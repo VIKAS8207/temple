@@ -1,0 +1,133 @@
+// src/components/Navbar.jsx
+import { useTranslation } from 'react-i18next';
+
+export default function Navbar() {
+  const { t, i18n } = useTranslation();
+
+  // Function to switch languages
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
+  return (
+    <header className="sticky top-0 z-50 shadow-xl">
+      
+      {/* 1. TOP STRIP */}
+      <div className="bg-red-950 border-b border-red-900/50 relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1.5 flex justify-between items-center text-amber-100/80 text-xs sm:text-sm">
+          
+          <div className="flex items-center gap-4 font-medium tracking-wide">
+            <div className="flex items-center gap-2">
+              <svg className="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span>+91 98765 43210</span>
+              <span className="hidden sm:inline">, +91 91234 56789</span>
+            </div>
+          </div>
+          
+          {/* Language Toggles triggering i18n */}
+          <div className="flex items-center gap-3 font-semibold">
+            <button 
+              onClick={() => changeLanguage('en')} 
+              className={`transition-colors ${i18n.language === 'en' ? 'text-amber-400' : 'hover:text-amber-400'}`}
+            >
+              English
+            </button>
+            <span className="text-red-800">|</span>
+            <button 
+              onClick={() => changeLanguage('hi')} 
+              className={`transition-colors font-rozha text-base ${i18n.language === 'hi' ? 'text-amber-400' : 'hover:text-amber-400'}`}
+            >
+              हिन्दी
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      {/* 2. MAIN NAVBAR */}
+      <nav className="relative text-amber-50 overflow-hidden"> 
+        
+        <img 
+          src="/image/Nav1.webp" 
+          alt="Temple Texture"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+        />
+        <div className="absolute inset-0 bg-red-950/85 pointer-events-none z-0 mix-blend-multiply"></div>
+
+        {/* Content Container */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20">
+            
+            <div className="flex items-center gap-3 cursor-pointer shrink-0">
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 text-red-950 rounded-full flex items-center justify-center font-bold text-3xl shadow-[0_0_15px_rgba(251,191,36,0.4)] border-2 border-amber-200">
+                ॐ
+              </div>
+              <div className="flex flex-col">
+                <span className="font-rozha text-2xl text-amber-400 tracking-wide leading-none mt-1 drop-shadow-md">
+                  {t('hero.templeName')}
+                </span>
+                <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-amber-200/90 drop-shadow-sm">
+                  Badimatha Temple
+                </span>
+              </div>
+            </div>
+
+            {/* Desktop Navigation Links with Hover Animation */}
+            <div className="hidden lg:flex space-x-6 items-center text-sm font-medium tracking-wide">
+              {['home', 'about', 'timing', 'gallery', 'news'].map((item) => (
+                <a key={item} href="#" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
+                  {t(`nav.${item}`)}
+                  {/* The Left-to-Right Animated Line */}
+                  <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
+                </a>
+              ))}
+              
+              <a href="#" className="relative group text-yellow-300 animate-pulse hover:text-yellow-200 transition-colors drop-shadow-md py-1">
+                {t('nav.lucky')}
+                <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-300 transition-all duration-300 group-hover:w-full"></div>
+              </a>
+              <a href="#" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
+                {t('nav.contact')}
+                <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
+              </a>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="hidden lg:flex items-center gap-4 shrink-0">
+              <button className="text-amber-100 hover:text-white font-semibold transition-colors text-sm drop-shadow-md">
+                {t('nav.login')}
+              </button>
+              <button className="bg-gradient-to-r from-amber-400 to-yellow-500 text-red-950 px-6 py-2 rounded-full font-bold shadow-lg hover:shadow-amber-500/30 hover:from-amber-300 hover:to-yellow-400 transition-all duration-300 transform hover:-translate-y-0.5 border border-amber-200">
+                {t('nav.donate')}
+              </button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden flex items-center">
+              <button className="text-amber-400 hover:text-amber-200 focus:outline-none drop-shadow-md">
+                <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+
+      {/* --- HANGING BOTTOM MANDALA BORDER --- */}
+      {/* absolute top-full forces it outside the flow so it perfectly overlaps the section below without a background */}
+      {/* -mt-[1px] pulls it up slightly so it merges seamlessly with the red navbar */}
+      <div 
+        className="absolute top-full left-0 w-full h-3 z-10 bg-repeat-x -mt-[1px]"
+        style={{ 
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='24' height='12' viewBox='0 0 24 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 12C6.477 12 2 7.523 2 2h2c0 4.418 3.582 8 8 8s8-3.582 8-8h2c0 5.523-4.477 10-10 10z' fill='%236B1111' fill-opacity='1'/%3E%3Cpath d='M12 6a2 2 0 100-4 2 2 0 000 4z' fill='%236B1111'/%3E%3C/svg%3E")`,
+          backgroundSize: '24px 12px'
+        }}
+      ></div>
+
+    </header>
+  );
+}

@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* 2. Register your custom font for Tailwind to use */
+@theme {
+  --font-rozha: "Rozha One", serif;
+}
