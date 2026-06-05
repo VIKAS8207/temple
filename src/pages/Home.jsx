@@ -2,6 +2,9 @@ import { useTranslation } from 'react-i18next';
 import ActionButtons from "../components/ActionButtons";
 import TempleStats from "../components/TempleStats";
 import TempleTiming from "../components/TempleTiming";
+import Founders from "../components/Founders";
+import TempleCarousel from "../components/TempleCarousel";
+import WinnerList from "../components/WinnerList";
 
 export default function Home() {
   // Initialize the translation hook
@@ -102,8 +105,11 @@ export default function Home() {
       </section>
 
       <ActionButtons />
+      <TempleCarousel />
       <TempleStats />
       <TempleTiming />
+      <Founders />
+      <WinnerList />
 
     </div>
   );

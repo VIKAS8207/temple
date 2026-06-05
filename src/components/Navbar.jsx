@@ -1,5 +1,6 @@
 // src/components/Navbar.jsx
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -74,24 +75,41 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Desktop Navigation Links with Hover Animation */}
+            {/* Desktop Navigation Links (Written out line by line) */}
             <div className="hidden lg:flex space-x-6 items-center text-sm font-medium tracking-wide">
-              {['home', 'about', 'timing', 'gallery', 'news'].map((item) => (
-                <a key={item} href="#" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
-                  {t(`nav.${item}`)}
-                  {/* The Left-to-Right Animated Line */}
-                  <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
-                </a>
-              ))}
               
-              <a href="#" className="relative group text-yellow-300 animate-pulse hover:text-yellow-200 transition-colors drop-shadow-md py-1">
+              <Link to="/" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
+                {t('nav.home')}
+                <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
+              </Link>
+
+              <Link to="/about" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
+                {t('nav.about')}
+                <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
+              </Link>
+
+              
+
+              <Link to="/gallery" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
+                {t('nav.gallery')}
+                <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
+              </Link>
+
+              <Link to="/news" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
+                {t('nav.news')}
+                <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
+              </Link>
+
+              <Link to="/lucky-draw" className="relative group text-yellow-300 animate-pulse hover:text-yellow-200 transition-colors drop-shadow-md py-1">
                 {t('nav.lucky')}
                 <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-300 transition-all duration-300 group-hover:w-full"></div>
-              </a>
-              <a href="#" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
+              </Link>
+
+              <Link to="/contact" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
                 {t('nav.contact')}
                 <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
-              </a>
+              </Link>
+
             </div>
 
             {/* Action Buttons */}
@@ -99,9 +117,13 @@ export default function Navbar() {
               <button className="text-amber-100 hover:text-white font-semibold transition-colors text-sm drop-shadow-md">
                 {t('nav.login')}
               </button>
-              <button className="bg-gradient-to-r from-amber-400 to-yellow-500 text-red-950 px-6 py-2 rounded-full font-bold shadow-lg hover:shadow-amber-500/30 hover:from-amber-300 hover:to-yellow-400 transition-all duration-300 transform hover:-translate-y-0.5 border border-amber-200">
+              {/* Changed from <button> to <Link> and added to="/donate" */}
+              <Link 
+                to="/donate"
+                className="bg-gradient-to-r from-amber-400 to-yellow-500 text-red-950 px-6 py-2 rounded-full font-bold shadow-lg hover:shadow-amber-500/30 hover:from-amber-300 hover:to-yellow-400 transition-all duration-300 transform hover:-translate-y-0.5 border border-amber-200"
+              >
                 {t('nav.donate')}
-              </button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -118,8 +140,6 @@ export default function Navbar() {
       </nav>
 
       {/* --- HANGING BOTTOM MANDALA BORDER --- */}
-      {/* absolute top-full forces it outside the flow so it perfectly overlaps the section below without a background */}
-      {/* -mt-[1px] pulls it up slightly so it merges seamlessly with the red navbar */}
       <div 
         className="absolute top-full left-0 w-full h-3 z-10 bg-repeat-x -mt-[1px]"
         style={{ 

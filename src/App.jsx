@@ -2,7 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"; // 1. Import your new Footer
 import Home from "./pages/Home";
-
+import About from "./pages/About";
+import Gallery from "./pages/Gallery";
+import News from "./pages/News";
+import Contact from "./pages/Contact";
+import LuckyDraw from "./pages/LuckyDraw";
+import Donation from "./pages/Donation";
 
 // Example of how you'll import future pages:
 // import About from "./pages/About"; 
@@ -23,6 +28,12 @@ function App() {
           <Routes>
             {/* The default home page */}
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/lucky-draw" element={<LuckyDraw />} />
+            <Route path="/donate" element={<Donation />} />
             
             {/* How you will add your future pages: */}
             {/* <Route path="/about" element={<About />} /> */}
