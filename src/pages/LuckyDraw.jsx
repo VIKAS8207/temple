@@ -4,57 +4,68 @@ import { useTranslation } from 'react-i18next';
 export default function LuckyDraw() {
   const { t } = useTranslation();
 
-  // Prize Images (Positions removed, just data for the marquee)
+  // Prize Images (Now fully translatable!)
   const prizes = [
-    { id: 1, name: "Plot", img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=300&q=80" },
-    { id: 2, name: "Gold", img: "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=300&q=80" },
-    { id: 3, name: "Bike", img: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=300&q=80" },
-    { id: 4, name: "Car", img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=300&q=80" },
-    { id: 5, name: "Fridge", img: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=300&q=80" },
-    { id: 6, name: "TV", img: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=300&q=80" },
-    { id: 7, name: "Phone", img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=300&q=80" },
+    { id: 1, name: t('luckyNew.prizePlot'), img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=300&q=80" },
+    { id: 2, name: t('luckyNew.prizeGold'), img: "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=300&q=80" },
+    { id: 3, name: t('luckyNew.prizeBike'), img: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=300&q=80" },
+    { id: 4, name: t('luckyNew.prizeCar'), img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=300&q=80" },
+    { id: 5, name: t('luckyNew.prizeFridge'), img: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=300&q=80" },
+    { id: 6, name: t('luckyNew.prizeTV'), img: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=300&q=80" },
+    { id: 7, name: t('luckyNew.prizePhone'), img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=300&q=80" },
+    { id: 1, name: t('luckyNew.prizePlot'), img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=300&q=80" },
+    { id: 2, name: t('luckyNew.prizeGold'), img: "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=300&q=80" },
+    { id: 3, name: t('luckyNew.prizeBike'), img: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=300&q=80" },
+    { id: 4, name: t('luckyNew.prizeCar'), img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=300&q=80" },
+    { id: 5, name: t('luckyNew.prizeFridge'), img: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=300&q=80" },
+    { id: 6, name: t('luckyNew.prizeTV'), img: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=300&q=80" },
+    { id: 7, name: t('luckyNew.prizePhone'), img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=300&q=80" },
   ];
 
-  // We duplicate the array to create a seamless infinite scrolling loop
+  // Duplicated array for seamless marquee loop
   const marqueeItems = [...prizes, ...prizes];
 
   return (
-    <div className="min-h-screen bg-[#fcf9f5] relative overflow-hidden flex flex-col items-center pt-24 pb-32">
+    <div className="min-h-screen bg-[#fcf9f5] relative overflow-hidden flex flex-col items-center pt-12 pb-24 px-4 sm:px-6">
       
       {/* Background ambient glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-gradient-to-b from-amber-500/10 to-transparent blur-3xl pointer-events-none"></div>
 
-      {/* 1. TOP TEXT SECTION */}
-      <div className="text-center z-10 px-4 max-w-3xl mx-auto mb-16">
-        <span className="text-[#8B3A2B] font-bold tracking-[0.2em] uppercase text-xs border border-[#8B3A2B]/20 rounded-full px-4 py-1.5 mb-6 inline-block bg-white shadow-sm">
-          {t('luckyNew.tag')}
-        </span>
-        <h1 className="text-4xl md:text-6xl font-rozha text-stone-900 mb-6 leading-tight">
-          {t('luckyNew.title')}
-        </h1>
-        <p className="text-stone-600 font-medium md:text-lg mb-8 max-w-xl mx-auto">
-          {t('luckyNew.subtitle')}
-        </p>
-        <button className="bg-white text-stone-800 border border-stone-200 shadow-sm hover:shadow-md font-semibold px-6 py-2 rounded-full transition-all">
-          {t('luckyNew.learnMore')}
-        </button>
+{/* 1. WIDE PRESENTATION BANNER AT THE TOP */}
+      <div className="relative z-10 w-full max-w-5xl aspect-[4/3] md:aspect-[16/9] max-h-[55vh] rounded-3xl overflow-hidden shadow-2xl mb-12 border-4 border-white/60 bg-stone-200">
+        <img 
+          src="/image/lucky.jpg" 
+          alt="Bhagyashali Bhakt Upahar Yojna Banner" 
+          className="w-full h-full object-cover"
+        />
+        {/* Subtle gradient overlay at the bottom of the banner */}
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent"></div>
       </div>
 
-      {/* 2. INFINITE SCROLLING MARQUEE */}
-      {/* group class added to pause the animation when the user hovers over it */}
-      <div className="relative w-full max-w-[100vw] overflow-hidden z-10 mb-16 group py-4">
+      {/* 2. MAIN HEADING */}
+      <div className="text-center z-10 max-w-3xl mx-auto mb-10">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-aparajita text-[#8B3A2B] font-bold mb-4 leading-tight drop-shadow-sm">
+          {t('luckyNew.mainHeading', 'भाग्यशाली भक्त उपहार योजना')}
+        </h1>
+        <p className="text-stone-600 font-medium md:text-lg mb-8 max-w-xl mx-auto">
+          {t('luckyNew.subtitle', 'मंदिर के विकास में सहयोग करें और शानदार उपहार जीतने का अवसर पाएं।')}
+        </p>
+      </div>
+
+      {/* 3. FIXED INFINITE SCROLLING MARQUEE */}
+      <div className="relative w-full max-w-[100vw] overflow-hidden z-10 mb-12 group py-4">
         
         {/* Left & Right fade gradients for smooth entering/exiting */}
-        <div className="absolute top-0 left-0 w-24 md:w-48 h-full bg-gradient-to-r from-[#fcf9f5] to-transparent z-20 pointer-events-none"></div>
-        <div className="absolute top-0 right-0 w-24 md:w-48 h-full bg-gradient-to-l from-[#fcf9f5] to-transparent z-20 pointer-events-none"></div>
+        <div className="absolute top-0 left-0 w-16 md:w-32 h-full bg-gradient-to-r from-[#fcf9f5] to-transparent z-20 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-16 md:w-32 h-full bg-gradient-to-l from-[#fcf9f5] to-transparent z-20 pointer-events-none"></div>
 
-        {/* The moving track */}
-        <div className="flex w-max animate-[marquee_25s_linear_infinite] group-hover:[animation-play-state:paused] items-center">
+        {/* The moving track (Fixed spacing with px-8 instead of gap to ensure seamless loop calculation) */}
+        <div className="flex w-max animate-[marquee_40s_linear_infinite] group-hover:[animation-play-state:paused] items-center">
           {marqueeItems.map((prize, index) => (
-            <div key={index} className="flex flex-col items-center mx-6 sm:mx-10 cursor-pointer">
+            <div key={index} className="flex flex-col items-center px-4 sm:px-8 shrink-0 cursor-pointer">
               
               {/* Prize Image Circle */}
-              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg overflow-hidden transition-transform duration-300 hover:scale-110 bg-white">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-[3px] border-amber-200 shadow-md overflow-hidden transition-transform duration-300 hover:scale-110 bg-white">
                 <img 
                   src={prize.img} 
                   alt={prize.name} 
@@ -62,7 +73,7 @@ export default function LuckyDraw() {
                 />
               </div>
               
-              {/* Label directly underneath */}
+              {/* Label */}
               <span className="mt-4 bg-white border border-stone-200 text-stone-700 text-xs font-bold px-4 py-1.5 rounded-full shadow-sm uppercase tracking-wider">
                 {prize.name}
               </span>
@@ -72,64 +83,68 @@ export default function LuckyDraw() {
         </div>
       </div>
 
-      {/* 3. THE CENTRAL PURCHASE CARD */}
-      <div className="relative w-full max-w-2xl mx-auto px-4 z-20">
-        
-        {/* Horizontal Design Line running behind the card */}
-        <div className="absolute top-1/2 -translate-y-1/2 -left-[50vw] w-[200vw] h-[2px] bg-gradient-to-r from-transparent via-amber-300 to-transparent -z-10 flex items-center justify-center">
-          <div className="w-32 h-2 rounded-full bg-[#fcf9f5] border-2 border-amber-300"></div>
-        </div>
+      {/* 4. BOOK COUPON BUTTON */}
+      <div className="z-10 mb-20 w-full flex justify-center">
+        <button className="group relative flex items-center justify-center gap-3 bg-gradient-to-r from-orange-600 to-amber-600 text-white px-10 py-4 rounded-full shadow-xl hover:shadow-orange-500/40 hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto overflow-hidden">
+          {/* Shine sweep effect */}
+          <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"></div>
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" /></svg>
+          <span className="font-aparajita font-bold text-2xl tracking-wide">
+            {t('luckyNew.bookBtn', 'कूपन बुक करें')}
+          </span>
+        </button>
+      </div>
 
-        {/* The Card */}
-        <div className="bg-white/80 backdrop-blur-xl border border-white/60 p-6 md:p-8 rounded-3xl shadow-[0_20px_40px_rgba(139,58,43,0.08)]">
+      {/* 5. REALISTIC TICKET/COUPON DESIGN */}
+      <div className="relative w-full max-w-2xl mx-auto z-10 px-4 sm:px-8">
+        <div className="relative bg-gradient-to-br from-[#8B3A2B] to-[#592218] rounded-xl  p-1 overflow-visible">
           
-          <div className="flex justify-between items-start mb-6">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-[#8B3A2B] rounded-xl flex items-center justify-center shadow-md">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" /></svg>
-              </div>
-              <h2 className="text-2xl font-bold text-stone-900 font-rozha">
-                {t('luckyNew.cardTitle')}
+          {/* Inner Dashed Border to look like a tear-off ticket */}
+          <div className="border-[3px] border-dashed border-amber-500/40 rounded-lg p-6 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6 relative bg-[#8B3A2B]/20 backdrop-blur-sm">
+            
+            {/* Left side: Event Info */}
+            <div className="flex flex-col items-center sm:items-start text-center sm:text-left flex-1">
+              <span className="text-amber-400 font-bold tracking-[0.2em] uppercase text-xs mb-2">
+                {t('luckyNew.ticketTag', 'सहयोग रसीद')}
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-aparajita font-bold text-white leading-tight">
+                {t('luckyNew.mainHeading', 'भाग्यशाली भक्त उपहार योजना')}
               </h2>
+              <p className="text-amber-100/70 text-sm mt-2 font-medium">
+                {t('luckyNew.ticketDesc', 'आपके सहयोग से ही मंदिर का नवनिर्माण संभव है।')}
+              </p>
             </div>
-            <div className="bg-[#8B3A2B]/10 text-[#8B3A2B] text-xs font-bold px-3 py-1.5 rounded-lg uppercase tracking-wide">
-              {t('luckyNew.cardPrice')}
-            </div>
-          </div>
 
-          <p className="text-stone-500 font-semibold text-sm mb-3">
-            {t('luckyNew.cardIncludes')}
-          </p>
-          
-          {/* Pills/Tags */}
-          <div className="flex flex-wrap gap-2 mb-8">
-            <span className="bg-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">{t('luckyNew.tag1')}</span>
-            <span className="bg-stone-100 text-stone-600 text-xs font-bold px-3 py-1.5 rounded-full">{t('luckyNew.tag2')}</span>
-            <span className="bg-stone-100 text-stone-600 text-xs font-bold px-3 py-1.5 rounded-full">{t('luckyNew.tag3')}</span>
-            <span className="bg-stone-100 text-stone-600 text-xs font-bold px-3 py-1.5 rounded-full">{t('luckyNew.tag4')}</span>
-          </div>
+            {/* Divider Line on Mobile, Hidden on Desktop */}
+            <div className="w-full h-px border-t border-dashed border-amber-500/40 sm:hidden"></div>
 
-          {/* Action Button */}
-          <button className="w-full flex items-center justify-between bg-stone-50 border border-stone-200 hover:border-amber-400 hover:bg-white p-4 rounded-xl transition-all duration-300 group shadow-sm hover:shadow-md">
-            <div className="flex items-center gap-3">
-              <svg className="w-5 h-5 text-stone-400 group-hover:text-amber-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
-              <span className="font-semibold text-stone-700 group-hover:text-stone-900 transition-colors">
-                {t('luckyNew.buyBtn')}
+            {/* Right side: Price */}
+            <div className="flex flex-col items-center justify-center bg-amber-500 rounded-xl px-6 py-4 shadow-inner shrink-0 rotate-[-2deg]">
+              <span className="text-orange-950 font-bold uppercase text-xs tracking-widest mb-1">
+                {t('luckyNew.ticketPriceLabel', 'सहयोग राशि')}
+              </span>
+              <span className="text-3xl sm:text-4xl font-black text-white drop-shadow-md">
+                ₹500
               </span>
             </div>
-            <div className="flex gap-2 text-stone-400 group-hover:text-amber-500 transition-colors">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-            </div>
-          </button>
+
+          </div>
+
+          {/* Ticket Perforated Cutouts (Left & Right) */}
+          <div className="absolute top-1/2 -left-4 -translate-y-1/2 w-8 h-8 bg-[#fcf9f5] rounded-full"></div>
+          <div className="absolute top-1/2 -right-4 -translate-y-1/2 w-8 h-8 bg-[#fcf9f5] rounded-full"></div>
 
         </div>
       </div>
 
-      {/* Marquee Keyframes Injection */}
+      {/* Keyframes Injection for Marquee and Shimmer */}
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes marquee {
           0% { transform: translateX(0%); }
           100% { transform: translateX(-50%); }
+        }
+        @keyframes shimmer {
+          100% { transform: translateX(100%); }
         }
       `}} />
 

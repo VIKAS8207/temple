@@ -4,82 +4,90 @@ import { useTranslation } from 'react-i18next';
 
 export default function Donation() {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState('daily');
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    isAnonymous: false,
+    sevaType: '',
+    otherSeva: '',
+    amount: ''
+  });
 
-  // Tab Categories based on your screenshot
-  const tabs = [
-    { id: 'daily', label: t('donate.tabDaily') },
-    { id: 'tuesday', label: t('donate.tabTuesday') },
-    { id: 'navratri', label: t('donate.tabNavratri') },
-    { id: 'online', label: t('donate.tabOnline') },
-    { id: 'bhandara', label: t('donate.tabBhandara') },
-    { id: 'gau', label: t('donate.tabGau') },
+  const sevaOptions = [
+    { value: 'akhand_deep', label: t('donate.subDainik1', 'अखंड दीप सेवा') },
+    { value: 'annadaan', label: t('donate.subDainik7', 'अन्नदान सेवा') },
+    { value: 'abhishek', label: t('donate.subAbhishek1', 'अभिषेक पूजन') },
+    { value: 'others', label: t('donate.others', 'अन्य (Others)') }
   ];
 
-  // Seva Cards based on your screenshot
-  const sevas = [
-    { id: 1, icon: "🪔", title: t('donate.seva1Title'), desc: t('donate.seva1Desc') },
-    { id: 2, icon: "🌸", title: t('donate.seva2Title'), desc: t('donate.seva2Desc') },
-    { id: 3, icon: "🍛", title: t('donate.seva3Title'), desc: t('donate.seva3Desc') },
-    { id: 4, icon: "🔔", title: t('donate.seva4Title'), desc: t('donate.seva4Desc') },
-    { id: 5, icon: "🥻", title: t('donate.seva5Title'), desc: t('donate.seva5Desc') },
-    { id: 6, icon: "✨", title: t('donate.seva6Title'), desc: t('donate.seva6Desc') },
-    { id: 7, icon: "🙏", title: t('donate.seva7Title'), desc: t('donate.seva7Desc') },
-    { id: 8, icon: "📿", title: t('donate.seva8Title'), desc: t('donate.seva8Desc') },
-  ];
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Donation Data:", formData);
+    // Add your payment gateway logic here
+  };
 
   return (
-    <div className="min-h-screen bg-[#faf6f0] py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-[#fcf9f5] py-16 px-4">
+      <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl border border-stone-100 p-8 md:p-12">
         
-        {/* Header Section */}
-        <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-rozha text-[#8b3a2b] flex items-center gap-3 mb-2">
-            <span className="text-4xl">🪔</span> {t('donate.pageTitle')}
-          </h1>
-          <p className="text-stone-600 font-medium text-lg ml-1">
-            {t('donate.subtitle')}
-          </p>
-        </div>
+        <h1 className="text-3xl md:text-4xl font-aparajita text-[#8B3A2B] text-center mb-8 font-bold">
+          {t('donate.formTitle', 'दान एवं सेवा अर्पण')}
+        </h1>
 
-        {/* Tabs Section */}
-        <div className="flex overflow-x-auto pb-4 mb-8 gap-3 hide-scrollbar">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-semibold transition-colors duration-300 border ${
-                activeTab === tab.id
-                  ? 'bg-[#e87a30] text-white border-[#e87a30] shadow-md'
-                  : 'bg-white text-stone-600 border-stone-200 hover:border-[#e87a30] hover:text-[#e87a30]'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Name & Phone */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <input 
+              type="text" placeholder={t('donate.name', 'पूरा नाम')} required
+              className="w-full p-4 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-500 outline-none"
+              onChange={(e) => setFormData({...formData, name: e.target.value})}
+            />
+            <input 
+              type="tel" placeholder={t('donate.phone', 'मोबाइल नंबर')} required
+              className="w-full p-4 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-500 outline-none"
+              onChange={(e) => setFormData({...formData, phone: e.target.value})}
+            />
+          </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
-          {sevas.map((seva) => (
-            <div 
-              key={seva.id} 
-              className="bg-white rounded-xl p-5 border border-stone-200 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full"
-            >
-              <div className="text-3xl mb-4">{seva.icon}</div>
-              <h3 className="text-lg font-bold text-stone-800 mb-1 leading-tight">
-                {seva.title}
-              </h3>
-              <p className="text-sm text-stone-500 mb-6 flex-grow leading-relaxed">
-                {seva.desc}
-              </p>
-              <button className="w-full py-2 rounded-md bg-[#fff5ec] text-[#e87a30] border border-[#f9d8c0] font-bold text-sm hover:bg-[#ffe8d6] transition-colors">
-                {t('donate.bookBtn')}
-              </button>
-            </div>
-          ))}
-        </div>
+          {/* Anonymous Checkbox */}
+          <label className="flex items-center gap-3 cursor-pointer">
+            <input 
+              type="checkbox" className="w-5 h-5 accent-[#8B3A2B]"
+              onChange={(e) => setFormData({...formData, isAnonymous: e.target.checked})}
+            />
+            <span className="text-stone-600 font-medium">{t('donate.anonymous', 'गुमनाम दान (Anonymous Donation)')}</span>
+          </label>
 
+          {/* Seva Dropdown */}
+          <select 
+            required
+            className="w-full p-4 border border-stone-200 rounded-xl outline-none"
+            onChange={(e) => setFormData({...formData, sevaType: e.target.value})}
+          >
+            <option value="">{t('donate.selectSeva', 'सेवा का प्रकार चुनें')}</option>
+            {sevaOptions.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
+          </select>
+
+          {/* Conditional "Other" Field */}
+          {formData.sevaType === 'others' && (
+            <input 
+              type="text" placeholder={t('donate.specify', 'कृपया सेवा बताएं')} required
+              className="w-full p-4 border border-amber-300 bg-amber-50 rounded-xl outline-none"
+              onChange={(e) => setFormData({...formData, otherSeva: e.target.value})}
+            />
+          )}
+
+          {/* Amount */}
+          <input 
+            type="number" placeholder={t('donate.amount', 'राशि (₹)')} required
+            className="w-full p-4 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-500 outline-none"
+            onChange={(e) => setFormData({...formData, amount: e.target.value})}
+          />
+
+          <button type="submit" className="w-full py-4 bg-gradient-to-r from-orange-600 to-amber-600 text-white font-bold text-lg rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all">
+            {t('donate.payNow', 'भुगतान करें (Pay Now)')}
+          </button>
+        </form>
       </div>
     </div>
   );

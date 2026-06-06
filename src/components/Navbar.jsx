@@ -105,6 +105,13 @@ export default function Navbar() {
                 <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-300 transition-all duration-300 group-hover:w-full"></div>
               </Link>
 
+              
+
+              <Link to="/donate" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
+                {t('nav.donate')}
+                <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
+              </Link>
+
               <Link to="/contact" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
                 {t('nav.contact')}
                 <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
@@ -119,10 +126,10 @@ export default function Navbar() {
               </button>
               {/* Changed from <button> to <Link> and added to="/donate" */}
               <Link 
-                to="/donate"
+                to="/serve"
                 className="bg-gradient-to-r from-amber-400 to-yellow-500 text-red-950 px-6 py-2 rounded-full font-bold shadow-lg hover:shadow-amber-500/30 hover:from-amber-300 hover:to-yellow-400 transition-all duration-300 transform hover:-translate-y-0.5 border border-amber-200"
               >
-                {t('nav.donate')}
+                {t('nav.seva')}
               </Link>
             </div>
 

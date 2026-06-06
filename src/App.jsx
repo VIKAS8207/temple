@@ -7,7 +7,9 @@ import Gallery from "./pages/Gallery";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
 import LuckyDraw from "./pages/LuckyDraw";
+import Serve from "./pages/Serve";
 import Donation from "./pages/Donation";
+
 
 // Example of how you'll import future pages:
 // import About from "./pages/About"; 
@@ -33,6 +35,7 @@ function App() {
             <Route path="/news" element={<News />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/lucky-draw" element={<LuckyDraw />} />
+            <Route path="/serve" element={<Serve />} />
             <Route path="/donate" element={<Donation />} />
             
             {/* How you will add your future pages: */}

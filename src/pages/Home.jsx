@@ -5,6 +5,7 @@ import TempleTiming from "../components/TempleTiming";
 import Founders from "../components/Founders";
 import TempleCarousel from "../components/TempleCarousel";
 import WinnerList from "../components/WinnerList";
+import CursorTrail from "../components/CursorTrail"; // IMPORTED TRAIL
 
 export default function Home() {
   // Initialize the translation hook
@@ -13,17 +14,33 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-[100vh]">
       
+      {/* Global Mouse Twinkle Trail */}
+      <CursorTrail />
+
       {/* Hero Section */}
       <section className="relative flex-grow flex flex-col items-center justify-center px-4 sm:px-6 bg-gradient-to-b from-orange-50 to-stone-50 overflow-hidden">
 
-        {/* Main Content Wrapper */}
-        <div className="relative w-full max-w-7xl mx-auto mt-22 md:mt-40 mb-12 flex flex-col lg:flex-row items-center justify-between gap-12 z-10">
+        {/* --- CALMING BACKGROUND GRADIENTS --- */}
+        {/* Soft Amber Glow on Left */}
+        <div className="absolute top-20 -left-20 w-96 h-96 bg-amber-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
+        {/* Soft Orange Glow on Right */}
+        <div className="absolute bottom-10 -right-20 w-[30rem] h-[30rem] bg-orange-300/30 rounded-full blur-[140px] pointer-events-none z-0"></div>
+
+        {/* Very Top Sentence */}
+        <div className="absolute top-10 md:top-16 left-1/2 -translate-x-1/2 z-30 w-full text-center">
+          <h2 className="text-3xl md:text-3xl font-aparajita text-[#8B3A2B] font-bold tracking-wide drop-shadow-sm">
+            नगर शक्ति पीठ
+          </h2>
+        </div>
+
+        {/* Main Content Wrapper (Fixed mt-24 for mobile responsiveness) */}
+        <div className="relative w-full max-w-7xl mx-auto mt-34 md:mt-50 mb-12 flex flex-col lg:flex-row items-center justify-between gap-12 z-10">
           
           {/* === LEFT COLUMN === */}
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 w-full">
             
             {/* Adi Shakti Slogan (Using 4 separate lines for safe HTML breaks) */}
-            <div className="font-rozha text-orange-900 text-2xl lg:text-3xl leading-tight drop-shadow-sm">
+            <div className="font-aparajita text-orange-900 text-3xl sm:text-2xl lg:text-3xl leading-tight drop-shadow-sm">
               {t('hero.slogan1')}<br />
               {t('hero.slogan2')}<br />
               {t('hero.slogan3')}<br />
@@ -31,9 +48,9 @@ export default function Home() {
             </div>
             
             {/* Three Traditional 5-Petal Lotus Flowers */}
-            <div className="mt-8 flex items-center justify-center lg:justify-start gap-8 text-orange-700/60">
+            <div className="mt-8 flex items-center justify-center lg:justify-start gap-6 sm:gap-8 text-orange-700/60">
               {[...Array(3)].map((_, i) => (
-                <svg key={i} viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 drop-shadow-sm overflow-visible">
+                <svg key={i} viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-sm overflow-visible">
                   <path d="M12 22c0 0-8-5-8-12 0-3 1.5-5.5 3.5-8 1 4.5 4.5 7.5 4.5 10.5v9.5z" opacity="0.4" transform="rotate(-25 12 22)" />
                   <path d="M12 22c0 0 8-5 8-12 0-3-1.5-5.5-3.5-8-1 4.5-4.5 7.5-4.5 10.5v9.5z" opacity="0.4" transform="rotate(25 12 22)" />
                   <path d="M12 22c0 0-8-5-8-12 0-3 1.5-5.5 3.5-8 1 4.5 4.5 7.5 4.5 10.5v9.5z" opacity="0.7" />
@@ -56,7 +73,7 @@ export default function Home() {
             
             {/* LAYER 3: Sandwiched Giant Hindi Text (z-20) */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
-              <h1 className="text-[15vw] sm:text-[12vw] font-rozha text-orange-950 whitespace-nowrap select-none drop-shadow-md text-center">
+              <h1 className="relative text-[18vw] sm:text-[12vw] font-aparajita text-orange-950 whitespace-nowrap select-none drop-shadow-md text-center">
                 {t('hero.templeName')}
               </h1>
             </div>
@@ -65,7 +82,7 @@ export default function Home() {
             <img
               src="/image/Hero.png" 
               alt="Badimatha Temple"
-              className="relative z-30 w-64 sm:w-96 md:w-[28rem] h-auto object-cover"
+              className="relative z-30 w-64 sm:w-80 md:w-[28rem] h-auto object-cover"
             />
             
           </div>
@@ -76,28 +93,26 @@ export default function Home() {
             <img 
               src="/image/Pooja.png" 
               alt="Pooja Items" 
-              className="w-28 h-28 lg:w-32 lg:h-32 mb-6"
+              className="w-24 h-24 lg:w-32 lg:h-32 mb-4 lg:mb-6"
             />
             
-            <p className="text-stone-700 font-rozha mb-8 max-w-[280px] text-lg">
+            <p className="text-stone-700 font-aparajita mb-8 max-w-[280px] text-base sm:text-lg">
               {t('hero.description')}
             </p>
 
-
             {/* Pooja Seva Button (Animated Lotus Bloom) */}
-            <button className="group relative flex items-center gap-3 bg-gradient-to-r from-orange-600 to-amber-600 text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:shadow-orange-500/40 transition-all duration-500 overflow-visible">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 overflow-visible">
+            <button className="group relative flex items-center gap-3 bg-gradient-to-r from-orange-600 to-amber-600 text-white font-bold px-6 sm:px-8 py-3.5 rounded-full shadow-lg hover:shadow-orange-500/40 transition-all duration-500 overflow-visible">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 sm:w-6 sm:h-6 overflow-visible">
+                <path d="M12 22c0 0-4-4.5-4-10.5 0-3.5 2-6.5 4-10.5 2 4 4 7 4 10.5 0 6-4 10.5-4 10.5z" className="z-10 relative" />
                 <path d="M12 22c0 0-4-4.5-4-10.5 0-3.5 2-6.5 4-10.5 2 4 4 7 4 10.5 0 6-4 10.5-4 10.5z" className="z-10 relative" />
                 <path d="M12 22c0 0-8-5-8-12 0-3 1.5-5.5 3.5-8 1 4.5 4.5 7.5 4.5 10.5v9.5z" className="origin-[12px_22px] transition-transform duration-500 ease-out group-hover:-rotate-[20deg]" opacity="0.8" />
                 <path d="M12 22c0 0 8-5 8-12 0-3-1.5-5.5-3.5-8-1 4.5-4.5 7.5-4.5 10.5v9.5z" className="origin-[12px_22px] transition-transform duration-500 ease-out group-hover:rotate-[20deg]" opacity="0.8" />
                 <path d="M12 22c0 0-8-5-8-12 0-3 1.5-5.5 3.5-8 1 4.5 4.5 7.5 4.5 10.5v9.5z" className="origin-[12px_22px] scale-75 opacity-0 transition-all duration-500 ease-out group-hover:scale-100 group-hover:-rotate-[45deg] group-hover:opacity-50" />
                 <path d="M12 22c0 0 8-5 8-12 0-3-1.5-5.5-3.5-8-1 4.5-4.5 7.5-4.5 10.5v9.5z" className="origin-[12px_22px] scale-75 opacity-0 transition-all duration-500 ease-out group-hover:scale-100 group-hover:rotate-[45deg] group-hover:opacity-50" />
               </svg>
-              <span>{t('hero.poojaSeva')}</span>
+              <span className="text-sm sm:text-base">{t('hero.poojaSeva')}</span>
             </button>
             
-            
-
           </div>
           
         </div>
@@ -107,9 +122,10 @@ export default function Home() {
       <ActionButtons />
       <TempleCarousel />
       <TempleStats />
-      <TempleTiming />
+      <WinnerList />   
       <Founders />
-      <WinnerList />
+      <TempleTiming />
+      
 
     </div>
   );
