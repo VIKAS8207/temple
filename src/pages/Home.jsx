@@ -9,7 +9,10 @@ import CursorTrail from "../components/CursorTrail"; // IMPORTED TRAIL
 
 export default function Home() {
   // Initialize the translation hook
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  // FIX: Defining the missing variable to look for English locale variants
+  const isEnglish = i18n.language?.startsWith('en');
 
   return (
     <div className="flex flex-col min-h-[100vh]">
@@ -27,20 +30,52 @@ export default function Home() {
         <div className="absolute bottom-10 -right-20 w-[30rem] h-[30rem] bg-orange-300/30 rounded-full blur-[140px] pointer-events-none z-0"></div>
 
         {/* Very Top Sentence */}
-        <div className="absolute top-10 md:top-16 left-1/2 -translate-x-1/2 z-30 w-full text-center">
-          <h2 className="text-3xl md:text-3xl font-aparajita text-[#8B3A2B] font-bold tracking-wide drop-shadow-sm">
-            नगर शक्ति पीठ
-          </h2>
+        <div className="absolute top-8 md:top-14 left-1/2 -translate-x-1/2 z-30 w-full text-center px-4 ">
+          <div className="flex items-center justify-center gap-3 md:gap-5">
+            
+            
+            {/* Left Flower SVG */}
+    <div className=" flex items-center justify-center lg:justify-start gap-6 sm:gap-8 text-orange-700/60">
+              {[...Array(3)].map((_, i) => (
+                <svg key={i} viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-sm overflow-visible">
+                  <path d="M12 22c0 0-8-5-8-12 0-3 1.5-5.5 3.5-8 1 4.5 4.5 7.5 4.5 10.5v9.5z" opacity="0.4" transform="rotate(-25 12 22)" />
+                  <path d="M12 22c0 0 8-5 8-12 0-3-1.5-5.5-3.5-8-1 4.5-4.5 7.5-4.5 10.5v9.5z" opacity="0.4" transform="rotate(25 12 22)" />
+                  <path d="M12 22c0 0-8-5-8-12 0-3 1.5-5.5 3.5-8 1 4.5 4.5 7.5 4.5 10.5v9.5z" opacity="0.7" />
+                  <path d="M12 22c0 0 8-5 8-12 0-3-1.5-5.5-3.5-8-1 4.5-4.5 7.5-4.5 10.5v9.5z" opacity="0.7" />
+                  <path d="M12 22c0 0-4-4.5-4-10.5 0-3.5 2-6.5 4-10.5 2 4 4 7 4 10.5 0 6-4 10.5-4 10.5z" opacity="1" />
+                </svg>
+              ))}
+            </div>
+
+            {/* Bigger Text */}
+            <h2 className="text-4xl md:text-5xl font-rozha text-[#8B3A2B] font-bold tracking-wide drop-shadow-md whitespace-nowrap">
+              नगर शक्ति पीठ
+            </h2>
+
+            {/* Right Flower SVG */}
+             <div className=" flex items-center justify-center lg:justify-start gap-6 sm:gap-8 text-orange-700/60">
+              {[...Array(3)].map((_, i) => (
+                <svg key={i} viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-sm overflow-visible">
+                  <path d="M12 22c0 0-8-5-8-12 0-3 1.5-5.5 3.5-8 1 4.5 4.5 7.5 4.5 10.5v9.5z" opacity="0.4" transform="rotate(-25 12 22)" />
+                  <path d="M12 22c0 0 8-5 8-12 0-3-1.5-5.5-3.5-8-1 4.5-4.5 7.5-4.5 10.5v9.5z" opacity="0.4" transform="rotate(25 12 22)" />
+                  <path d="M12 22c0 0-8-5-8-12 0-3 1.5-5.5 3.5-8 1 4.5 4.5 7.5 4.5 10.5v9.5z" opacity="0.7" />
+                  <path d="M12 22c0 0 8-5 8-12 0-3-1.5-5.5-3.5-8-1 4.5-4.5 7.5-4.5 10.5v9.5z" opacity="0.7" />
+                  <path d="M12 22c0 0-4-4.5-4-10.5 0-3.5 2-6.5 4-10.5 2 4 4 7 4 10.5 0 6-4 10.5-4 10.5z" opacity="1" />
+                </svg>
+              ))}
+            </div>
+
+          </div>
         </div>
 
         {/* Main Content Wrapper (Fixed mt-24 for mobile responsiveness) */}
-        <div className="relative w-full max-w-7xl mx-auto mt-34 md:mt-50 mb-12 flex flex-col lg:flex-row items-center justify-between gap-12 z-10">
+        <div className="relative w-full max-w-7xl mx-auto mt-34 md:mt-56 mb-12 flex flex-col lg:flex-row items-center justify-between gap-12 z-10">
           
           {/* === LEFT COLUMN === */}
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 w-full">
             
             {/* Adi Shakti Slogan (Using 4 separate lines for safe HTML breaks) */}
-            <div className="font-aparajita text-orange-900 text-3xl sm:text-2xl lg:text-3xl leading-tight drop-shadow-sm">
+            <div className="font-rozha font-bold text-orange-900 text-3xl sm:text-2xl lg:text-3xl leading-tight">
               {t('hero.slogan1')}<br />
               {t('hero.slogan2')}<br />
               {t('hero.slogan3')}<br />
@@ -73,7 +108,11 @@ export default function Home() {
             
             {/* LAYER 3: Sandwiched Giant Hindi Text (z-20) */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
-              <h1 className="relative text-[18vw] sm:text-[12vw] font-aparajita text-orange-950 whitespace-nowrap select-none drop-shadow-md text-center">
+              <h1 className={`relative whitespace-nowrap select-none drop-shadow-md text-center font-rozha text-orange-950
+                ${isEnglish 
+                  ? 'text-[8vw] sm:text-[8vw] md:text-[8vw] lg:text-[8vw] tracking-normal' 
+                  : 'text-[12vw] sm:text-[12vw] md:text-[8vw] lg:text-[12vw] tracking-wide'
+                }`}>
                 {t('hero.templeName')}
               </h1>
             </div>
@@ -96,7 +135,9 @@ export default function Home() {
               className="w-24 h-24 lg:w-32 lg:h-32 mb-4 lg:mb-6"
             />
             
-            <p className="text-stone-700 font-aparajita mb-8 max-w-[280px] text-base sm:text-lg">
+            {/* Fixed sizing wrapper with adaptive layout sizes */}
+            <p className={`text-stone-700 font-aparajita mb-8 max-w-[280px] md:max-w-[320px] break-words hyphens-auto leading-relaxed
+                ${isEnglish ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
               {t('hero.description')}
             </p>
 
@@ -125,7 +166,6 @@ export default function Home() {
       <WinnerList />   
       <Founders />
       <TempleTiming />
-      
 
     </div>
   );

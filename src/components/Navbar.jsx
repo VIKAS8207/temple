@@ -88,7 +88,10 @@ export default function Navbar() {
                 <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
               </Link>
 
-              
+              <Link to="/lucky-draw" className="relative group text-yellow-300 animate-pulse hover:text-yellow-200 transition-colors drop-shadow-md py-1">
+                {t('nav.lucky')}
+                <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-300 transition-all duration-300 group-hover:w-full"></div>
+              </Link>
 
               <Link to="/gallery" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
                 {t('nav.gallery')}
@@ -99,13 +102,6 @@ export default function Navbar() {
                 {t('nav.news')}
                 <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
               </Link>
-
-              <Link to="/lucky-draw" className="relative group text-yellow-300 animate-pulse hover:text-yellow-200 transition-colors drop-shadow-md py-1">
-                {t('nav.lucky')}
-                <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-300 transition-all duration-300 group-hover:w-full"></div>
-              </Link>
-
-              
 
               <Link to="/donate" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
                 {t('nav.donate')}
@@ -121,9 +117,7 @@ export default function Navbar() {
 
             {/* Action Buttons */}
             <div className="hidden lg:flex items-center gap-4 shrink-0">
-              <button className="text-amber-100 hover:text-white font-semibold transition-colors text-sm drop-shadow-md">
-                {t('nav.login')}
-              </button>
+              
               {/* Changed from <button> to <Link> and added to="/donate" */}
               <Link 
                 to="/serve"

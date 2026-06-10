@@ -11,20 +11,14 @@ export default function TempleCarousel() {
     {
       id: 0,
       image: "https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=1200&auto=format&fit=crop",
-      title: t('carousel.slide1Title'),
-      subtitle: t('carousel.slide1Sub'),
     },
     {
       id: 1,
       image: "https://images.unsplash.com/photo-1604168612704-dfb1200fc0eb?q=80&w=1200&auto=format&fit=crop",
-      title: t('carousel.slide2Title'),
-      subtitle: t('carousel.slide2Sub'),
     },
     {
       id: 2,
       image: "https://images.unsplash.com/photo-1593014164582-74718cb14eb5?q=80&w=1200&auto=format&fit=crop",
-      title: t('carousel.slide3Title'),
-      subtitle: t('carousel.slide3Sub'),
     },
   ];
 
@@ -68,20 +62,7 @@ export default function TempleCarousel() {
           {/* Text Content */}
           <div className="absolute inset-0 flex flex-col items-center justify-end pb-20 md:pb-32 px-4 text-center">
             <div className="flex items-center gap-4 mb-4 transform translate-y-4 opacity-0 animate-[fadeUp_0.8s_ease-out_forwards_0.3s]">
-              <span className="w-12 h-[2px] bg-amber-500"></span>
-              <span className="text-amber-400 font-bold uppercase tracking-[0.2em] text-xs md:text-sm drop-shadow-md">
-                Badimatha Temple
-              </span>
-              <span className="w-12 h-[2px] bg-amber-500"></span>
             </div>
-            
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-rozha text-white mb-4 drop-shadow-xl transform translate-y-4 opacity-0 animate-[fadeUp_0.8s_ease-out_forwards_0.5s]">
-              {slide.title}
-            </h2>
-            
-            <p className="text-amber-50/90 text-lg md:text-xl font-serif max-w-2xl drop-shadow-md transform translate-y-4 opacity-0 animate-[fadeUp_0.8s_ease-out_forwards_0.7s]">
-              {slide.subtitle}
-            </p>
           </div>
         </div>
       ))}

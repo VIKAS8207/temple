@@ -14,11 +14,10 @@ const resources = {
         lucky: "Lucky Draw",
         donate: "Donate",
         contact: "Contact",
-        login: "Login / Sign Up",
         seva: "Serve"
       },
       hero: {
-        templeName: "Shri Badimatha Temple",
+        templeName: "Shri Badi matha Temple",
         slogan1: "Sarva Mangala Mangalye",
         slogan2: "Shive Sarvartha Sadhike |",
         slogan3: "Sharanye Tryambake Gauri",
@@ -178,11 +177,10 @@ const resources = {
         lucky: "लकी ड्रॉ",
         donate: "दान कर",
         contact: "संपर्क करें",
-        login: "लॉगिन / साइन अप",
         seva: "सेवा"
       },
       hero: {
-        templeName: "श्री बड़ीमाता मंदिर",
+        templeName: "श्री बड़ी माता मंदिर",
         slogan1: "सर्वमङ्गलमाङ्गल्ये",
         slogan2: "शिवे सर्वार्थसाधिके ।",
         slogan3: "शरण्ये त्र्यम्बके गौरि",
