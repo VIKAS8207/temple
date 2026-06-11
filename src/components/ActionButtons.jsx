@@ -1,16 +1,19 @@
 // src/components/ActionButtons.jsx
+import { useTranslation } from 'react-i18next';
 
 export default function ActionButtons() {
+  // Initialize the translation hook here!
+  const { t } = useTranslation();
   
   // Reusable Lotus Animation SVG
   const LotusIcon = () => (
     <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 sm:w-6 sm:h-6 overflow-visible shrink-0">
       <path d="M12 22c0 0-4-4.5-4-10.5 0-3.5 2-6.5 4-10.5 2 4 4 7 4 10.5 0 6-4 10.5-4 10.5z" className="z-10 relative" />
-                <path d="M12 22c0 0-4-4.5-4-10.5 0-3.5 2-6.5 4-10.5 2 4 4 7 4 10.5 0 6-4 10.5-4 10.5z" className="z-10 relative" />
-                <path d="M12 22c0 0-8-5-8-12 0-3 1.5-5.5 3.5-8 1 4.5 4.5 7.5 4.5 10.5v9.5z" className="origin-[12px_22px] transition-transform duration-500 ease-out group-hover:-rotate-[20deg]" opacity="0.8" />
-                <path d="M12 22c0 0 8-5 8-12 0-3-1.5-5.5-3.5-8-1 4.5-4.5 7.5-4.5 10.5v9.5z" className="origin-[12px_22px] transition-transform duration-500 ease-out group-hover:rotate-[20deg]" opacity="0.8" />
-                <path d="M12 22c0 0-8-5-8-12 0-3 1.5-5.5 3.5-8 1 4.5 4.5 7.5 4.5 10.5v9.5z" className="origin-[12px_22px] scale-75 opacity-0 transition-all duration-500 ease-out group-hover:scale-100 group-hover:-rotate-[45deg] group-hover:opacity-50" />
-                <path d="M12 22c0 0 8-5 8-12 0-3-1.5-5.5-3.5-8-1 4.5-4.5 7.5-4.5 10.5v9.5z" className="origin-[12px_22px] scale-75 opacity-0 transition-all duration-500 ease-out group-hover:scale-100 group-hover:rotate-[45deg] group-hover:opacity-50" />
+      <path d="M12 22c0 0-4-4.5-4-10.5 0-3.5 2-6.5 4-10.5 2 4 4 7 4 10.5 0 6-4 10.5-4 10.5z" className="z-10 relative" />
+      <path d="M12 22c0 0-8-5-8-12 0-3 1.5-5.5 3.5-8 1 4.5 4.5 7.5 4.5 10.5v9.5z" className="origin-[12px_22px] transition-transform duration-500 ease-out group-hover:-rotate-[20deg]" opacity="0.8" />
+      <path d="M12 22c0 0 8-5 8-12 0-3-1.5-5.5-3.5-8-1 4.5-4.5 7.5-4.5 10.5v9.5z" className="origin-[12px_22px] transition-transform duration-500 ease-out group-hover:rotate-[20deg]" opacity="0.8" />
+      <path d="M12 22c0 0-8-5-8-12 0-3 1.5-5.5 3.5-8 1 4.5 4.5 7.5 4.5 10.5v9.5z" className="origin-[12px_22px] scale-75 opacity-0 transition-all duration-500 ease-out group-hover:scale-100 group-hover:-rotate-[45deg] group-hover:opacity-50" />
+      <path d="M12 22c0 0 8-5 8-12 0-3-1.5-5.5-3.5-8-1 4.5-4.5 7.5-4.5 10.5v9.5z" className="origin-[12px_22px] scale-75 opacity-0 transition-all duration-500 ease-out group-hover:scale-100 group-hover:rotate-[45deg] group-hover:opacity-50" />
     </svg>
   );
 
@@ -24,25 +27,25 @@ export default function ActionButtons() {
         {/* Button 1: Temple Construction */}
         <button className={buttonClasses}>
           <LotusIcon />
-          <span className="font-aparajita font-bold text-xl sm:text-2xl tracking-wide drop-shadow-sm">मंदिर निर्माण सहयोग</span>
+          <span className="font-aparajita font-bold text-xl sm:text-2xl tracking-wide drop-shadow-sm">{t('action.btn1')}</span>
         </button>
 
         {/* Button 2: Get Online Coupon */}
         <button className={buttonClasses}>
           <LotusIcon />
-          <span className="font-aparajita font-bold text-xl sm:text-2xl tracking-wide drop-shadow-sm">ऑनलाइन कूपन प्राप्त करें</span>
+          <span className="font-aparajita font-bold text-xl sm:text-2xl tracking-wide drop-shadow-sm">{t('action.btn2')}</span>
         </button>
 
         {/* Button 3: Donate Online */}
         <button className={buttonClasses}>
           <LotusIcon />
-          <span className="font-aparajita font-bold text-xl sm:text-2xl tracking-wide drop-shadow-sm">ऑनलाइन दान करें</span>
+          <span className="font-aparajita font-bold text-xl sm:text-2xl tracking-wide drop-shadow-sm">{t('action.btn3')}</span>
         </button>
 
         {/* Button 4: Book Seva */}
         <button className={buttonClasses}>
           <LotusIcon />
-          <span className="font-aparajita font-bold text-xl sm:text-2xl tracking-wide drop-shadow-sm">सेवा बुक करें</span>
+          <span className="font-aparajita font-bold text-xl sm:text-2xl tracking-wide drop-shadow-sm">{t('action.btn4')}</span>
         </button>
 
       </div>

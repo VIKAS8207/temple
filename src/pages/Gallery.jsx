@@ -10,13 +10,7 @@ export default function Gallery() {
       {/* 1. HERO SECTION (Deep Maroon Banner with Ornaments) */}
       <section className="relative w-full bg-[#3e1a16] text-[#eedcbf] py-20 px-4 border-b-8 border-amber-600/40 overflow-hidden flex flex-col items-center text-center">
         {/* Background Mandala overlay */}
-        <div 
-          className="absolute inset-0 opacity-10 pointer-events-none"
-          style={{ 
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 30c0-16.57 13.43-30 30-30v60c-16.57 0-30-13.43-30-30zM0 30c0 16.57 13.43 30 30 30V0C13.43 0 0 13.43 0 30z' fill='%23eedcbf' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E")`,
-            backgroundSize: '60px 60px'
-          }}
-        ></div>
+        
         
         <h1 className="relative z-10 text-5xl md:text-7xl font-rozha mb-4 tracking-wide drop-shadow-lg">
           {t('gallery.pageTitle')}

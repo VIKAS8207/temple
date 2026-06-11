@@ -49,7 +49,7 @@ export default function Home() {
 
             {/* Bigger Text */}
             <h2 className="text-4xl md:text-5xl font-rozha text-[#8B3A2B] font-bold tracking-wide drop-shadow-md whitespace-nowrap">
-              नगर शक्ति पीठ
+            {t('hero.templeTrust')}
             </h2>
 
             {/* Right Flower SVG */}

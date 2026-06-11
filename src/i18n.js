@@ -14,7 +14,8 @@ const resources = {
         lucky: "Lucky Draw",
         donate: "Donate",
         contact: "Contact",
-        seva: "Serve"
+        seva: "Seva",
+        register: "Registration number"                    
       },
       hero: {
         templeName: "Shri Badi matha Temple",
@@ -23,7 +24,8 @@ const resources = {
         slogan3: "Sharanye Tryambake Gauri",
         slogan4: "Narayani Namostute ||",
         description: "Join us in our daily aartis, seek divine blessings, and participate in personalized temple sevas.",
-        poojaSeva: "Pooja Seva"
+        poojaSeva: "Pooja Seva",
+        templeTrust: "Nagar Shakti Peeth"
       },
       action: {
         btn1: "Get Online Coupon",
@@ -119,18 +121,6 @@ const resources = {
         prizeTV: "TV",
         prizePhone: "Smartphone"
       },
-      // Add these to both 'en' and 'hi' sections
-        donate: {
-          formTitle: "Donation & Seva Offering",
-          name: "Full Name",
-          phone: "Mobile Number",
-          anonymous: "Donate Anonymously",
-          selectSeva: "Select Seva Type",
-          others: "Others",
-          specify: "Please specify the seva",
-          amount: "Amount (₹)",
-          payNow: "Pay Now"
-      },
       founders: {
         title: "Our Visionaries",
         subtitle: "The guiding lights and founding pillars who established the divine foundation of Shri Badimatha Temple.",
@@ -162,8 +152,101 @@ const resources = {
         colTicket: "Ticket No.",
         colName: "Winner Name",
         colLocation: "Location",
-        noResults: "No matching ticket found. Please check your coupon number."
+        noResults: "No matching ticket found. Please check your coupon number.",
+        couponBannerTitle: "Participate in the Lucky Draw",
+        couponBannerDesc: "Get your coupon today! Support the temple's development and stand a chance to win spectacular prizes.",
+        couponPriceLabel: "Coupon Amount",
+        couponBuyBtn: "Buy Coupon Now"
       },
+      donate: {
+        // Merged Form Translations
+        formTitle: "Donation & Seva Offering",
+        name: "Full Name",
+        phone: "Mobile Number",
+        anonymous: "Donate Anonymously",
+        selectSeva: "Select Seva Type",
+        specify: "Please specify the seva",
+        amount: "Amount (₹)",
+        payNow: "Pay Now",
+        
+        // Merged Category Translations
+        pageTitle: "Daily & Special Sevas",
+        subtitle: "Become a partner in the divine sevas of Maa Badi Mata",
+        genericDesc: "Contribute to this holy seva and receive the divine blessings of Mata Rani.",
+        bookBtn: "Book Seva",
+        others: "Others",
+        
+        // Parent Categories
+        catDainik: "Daily Seva",
+        catTuesdaySpecial: "Tuesday Special Sevas",
+        catTuesdayBhandara: "Tuesday Bhandara Seva",
+        catKalash: "Kalash Sthapana",
+        catAbhishek: "Abhishek Pujan",
+        catJaap: "Jaap Seva",
+        catArchan: "Archan Seva",
+        catVastra: "Vastra Seva",
+        catShringar: "Shringar Seva",
+        catNavratri: "Navratri Festival",
+        catGau: "Gau-Seva (Cow Care)",
+
+        // Daily Sub-Sevas
+        subDainik1: "Akhand Deep Seva",
+        subDainik2: "Pushpa Seva (Flowers)",
+        subDainik3: "Bhog Seva (Offerings)",
+        subDainik4: "Aarti Seva",
+        subDainik5: "Vastra Seva (Clothing)",
+        subDainik6: "Daily Shringar Seva",
+        subDainik7: "Annadaan Seva (Food Donation)",
+        subDainik8: "Special Sankalp Puja",
+
+        // Tuesday Special Sub-Sevas
+        subTueSp1: "Tuesday Special Abhishek",
+        subTueSp2: "Mangal Paath",
+        subTueSp3: "Special Tuesday Aarti",
+        subTueSp4: "Prasad Seva",
+        subTueSp5: "Sankalp Puja",
+
+        // Tuesday Bhandara Sub-Sevas
+        subTueBh1: "Full Bhandara Sponsorship",
+        subTueBh2: "Partial Bhandara Sponsorship",
+        subTueBh3: "Prasad Distribution",
+        subTueBh4: "Annadaan (Grain Donation)",
+
+        // Kalash & Abhishek Sub-Sevas
+        subKalash1: "Sacred Kalash Sthapana",
+        subAbhishek1: "Maha Abhishek Pujan",
+
+        // Jaap Sub-Sevas
+        subJaap1: "Durga Saptashati Paath",
+        subJaap2: "Navchandi Paath",
+        subJaap3: "Special Jaap & Chanting",
+
+        // Archan Sub-Sevas
+        subArchan1: "Pushpa Archan",
+        subArchan2: "Kumkum Archan",
+        subArchan3: "Fruit Offering",
+        subArchan4: "Sindoor Archan",
+        subArchan5: "Dry Fruits Offering",
+
+        // Vastra & Shringar Sub-Sevas
+        subVastra1: "Divine Dress Offering",
+        subShringar1: "Maha Shringar Shobha",
+
+        // Navratri Festival Sub-Sevas
+        subNavratri1: "Akhand Jyoti Puja",
+        subNavratri2: "Navratri Durga Saptashati",
+        subNavratri3: "Kanya Pujan Seva",
+        subNavratri4: "Navratri Maha Abhishek",
+        subNavratri5: "Navratri Special Shringar",
+        subNavratri6: "Navratri Annadaan Mahotsav",
+        subNavratri7: "Navratri Kalash Sthapana",
+
+        // Gau-Seva Sub-Sevas
+        subGau1: "Green Fodder (Chara) Seva",
+        subGau2: "Gau Bhojan (Cow Meals)",
+        subGau3: "Medical Assistance Supply",
+        subGau4: "Gau Shala Shelter Support"
+      }
     }
   },
   hi: {
@@ -174,10 +257,11 @@ const resources = {
         timing: "दर्शन का समय",
         gallery: "गैलरी",
         news: "समाचार और घटनाएँ",
-        lucky: "लकी ड्रॉ",
-        donate: "दान कर",
+        lucky: "भाग्यशाली भक्त उपहार योजना",
+        donate: "दान करें",
         contact: "संपर्क करें",
-        seva: "सेवा"
+        seva: "सेवा",
+        register: "पंजीयन क्रमांक" 
       },
       hero: {
         templeName: "श्री बड़ी माता मंदिर",
@@ -186,7 +270,8 @@ const resources = {
         slogan3: "शरण्ये त्र्यम्बके गौरि",
         slogan4: "नारायणि नमोऽस्तु ते ॥",
         description: "हमारी दैनिक आरती में सम्मिलित हों, ईश्वरीय आशीर्वाद प्राप्त करें, और मंदिर की विशेष सेवाओं में हिस्सा लें।",
-        poojaSeva: "पूजा सेवा"
+        poojaSeva: "पूजा सेवा",
+        templeTrust: "नगर शक्ति पीठ"
       },
       action: {
         btn1: "ऑनलाइन कूपन प्राप्त करें",
@@ -282,18 +367,6 @@ const resources = {
         prizeTV: "टीवी",
         prizePhone: "स्मार्टफोन"
       },
-      // 'hi' (Hindi) section में इन्हें जोड़ें:
-donate: {
-  formTitle: "दान एवं सेवा अर्पण",
-  name: "पूरा नाम",
-  phone: "मोबाइल नंबर",
-  anonymous: "गुमनाम दान (Anonymous Donation)",
-  selectSeva: "सेवा का प्रकार चुनें",
-  others: "अन्य (Others)",
-  specify: "कृपया सेवा बताएं",
-  amount: "राशि (₹)",
-  payNow: "भुगतान करें (Pay Now)"
-},
       founders: {
         title: "हमारे संस्थापक",
         subtitle: "वे मार्गदर्शक और संस्थापक स्तंभ जिन्होंने श्री बड़ीमाता मंदिर की दिव्य नींव स्थापित की।",
@@ -316,7 +389,7 @@ donate: {
         slide3Sub: "हमारे निरंतर भोजन वितरण अभियानों के माध्यम से मानवता की सेवा।"
       },
       winners: {
-        title: "लकी ड्रॉ विजेता",
+        title: "भाग्यशाली भक्त उपहार योजना",
         subtitle: "परिणाम जांचें और देखें कि क्या आपका टिकट माँ की कृपा से चुना गया है!",
         searchPlaceholder: "कूपन नंबर खोजें...",
         prevWinnersBtn: "पिछले विजेता देखें",
@@ -325,12 +398,104 @@ donate: {
         colTicket: "टिकट नं.",
         colName: "विजेता का नाम",
         colLocation: "स्थान",
-        noResults: "कोई मेल खाता हुआ टिकट नहीं मिला। कृपया अपना कूपन नंबर जांचें।"
+        noResults: "कोई मेल खाता हुआ टिकट नहीं मिला। कृपया अपना कूपन नंबर जांचें।",
+        couponBannerTitle: "लकी ड्रॉ में भाग लें",
+        couponBannerDesc: "आज ही अपना कूपन प्राप्त करें! मंदिर नवनिर्माण में सहयोग करें और शानदार पुरस्कार जीतने का अवसर पाएं।",
+        couponPriceLabel: "कूपन राशि",
+        couponBuyBtn: "अभी कूपन खरीदें"
       },
+      donate: {
+        // Merged Form Translations
+        formTitle: "दान एवं सेवा अर्पण",
+        name: "पूरा नाम",
+        phone: "मोबाइल नंबर",
+        anonymous: "गुमनाम दान (Anonymous Donation)",
+        selectSeva: "सेवा का प्रकार चुनें",
+        specify: "कृपया सेवा बताएं",
+        amount: "राशि (₹)",
+        payNow: "भुगतान करें (Pay Now)",
+        
+        // Merged Category Translations
+        pageTitle: "दैनिक एवं विशेष सेवाएँ",
+        subtitle: "माँ बड़ी माता की सेवाओं में सहभागी बनें",
+        genericDesc: "इस पवित्र सेवा में अपना योगदान दें और माता का आशीर्वाद प्राप्त करें।",
+        bookBtn: "बुक करें",
+        others: "अन्य (Others)",
+        
+        // Parent Categories
+        catDainik: "दैनिक सेवा",
+        catTuesdaySpecial: "मंगलवार विशेष सेवाएँ",
+        catTuesdayBhandara: "मंगलवार भंडारा सेवा",
+        catKalash: "कलश स्थापना",
+        catAbhishek: "अभिषेक पूजन",
+        catJaap: "जाप सेवा",
+        catArchan: "अर्चन सेवा",
+        catVastra: "वस्त्र सेवा",
+        catShringar: "श्रृंगार सेवा",
+        catNavratri: "नवरात्रि महोत्सव",
+        catGau: "गौ-सेवा",
+
+        // Daily Sub-Sevas
+        subDainik1: "अखंड दीप सेवा",
+        subDainik2: "पुष्प सेवा",
+        subDainik3: "भोग सेवा",
+        subDainik4: "आरती सेवा",
+        subDainik5: "वस्त्र सेवा",
+        subDainik6: "दैनिक श्रृंगार सेवा",
+        subDainik7: "अन्नदान सेवा",
+        subDainik8: "विशेष संकल्प सेवा",
+
+        // Tuesday Special Sub-Sevas
+        subTueSp1: "मंगलवार विशेष अभिषेक",
+        subTueSp2: "मंगल पाठ",
+        subTueSp3: "विशेष आरती",
+        subTueSp4: "प्रसाद सेवा",
+        subTueSp5: "संकल्प पूजा",
+
+        // Tuesday Bhandara Sub-Sevas
+        subTueBh1: "संपूर्ण भंडारा",
+        subTueBh2: "आंशिक भंडारा",
+        subTueBh3: "प्रसाद वितरण",
+        subTueBh4: "अन्नदान",
+
+        // Kalash & Abhishek Sub-Sevas
+        subKalash1: "कलश स्थापना",
+        subAbhishek1: "अभिषेक पूजन",
+
+        // Jaap Sub-Sevas
+        subJaap1: "दुर्गा सप्तशती पाठ",
+        subJaap2: "नवचंडी पाठ",
+        subJaap3: "विशेष जाप",
+
+        // Archan Sub-Sevas
+        subArchan1: "पुष्प अर्चन",
+        subArchan2: "कुमकुम अर्चन",
+        subArchan3: "फल अर्पण",
+        subArchan4: "सिंदूर अर्पण",
+        subArchan5: "सूखे मेवे अर्पण",
+
+        // Vastra & Shringar Sub-Sevas
+        subVastra1: "वस्त्र सेवा",
+        subShringar1: "श्रृंगार सेवा",
+
+        // Navratri Festival Sub-Sevas
+        subNavratri1: "अखंड ज्योति",
+        subNavratri2: "दुर्गा सप्तशती पाठ",
+        subNavratri3: "कन्या पूजन",
+        subNavratri4: "विशेष अभिषेक",
+        subNavratri5: "श्रृंगार सेवा",
+        subNavratri6: "अन्नदान",
+        subNavratri7: "कलश स्थापना",
+
+        // Gau-Seva Sub-Sevas
+        subGau1: "चारा सेवा",
+        subGau2: "गौ भोजन",
+        subGau3: "चिकित्सा सहायता",
+        subGau4: "गौ आश्रय सहयोग"
+      }
     }
   }
 };
-
 
 i18n
   .use(initReactI18next)

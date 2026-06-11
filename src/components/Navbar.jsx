@@ -29,6 +29,9 @@ export default function Navbar() {
           
           {/* Language Toggles triggering i18n */}
           <div className="flex items-center gap-3 font-semibold">
+            <span className="hidden sm:inline">{t('nav.register')}</span>
+            <span className="hidden sm:inline">61/2019</span>
+            <span className="text-red-800">|</span>
             <button 
               onClick={() => changeLanguage('en')} 
               className={`transition-colors ${i18n.language === 'en' ? 'text-amber-400' : 'hover:text-amber-400'}`}
@@ -83,14 +86,14 @@ export default function Navbar() {
                 <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
               </Link>
 
-              <Link to="/about" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
-                {t('nav.about')}
-                <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
-              </Link>
-
               <Link to="/lucky-draw" className="relative group text-yellow-300 animate-pulse hover:text-yellow-200 transition-colors drop-shadow-md py-1">
                 {t('nav.lucky')}
                 <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-300 transition-all duration-300 group-hover:w-full"></div>
+              </Link>
+
+              <Link to="/about" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
+                {t('nav.about')}
+                <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
               </Link>
 
               <Link to="/gallery" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
@@ -117,8 +120,6 @@ export default function Navbar() {
 
             {/* Action Buttons */}
             <div className="hidden lg:flex items-center gap-4 shrink-0">
-              
-              {/* Changed from <button> to <Link> and added to="/donate" */}
               <Link 
                 to="/serve"
                 className="bg-gradient-to-r from-amber-400 to-yellow-500 text-red-950 px-6 py-2 rounded-full font-bold shadow-lg hover:shadow-amber-500/30 hover:from-amber-300 hover:to-yellow-400 transition-all duration-300 transform hover:-translate-y-0.5 border border-amber-200"

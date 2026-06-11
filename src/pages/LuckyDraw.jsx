@@ -44,7 +44,7 @@ export default function LuckyDraw() {
 
       {/* 2. MAIN HEADING */}
       <div className="text-center z-10 max-w-3xl mx-auto mb-10">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-aparajita text-[#8B3A2B] font-bold mb-4 leading-tight drop-shadow-sm">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-rozha text-[#8B3A2B] font-bold mb-4 leading-tight drop-shadow-sm">
           {t('luckyNew.mainHeading', 'भाग्यशाली भक्त उपहार योजना')}
         </h1>
         <p className="text-stone-600 font-medium md:text-lg mb-8 max-w-xl mx-auto">
@@ -89,7 +89,7 @@ export default function LuckyDraw() {
           {/* Shine sweep effect */}
           <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"></div>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" /></svg>
-          <span className="font-aparajita font-bold text-2xl tracking-wide">
+          <span className="font-rozha font-bold text-2xl tracking-wide">
             {t('luckyNew.bookBtn', 'कूपन बुक करें')}
           </span>
         </button>
@@ -107,7 +107,7 @@ export default function LuckyDraw() {
               <span className="text-amber-400 font-bold tracking-[0.2em] uppercase text-xs mb-2">
                 {t('luckyNew.ticketTag', 'सहयोग रसीद')}
               </span>
-              <h2 className="text-2xl sm:text-3xl font-aparajita font-bold text-white leading-tight">
+              <h2 className="text-2xl sm:text-3xl font-rozha font-bold text-white leading-tight">
                 {t('luckyNew.mainHeading', 'भाग्यशाली भक्त उपहार योजना')}
               </h2>
               <p className="text-amber-100/70 text-sm mt-2 font-medium">
