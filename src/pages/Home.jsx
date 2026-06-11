@@ -136,7 +136,7 @@ export default function Home() {
             />
             
             {/* Fixed sizing wrapper with adaptive layout sizes */}
-            <p className={`text-stone-700 font-aparajita mb-8 max-w-[280px] md:max-w-[320px] break-words hyphens-auto leading-relaxed
+            <p className={`text-stone-700 font-rozha mb-8 max-w-[280px] md:max-w-[320px] break-words hyphens-auto leading-relaxed
                 ${isEnglish ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
               {t('hero.description')}
             </p>

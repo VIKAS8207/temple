@@ -27,25 +27,25 @@ export default function ActionButtons() {
         {/* Button 1: Temple Construction */}
         <button className={buttonClasses}>
           <LotusIcon />
-          <span className="font-aparajita font-bold text-xl sm:text-2xl tracking-wide drop-shadow-sm">{t('action.btn1')}</span>
+          <span className="font-rozha  text-xl sm:text-2xl tracking-wide drop-shadow-sm">{t('action.btn1')}</span>
         </button>
 
         {/* Button 2: Get Online Coupon */}
         <button className={buttonClasses}>
           <LotusIcon />
-          <span className="font-aparajita font-bold text-xl sm:text-2xl tracking-wide drop-shadow-sm">{t('action.btn2')}</span>
+          <span className="font-rozha  text-xl sm:text-2xl tracking-wide drop-shadow-sm">{t('action.btn2')}</span>
         </button>
 
         {/* Button 3: Donate Online */}
         <button className={buttonClasses}>
           <LotusIcon />
-          <span className="font-aparajita font-bold text-xl sm:text-2xl tracking-wide drop-shadow-sm">{t('action.btn3')}</span>
+          <span className="font-rozha  text-xl sm:text-2xl tracking-wide drop-shadow-sm">{t('action.btn3')}</span>
         </button>
 
         {/* Button 4: Book Seva */}
         <button className={buttonClasses}>
           <LotusIcon />
-          <span className="font-aparajita font-bold text-xl sm:text-2xl tracking-wide drop-shadow-sm">{t('action.btn4')}</span>
+          <span className="font-rozha  text-xl sm:text-2xl tracking-wide drop-shadow-sm">{t('action.btn4')}</span>
         </button>
 
       </div>
