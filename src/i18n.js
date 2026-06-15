@@ -245,7 +245,34 @@ const resources = {
         subGau1: "Green Fodder (Chara) Seva",
         subGau2: "Gau Bhojan (Cow Meals)",
         subGau3: "Medical Assistance Supply",
-        subGau4: "Gau Shala Shelter Support"
+        subGau4: "Gau Shala Shelter Support",
+
+        pageTitle: "Temple Construction Donation",
+        subtitle: "Building a Divine Legacy",
+        tagline: "“One Pillar – One Family”",
+        slogan: "Temple construction is not just building a structure, but creating an immortal legacy of Sanatan culture for future generations.",
+        step1: "Select Construction Part",
+        step2: "Your Details",
+        step3: "Donation Amount",
+        selectAlert: "Please select a construction category to proceed.",
+        payNow: "Offer Contribution",
+        
+        // Causes
+        causePillar: "Pillar Donation",
+        descPillar: "Contribute to the main temple pillars",
+        causeGarbha: "Sanctum Sanctorum",
+        descGarbha: "Contribution for Mata's main shrine",
+        causeShikhar: "Spire Construction",
+        descShikhar: "Support for the highest temple spire",
+        causeSabha: "Assembly Hall",
+        descSabha: "Grand hall for devotee seating",
+        causeAnna: "Food Pavilion",
+        descAnna: "Mahaprasad & Bhandara building",
+        causeGau: "Cow Shelter",
+        descGau: "For the shelter & care of Gau Mata",
+
+        donateBtn : "अभी सहयोग करें"
+
       }
     }
   },
@@ -258,7 +285,7 @@ const resources = {
         gallery: "गैलरी",
         news: "समाचार और घटनाएँ",
         lucky: "भाग्यशाली भक्त उपहार योजना",
-        donate: "दान करें",
+        donate: "मंदिर निर्माण महाअभियान",
         contact: "संपर्क करें",
         seva: "सेवा",
         register: "पंजीयन क्रमांक" 
@@ -491,7 +518,33 @@ const resources = {
         subGau1: "चारा सेवा",
         subGau2: "गौ भोजन",
         subGau3: "चिकित्सा सहायता",
-        subGau4: "गौ आश्रय सहयोग"
+        subGau4: "गौ आश्रय सहयोग",
+
+        // Temple Construction Specifics
+        pageTitle: "मंदिर निर्माण सहयोग",
+        subtitle: "एक दिव्य विरासत का निर्माण",
+        tagline: "“एक आधार स्तंभ – एक परिवार”",
+        slogan: "मंदिर निर्माण केवल भवन निर्माण नहीं बल्कि आने वाली पीढ़ियों के लिए सनातन संस्कृति की अमर विरासत का निर्माण है।",
+        step1: "सहयोग श्रेणी चुनें",
+        step2: "आपका विवरण",
+        step3: "सहयोग राशि",
+        selectAlert: "कृपया आगे बढ़ने के लिए एक सहयोग श्रेणी चुनें।",
+        payNow: "सहयोग अर्पण करें",
+        
+        // Causes
+        causePillar: "आधार स्तंभ दान",
+        descPillar: "मंदिर के मुख्य स्तंभों में अपना नाम अंकित करें",
+        causeGarbha: "गर्भगृह सहयोग",
+        descGarbha: "माता के मुख्य गर्भगृह निर्माण में आहुति",
+        causeShikhar: "शिखर निर्माण सहयोग",
+        descShikhar: "मंदिर के सर्वोच्च शिखर के लिए सहयोग",
+        causeSabha: "सभा मंडप सहयोग",
+        descSabha: "भक्तों के बैठने हेतु विशाल मंडप",
+        causeAnna: "अन्नक्षेत्र सहयोग",
+        descAnna: "महाप्रसाद एवं दैनिक भंडारा भवन",
+        causeGau: "गौशाला सहयोग",
+        descGau: "गौ माता के आश्रय एवं सेवा हेतु",
+        donateBtn : "अभी सहयोग करें"
       }
     }
   }
