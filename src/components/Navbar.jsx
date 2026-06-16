@@ -51,14 +51,17 @@ export default function Navbar() {
       </div>
 
       {/* 2. MAIN NAVBAR */}
-      <nav className="relative text-amber-50 overflow-hidden"> 
+      <nav className="relative text-amber-50"> 
         
-        <img 
-          src="/image/Nav1.webp" 
-          alt="Temple Texture"
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
-        />
-        <div className="absolute inset-0 bg-red-950/85 pointer-events-none z-0 mix-blend-multiply"></div>
+        {/* Background container separated safely */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+          <img 
+            src="/image/Nav1.webp" 
+            alt="Temple Texture"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-red-950/85 mix-blend-multiply"></div>
+        </div>
 
         {/* Content Container */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,8 +81,8 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Desktop Navigation Links (Written out line by line) */}
-            <div className="hidden lg:flex space-x-6 items-center text-sm font-medium tracking-wide">
+            {/* Desktop Navigation Links */}
+            <div className="hidden lg:flex space-x-6 items-center text-sm font-medium tracking-wide relative">
               
               <Link to="/" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
                 {t('nav.home')}
@@ -91,10 +94,30 @@ export default function Navbar() {
                 <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-300 transition-all duration-300 group-hover:w-full"></div>
               </Link>
 
-              <Link to="/about" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
-                {t('nav.about')}
-                <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
-              </Link>
+              {/* ABOUT US - DROPDOWN MENU */}
+              <div className="relative group">
+                {/* Removed py-6, just kept normal padding */}
+                <button className="relative text-amber-50 group-hover:text-amber-300 transition-colors drop-shadow-md flex items-center gap-1 py-1">
+                  {t('nav.about')}
+                  <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" /></svg>
+                  <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
+                </button>
+
+                {/* THE INVISIBLE HOVER BRIDGE: pt-5 creates a transparent area the mouse can travel across safely */}
+                <div className="absolute left-1/2 -translate-x-1/2 top-full w-64 pt-5 z-50 invisible opacity-0 translate-y-3 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out">
+                  <div className="bg-red-950/95 backdrop-blur-md border border-red-900/50 rounded-xl shadow-2xl py-2 overflow-hidden flex flex-col">
+                    <Link to="/about/history" className="px-5 py-3 text-sm text-amber-100/90 hover:text-amber-400 hover:bg-red-900/40 transition-colors border-b border-red-900/30">
+                      {t('nav.aboutHistory')}
+                    </Link>
+                    <Link to="/about/nirman" className="px-5 py-3 text-sm text-amber-100/90 hover:text-amber-400 hover:bg-red-900/40 transition-colors border-b border-red-900/30">
+                      {t('nav.aboutNirman')}
+                    </Link>
+                    <Link to="/about/trustees" className="px-5 py-3 text-sm text-amber-100/90 hover:text-amber-400 hover:bg-red-900/40 transition-colors">
+                      {t('nav.aboutTrustees')}
+                    </Link>
+                  </div>
+                </div>
+              </div>
 
               <Link to="/gallery" className="relative group text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md py-1">
                 {t('nav.gallery')}

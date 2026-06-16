@@ -39,55 +39,7 @@ export default function WinnerList() {
 
       <div className="max-w-5xl mx-auto relative z-10">
         
-        {/* ========================================= */}
-        {/* NEW: TOP COUPON PROMO BANNER SECTION */}
-        {/* ========================================= */}
-        <div className="mb-20 relative bg-gradient-to-r from-amber-500 to-[#8B3A2B] rounded-3xl p-1 shadow-2xl overflow-hidden hover:scale-[1.01] transition-transform duration-500">
-          
-          {/* Dashed inner border for a realistic ticket look */}
-          <div className="border-[3px] border-dashed border-white/40 rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative bg-white/10 backdrop-blur-sm">
-            
-            {/* Ticket Perforated Cutouts on the left and right */}
-            <div className="absolute top-1/2 -left-4 -translate-y-1/2 w-8 h-8 bg-[#f8f5f0] rounded-full shadow-[inset_-3px_0_5px_rgba(0,0,0,0.1)]"></div>
-            <div className="absolute top-1/2 -right-4 -translate-y-1/2 w-8 h-8 bg-[#f8f5f0] rounded-full shadow-[inset_3px_0_5px_rgba(0,0,0,0.1)]"></div>
-
-            {/* Banner Text Info */}
-            <div className="text-center md:text-left flex-1 px-4">
-              <span className="inline-block bg-amber-200 text-orange-950 text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4">
-                Grand Prize Awaits
-              </span>
-              <h3 className="text-3xl md:text-4xl font-rozha font-bold text-white mb-3 leading-tight drop-shadow-md">
-                {t('winners.couponBannerTitle')}
-              </h3>
-              <p className="text-amber-100/90 text-sm md:text-base font-medium max-w-lg mx-auto md:mx-0">
-                {t('winners.couponBannerDesc')}
-              </p>
-            </div>
-
-            {/* Divider for Mobile */}
-            <div className="w-full h-px border-t border-dashed border-white/40 md:hidden"></div>
-
-            {/* Price & Action Button Area */}
-            <div className="flex flex-col items-center bg-white rounded-2xl p-6 shadow-xl shrink-0 md:-rotate-2 border-2 border-amber-100 z-10">
-              <span className="text-stone-400 text-xs font-bold uppercase tracking-widest mb-1">
-                {t('winners.couponPriceLabel')}
-              </span>
-              <span className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-500 drop-shadow-sm mb-5">
-                ₹500
-              </span>
-              
-              {/* This links the user to your payment / lucky draw routing */}
-              <Link to="/lucky-draw" className="bg-gradient-to-r from-orange-600 to-amber-600 text-white font-bold py-3.5 px-8 rounded-xl shadow-lg hover:shadow-orange-500/40 hover:-translate-y-1 transition-all w-full text-center flex items-center justify-center gap-2 group">
-                {t('winners.couponBuyBtn')}
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-              </Link>
-            </div>
-
-          </div>
-        </div>
-        {/* ========================================= */}
-
-
+        
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center gap-3 mb-4">
@@ -225,7 +177,56 @@ export default function WinnerList() {
               </tbody>
             </table>
           </div>
+          
         </div>
+        
+        {/* ========================================= */}
+        {/* NEW: TOP COUPON PROMO BANNER SECTION */}
+        {/* ========================================= */}
+        <div className="mt-15 mb-20 relative bg-gradient-to-r from-amber-500 to-[#8B3A2B] rounded-3xl p-1 shadow-2xl overflow-hidden hover:scale-[1.01] transition-transform duration-500">
+          
+          {/* Dashed inner border for a realistic ticket look */}
+          <div className="border-[3px] border-dashed border-white/40 rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative bg-white/10 backdrop-blur-sm">
+            
+            {/* Ticket Perforated Cutouts on the left and right */}
+            <div className="absolute top-1/2 -left-4 -translate-y-1/2 w-8 h-8 bg-[#f8f5f0] rounded-full shadow-[inset_-3px_0_5px_rgba(0,0,0,0.1)]"></div>
+            <div className="absolute top-1/2 -right-4 -translate-y-1/2 w-8 h-8 bg-[#f8f5f0] rounded-full shadow-[inset_3px_0_5px_rgba(0,0,0,0.1)]"></div>
+
+            {/* Banner Text Info */}
+            <div className="text-center md:text-left flex-1 px-4">
+              <span className="inline-block bg-amber-200 text-orange-950 text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+                Grand Prize Awaits
+              </span>
+              <h3 className="text-3xl md:text-4xl font-rozha font-bold text-white mb-3 leading-tight drop-shadow-md">
+                {t('winners.couponBannerTitle')}
+              </h3>
+              <p className="text-amber-100/90 text-sm md:text-base font-medium max-w-lg mx-auto md:mx-0">
+                {t('winners.couponBannerDesc')}
+              </p>
+            </div>
+
+            {/* Divider for Mobile */}
+            <div className="w-full h-px border-t border-dashed border-white/40 md:hidden"></div>
+
+            {/* Price & Action Button Area */}
+            <div className="flex flex-col items-center bg-white rounded-2xl p-6 shadow-xl shrink-0 md:-rotate-2 border-2 border-amber-100 z-10">
+              <span className="text-stone-400 text-xs font-bold uppercase tracking-widest mb-1">
+                {t('winners.couponPriceLabel')}
+              </span>
+              <span className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-500 drop-shadow-sm mb-5">
+                ₹500
+              </span>
+              
+              {/* This links the user to your payment / lucky draw routing */}
+              <Link to="/lucky-draw" className="bg-gradient-to-r from-orange-600 to-amber-600 text-white font-bold py-3.5 px-8 rounded-xl shadow-lg hover:shadow-orange-500/40 hover:-translate-y-1 transition-all w-full text-center flex items-center justify-center gap-2 group">
+                {t('winners.couponBuyBtn')}
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </Link>
+            </div>
+
+          </div>
+        </div>
+        {/* ========================================= */}
 
       </div>
     </section>

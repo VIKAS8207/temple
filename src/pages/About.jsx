@@ -1,5 +1,6 @@
 // src/pages/About.jsx
 import { useTranslation } from 'react-i18next';
+import Founders from "../components/Founders";
 
 export default function About() {
   const { t } = useTranslation();
@@ -71,6 +72,8 @@ export default function About() {
         </div>
 
       </div>
+
+      <Founders />
     </div>
   );
 }

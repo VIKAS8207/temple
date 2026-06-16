@@ -1,18 +1,44 @@
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import ActionButtons from "../components/ActionButtons";
 import TempleStats from "../components/TempleStats";
 import TempleTiming from "../components/TempleTiming";
-import Founders from "../components/Founders";
 import TempleCarousel from "../components/TempleCarousel";
 import WinnerList from "../components/WinnerList";
-import CursorTrail from "../components/CursorTrail"; // IMPORTED TRAIL
+import CursorTrail from "../components/CursorTrail"; 
 
 export default function Home() {
   // Initialize the translation hook
   const { t, i18n } = useTranslation();
-
-  // FIX: Defining the missing variable to look for English locale variants
   const isEnglish = i18n.language?.startsWith('en');
+
+  // --- HERO CAROUSEL STATE & LOGIC ---
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // You can update the image paths here to match your actual files
+  const heroSlides = [
+    { img: "/image/Hero2.png", hi: "लक्ष्मी माता", en: "Laxmi Mata" },
+    { img: "/image/Hero1.png", hi: "सरस्वती माता", en: "Saraswati Mata" }, // Ensure you have this image
+    { img: "/image/Hero.png", hi: "दुर्गा माता", en: "Durga Mata" },       // Ensure you have this image
+  ];
+
+  // Random static positions and animation delays for the twinkling stars
+  const starPositions = [
+    { top: '10%', left: '5%', delay: '0s', duration: '1.5s' },
+    { top: '25%', right: '-5%', delay: '0.5s', duration: '2s' },
+    { top: '50%', left: '-8%', delay: '0.2s', duration: '1.8s' },
+    { bottom: '20%', right: '8%', delay: '0.8s', duration: '1.6s' },
+    { top: '-5%', right: '20%', delay: '1s', duration: '2.2s' },
+    { bottom: '10%', left: '15%', delay: '0.4s', duration: '1.4s' }
+  ];
+
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 3000); // Changes every 3 seconds
+
+    return () => clearInterval(slideInterval);
+  }, [heroSlides.length]);
 
   return (
     <div className="flex flex-col min-h-[100vh]">
@@ -33,9 +59,8 @@ export default function Home() {
         <div className="absolute top-8 md:top-14 left-1/2 -translate-x-1/2 z-30 w-full text-center px-4 ">
           <div className="flex items-center justify-center gap-3 md:gap-5">
             
-            
             {/* Left Flower SVG */}
-    <div className=" flex items-center justify-center lg:justify-start gap-6 sm:gap-8 text-orange-700/60">
+            <div className=" flex items-center justify-center lg:justify-start gap-6 sm:gap-8 text-orange-700/60">
               {[...Array(3)].map((_, i) => (
                 <svg key={i} viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-sm overflow-visible">
                   <path d="M12 22c0 0-8-5-8-12 0-3 1.5-5.5 3.5-8 1 4.5 4.5 7.5 4.5 10.5v9.5z" opacity="0.4" transform="rotate(-25 12 22)" />
@@ -68,7 +93,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Main Content Wrapper (Fixed mt-24 for mobile responsiveness) */}
+        {/* Main Content Wrapper */}
         <div className="relative w-full max-w-7xl mx-auto mt-34 md:mt-56 mb-12 flex flex-col lg:flex-row items-center justify-between gap-12 z-10">
           
           {/* === LEFT COLUMN === */}
@@ -97,16 +122,16 @@ export default function Home() {
 
           </div>
 
-          {/* === CENTER COLUMN (Image, Text, and Glows layered together) === */}
+          {/* === CENTER COLUMN (Image Carousel, Text, and Glows layered together) === */}
           <div className="relative flex items-center justify-center shrink-0 order-1 lg:order-2">
             
-            {/* LAYER 1: The Rotating Yellow Rays (z-10) */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] sm:w-[130%] max-w-[600px] aspect-square rounded-full bg-[repeating-conic-gradient(from_0deg,#fde047_0deg_15deg,#fbbf24_15deg_30deg)] blur-md animate-[spin_15s_linear_infinite] opacity-80 shadow-[0_0_40px_rgba(251,191,36,0.6)] z-10"></div>
+            {/* LAYER 1: The Rotating Yellow Rays (FIXED in background) (z-10) */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] sm:w-[130%] max-w-[600px] aspect-square rounded-full bg-[repeating-conic-gradient(from_0deg,#fde047_0deg_15deg,#fbbf24_15deg_30deg)] blur-md animate-[spin_15s_linear_infinite] opacity-80 shadow-[0_0_40px_rgba(251,191,36,0.6)] z-10 pointer-events-none"></div>
             
-            {/* LAYER 2: Inner ambient glow (z-10) */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] sm:w-[105%] max-w-[500px] aspect-square rounded-full bg-gradient-to-tr from-yellow-100 to-amber-200 animate-pulse opacity-70 blur-xl z-10"></div>
+            {/* LAYER 2: Inner ambient glow (FIXED in background) (z-10) */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] sm:w-[105%] max-w-[500px] aspect-square rounded-full bg-gradient-to-tr from-yellow-100 to-amber-200 animate-pulse opacity-70 blur-xl z-10 pointer-events-none"></div>
             
-            {/* LAYER 3: Sandwiched Giant Hindi Text (z-20) */}
+            {/* LAYER 3: Sandwiched Giant Text (FIXED in background) (z-20) */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
               <h1 className={`relative whitespace-nowrap select-none drop-shadow-md text-center font-rozha text-orange-950
                 ${isEnglish 
@@ -117,12 +142,41 @@ export default function Home() {
               </h1>
             </div>
 
-            {/* LAYER 4: The Center Image (z-30) */}
-            <img
-              src="/image/Hero.png" 
-              alt="Badimatha Temple"
-              className="relative z-30 w-64 sm:w-80 md:w-[28rem] h-auto object-cover"
-            />
+            {/* LAYER 4: The Animated Image Crossfade Carousel (z-30) */}
+            <div className="relative z-30 w-64 sm:w-80 md:w-[28rem] pb-4">
+              <div className="grid grid-cols-1 grid-rows-1">
+                {heroSlides.map((slide, index) => (
+                  <div 
+                    key={index} 
+                    className={`col-start-1 row-start-1 w-full flex flex-col items-center justify-center transition-opacity duration-1000 ease-in-out
+                      ${currentSlide === index ? 'opacity-100 z-10 relative' : 'opacity-0 z-0 pointer-events-none'}`}
+                  >
+                    <div className="relative">
+                      
+                      {/* Twinkling Stars Overlay */}
+                      {currentSlide === index && starPositions.map((star, i) => (
+                        <svg key={i} viewBox="0 0 24 24" fill="currentColor" 
+                             className="absolute text-yellow-300 w-6 h-6 drop-shadow-[0_0_8px_rgba(253,224,71,0.8)] z-40 animate-star"
+                             style={{ top: star.top, left: star.left, right: star.right, bottom: star.bottom, '--delay': star.delay, '--duration': star.duration }}>
+                          <path d="M12 2l2.4 7.6H22l-6 4.8 2.4 7.6-6.4-4.6-6.4 4.6 2.4-7.6-6-4.8h7.6z"/>
+                        </svg>
+                      ))}
+
+                      <img
+                        src={slide.img} 
+                        alt={slide.en}
+                        className="w-64 sm:w-80 md:w-[28rem] h-auto object-cover drop-shadow-2xl rounded-3xl"
+                      />
+                    </div>
+                    
+                    <div className="mt-6 text-center">
+                      <h3 className="font-rozha text-3xl md:text-4xl text-orange-950 font-bold drop-shadow-md mb-1">{slide.hi}</h3>
+                      <p className="font-rozha text-xl md:text-2xl text-orange-800 tracking-wide font-bold">{slide.en}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
             
           </div>
 
@@ -143,7 +197,7 @@ export default function Home() {
 
             {/* Pooja Seva Button (Animated Lotus Bloom) */}
             <button className="group relative flex items-center gap-3 bg-gradient-to-r from-orange-600 to-amber-600 text-white font-bold px-6 sm:px-8 py-3.5 rounded-full shadow-lg hover:shadow-orange-500/40 transition-all duration-500 overflow-visible">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 sm:w-6 sm:h-6 overflow-visible">
+               <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 sm:w-6 sm:h-6 overflow-visible">
                 <path d="M12 22c0 0-4-4.5-4-10.5 0-3.5 2-6.5 4-10.5 2 4 4 7 4 10.5 0 6-4 10.5-4 10.5z" className="z-10 relative" />
                 <path d="M12 22c0 0-4-4.5-4-10.5 0-3.5 2-6.5 4-10.5 2 4 4 7 4 10.5 0 6-4 10.5-4 10.5z" className="z-10 relative" />
                 <path d="M12 22c0 0-8-5-8-12 0-3 1.5-5.5 3.5-8 1 4.5 4.5 7.5 4.5 10.5v9.5z" className="origin-[12px_22px] transition-transform duration-500 ease-out group-hover:-rotate-[20deg]" opacity="0.8" />
@@ -164,8 +218,19 @@ export default function Home() {
       <TempleCarousel />
       <TempleStats />
       <WinnerList />   
-      <Founders />
+      
       <TempleTiming />
+
+      {/* --- INJECTED CSS FOR STAR TWINKLING ANIMATION --- */}
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes star-twinkle {
+          0%, 100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+          50% { opacity: 1; transform: scale(1.2) rotate(45deg); }
+        }
+        .animate-star {
+          animation: star-twinkle var(--duration) ease-in-out var(--delay) infinite;
+        }
+      `}} />
 
     </div>
   );

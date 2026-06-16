@@ -15,7 +15,11 @@ const resources = {
         donate: "Donate",
         contact: "Contact",
         seva: "Seva",
-        register: "Registration number"                    
+        register: "Registration number",  
+        
+        aboutHistory: "Mandir History",
+        aboutNirman: "Mandir Nirman Importance",
+        aboutTrustees: "Trustees",
       },
       hero: {
         templeName: "Shri Badi matha Temple",
@@ -288,7 +292,11 @@ const resources = {
         donate: "मंदिर निर्माण महाअभियान",
         contact: "संपर्क करें",
         seva: "सेवा",
-        register: "पंजीयन क्रमांक" 
+        register: "पंजीयन क्रमांक",
+
+        aboutHistory: "मंदिर का इतिहास",
+        aboutNirman: "मंदिर निर्माण का महत्व",
+        aboutTrustees: "ट्रस्टीगण",
       },
       hero: {
         templeName: "श्री बड़ी माता मंदिर",
