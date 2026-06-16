@@ -29,7 +29,11 @@ const resources = {
         slogan4: "Narayani Namostute ||",
         description: "Join us in our daily aartis, seek divine blessings, and participate in personalized temple sevas.",
         poojaSeva: "Pooja Seva",
-        templeTrust: "Nagar Shakti Peeth"
+        templeTrust: "Nagar Shakti Peeth",
+
+        slide1: "Laxmi Mata",
+        slide2: "Saraswati Mata",
+        slide3: "Durga Mata"
       },
       action: {
         btn1: "Get Online Coupon",
@@ -59,11 +63,20 @@ const resources = {
         aarti4: "Shayan Aarti"
       },
       about: {
-        pageTitle: "Our History & Heritage",
-        heading: "The Divine Origin of Badimatha",
-        desc1: "Established over centuries ago, the Shri Badimatha Temple stands as a beacon of spiritual strength and peace. The temple was born from the pure devotion of our ancestors, who witnessed the divine presence of Goddess Adi Shakti in this very soil.",
-        desc2: "Today, it serves thousands of devotees daily, providing not just a place for worship, but a sanctuary for the soul, a center for community service, and a preserver of ancient Vedic traditions.",
-        quote: "Where devotion is pure, the divine presence is eternal."
+        pageTitle: "Temple History & Legacy",
+        subtitle: "The Divine Origin of Maa Badi Mata",
+        genHeading: "Our Divine Heritage",
+        genDesc1: "For centuries, the Badi Mata Temple has stood as a beacon of faith, hope, and spiritual awakening. It is a sacred sanctuary where millions of devotees come to seek the boundless blessings and maternal grace of the Divine Mother.",
+        genDesc2: "The temple's glorious history is woven with modern miracles, deep devotion, and the unyielding faith of our ancestors who preserved this sacred space. Every corner of this temple resonates with cosmic energy and the silent prayers of true believers.",
+        mathaHeading: "The Three Divine Forms",
+        matha1Title: "Maa Badi Mata",
+        matha1Desc: "The supreme form of the Mother Goddess, radiating immense power and ultimate protection. She is the presiding deity, showering her children with endless grace and effortlessly destroying all obstacles in their path.",
+        matha2Title: "Maa Manjhli Mata",
+        matha2Desc: "The beautiful embodiment of wealth, prosperity, and nurturing love. Devotees earnestly seek her blessings for a life filled with abundance, family harmony, and untroubled peace.",
+        matha3Title: "Maa Chhoti Mata",
+        matha3Desc: "The radiant symbol of wisdom, purity, and spiritual enlightenment. She gently guides her devotees from darkness to light, granting supreme knowledge and ultimate liberation.",
+        slogan: "“Faith is not just believing that the Mother can, it is knowing that She will.”",
+        ctaBtn: "Explore News & Events"
       },
       gallery: {
         pageTitle: "Divine Gallery",
@@ -78,20 +91,25 @@ const resources = {
       },
       news: {
         pageTitle: "News & Events",
-        upcomingTitle: "Upcoming Events",
+        tabEvents: "Upcoming Events",
+        tabNews: "Latest News",
+        
+        // Events
+        event1Title: "Navratri Mahotsav Preparation",
+        event1Desc: "Join us for the grand preparation of the upcoming Navratri Mahotsav. Volunteers are welcome to participate in the decoration and arrangements.",
+        event2Title: "Special Bhandara Organization",
+        event2Desc: "A special community feast (Bhandara) is being organized. Devotees willing to contribute ingredients or volunteer can contact the trust office.",
+        readMore: "Read Details",
+        
+        // News
         latestNewsTitle: "Latest News",
-        event1Title: "Navratri Mahotsav Starts",
-        event1Desc: "Join us for 9 days of continuous devotion, special aarti, and traditional garba.",
-        event2Title: "Deepotsav Celebration",
-        event2Desc: "Experience the temple illuminated by thousands of diyas. Special pooja at 7 PM.",
-        readMore: "Read More",
-        readFullStory: "Read Full Story",
         tagCommunity: "Community",
         tagTemple: "Temple Update",
-        news1Title: "Food Distribution Drive Reaches 3 Lakh Milestone",
-        news1Desc: "With the blessings of Mata and the generous support of our devotees, our daily Bhandara has successfully served over 3 Lakh meals to those in need.",
-        news2Title: "New Temple Pavilion Construction Nears Completion",
-        news2Desc: "The new sitting area for devotees waiting for Darshan is in its final stages. It features traditional carvings and modern cooling systems."
+        news1Title: "Mega Food Distribution Drive Completed Successfully",
+        news1Desc: "Over 5,000 devotees were served Maha-Prasad during the recent drive. We thank all the donors and volunteers for their selfless service.",
+        news2Title: "Temple Shikhar Renovation Phase 1 Begins",
+        news2Desc: "The much-awaited renovation of the main temple Shikhar has officially begun. The architectural team aims to complete Phase 1 before Diwali.",
+        readFullStory: "Read Full Story"
       },
       contact: {
         pageTitle: "Contact Us",
@@ -111,32 +129,67 @@ const resources = {
         submit: "Send Message"
       },
       luckyNew: {
-        mainHeading: "Lucky Devotee Reward Scheme",
-        subtitle: "Support the temple's development and get a chance to win spectacular gifts.",
-        bookBtn: "Book Coupon",
-        ticketTag: "Contribution Receipt",
-        ticketDesc: "The reconstruction of the temple is possible only with your support.",
-        ticketPriceLabel: "Contribution Amount",
-        prizePlot: "Plot",
-        prizeGold: "Gold",
-        prizeBike: "Bike",
-        prizeCar: "Car",
-        prizeFridge: "Fridge",
-        prizeTV: "TV",
-        prizePhone: "Smartphone"
+        pageTitle: "Maa Badi Mata Lucky Devotee Gift Scheme",
+        prizePlot: "Plot up to ₹10 Lakhs",
+        prizeCar: "1 Car",
+        prizeRE: "1 Royal Enfield",
+        prizeChetak: "2 Bajaj Chetak EV",
+        prizeOther: "Many Attractive Prizes",
+        grandPrizesTag: "Grand Prizes",
+        prizeHeading: "Major Prizes",
+        introTag: "Introduction",
+        introQuote: "“Tomorrow, when the grand temple of Maa is complete, every devotee will be able to proudly say — I too have contributed to this.”",
+        introDetail: "About 65% of the temple construction work is already complete. This scheme has been launched to expedite the remaining construction work.",
+        objTitle: "Objective of the Scheme",
+        objText: "To encourage public contribution for the construction of the grand temple of Maa Badi Mata and to provide an opportunity for service, dedication, and participation to every devotee.",
+        joinTitle: "How can devotees join?",
+        joinText: "Participate in the scheme through a Mahadaan coupon of ₹500.",
+        getCouponTitle: "How to get a coupon?",
+        onlineMethod: "Online",
+        onlineStep1: "Fill Details",
+        onlineStep2: "Make Payment",
+        onlineStep3: "Get Digital Coupon",
+        offlineMethod: "Offline",
+        offlineStep1: "Temple Premises",
+        offlineStep2: "Trust Office",
+        offlineStep3: "Authorized Volunteers",
+        ctaBtn: "Get Coupon",
+        modalTitle: "Fill Receipt Details",
+        modalSubtitle: "Provide your details to get the coupon.",
+        modalNamePlaceholder: "Full Name",
+        modalPhonePlaceholder: "Mobile No.",
+        modalAmountLabel: "Contribution Amount:",
+        modalAmount: "₹500",
+        modalPayBtn: "Secure Payment",
+        modalAlert: "Redirecting to Payment Gateway..."
       },
       founders: {
-        title: "Our Visionaries",
-        subtitle: "The guiding lights and founding pillars who established the divine foundation of Shri Badimatha Temple.",
-        f1Name: "Shri Rajendra Sharma",
-        f1Role: "Chief Founder",
-        f1Desc: "Devoted his life to establishing the temple and spreading the message of peace and community service.",
-        f2Name: "Smt. Kamala Devi",
-        f2Role: "Chairperson",
-        f2Desc: "A beacon of compassion, leading the temple's daily Annadaan (food distribution) and charity initiatives.",
-        f3Name: "Shri Vikram Singh",
-        f3Role: "Head Trustee",
-        f3Desc: "Oversees the architectural preservation and spiritual administration of the temple trust."
+        title: "Trust Board",
+        subtitle: "Our dedicated members working towards the divine vision.",
+        
+        // Top 3 Leaders
+        f1Name: "Shri [Name Here]",
+        roleAdhyaks: "President",
+        f1Desc: "Guiding the temple trust with vision and dedication.",
+        
+        f2Name: "Shri [Name Here]",
+        roleSachiv: "Secretary",
+        f2Desc: "Managing the operational excellence and daily activities.",
+        
+        f3Name: "Shri [Name Here]",
+        roleKoshadhyksh: "Treasurer",
+        f3Desc: "Ensuring absolute transparency in all financial matters.",
+
+        // Committee Members
+        m1Name: "Shri [Member 1]",
+        m2Name: "Shri [Member 2]",
+        m3Name: "Shri [Member 3]",
+        m4Name: "Shri [Member 4]",
+        m5Name: "Shri [Member 5]",
+        m6Name: "Shri [Member 6]",
+        m7Name: "Shri [Member 7]",
+        m8Name: "Shri [Member 8]",
+        memberRole: "Committee Member"
       },
       carousel: {
         slide1Title: "Divine Maha Aarti",
@@ -277,6 +330,19 @@ const resources = {
 
         donateBtn : "अभी सहयोग करें"
 
+      },
+      nirman: {
+        pageTitle: "Temple Construction",
+        subtitle: "Building an Immortal Legacy for Future Generations",
+        sec1Title: "The Divine Vision",
+        sec1Text: "The construction of Maa Badi Mata's grand temple is not merely the creation of a physical structure, but the realization of a divine dream. It is a spiritual endeavor to create a sanctuary where devotees can experience absolute peace and maternal grace. Every stone laid is a testament to the unwavering faith of thousands.",
+        sec2Title: "Architectural Grandeur",
+        sec2Text: "The temple is being crafted using traditional architectural sciences (Vastu Shastra), merging ancient heritage with modern durability. The towering Shikhar (spire), the intricately carved pillars of the Sabha Mandap, and the sacred Garbhagriha (Sanctum Sanctorum) are designed to stand strong for centuries, radiating positive cosmic energy.",
+        sec3Title: "Cultural Importance",
+        sec3Text: "A temple is the epicenter of Sanatan Dharma. It is where our future generations will connect with their roots, learn our traditions, and find spiritual guidance. Contributing to this temple means etching your family's name into the golden pages of history, ensuring that the light of Dharma keeps burning bright.",
+        sec4Title: "Current Status & Your Role",
+        sec4Text: "By the grace of Mata, approximately 65% of the construction work is already complete. However, to bring the grand Shikhar and the finishing touches to life, we need the collective strength of our community. Join us in this historic Mahayagya.",
+        ctaBtn: "Contribute to Nirman"
       }
     }
   },
@@ -306,7 +372,10 @@ const resources = {
         slogan4: "नारायणि नमोऽस्तु ते ॥",
         description: "हमारी दैनिक आरती में सम्मिलित हों, ईश्वरीय आशीर्वाद प्राप्त करें, और मंदिर की विशेष सेवाओं में हिस्सा लें।",
         poojaSeva: "पूजा सेवा",
-        templeTrust: "नगर शक्ति पीठ"
+
+        slide1: "लक्ष्मी माता",
+        slide2: "सरस्वती माता",
+        slide3: "दुर्गा माता"
       },
       action: {
         btn1: "ऑनलाइन कूपन प्राप्त करें",
@@ -336,11 +405,20 @@ const resources = {
         aarti4: "शयन आरती"
       },
       about: {
-        pageTitle: "हमारा इतिहास और विरासत",
-        heading: "बड़ीमाता का दिव्य उद्गम",
-        desc1: "सदियों पहले स्थापित, श्री बड़ीमाता मंदिर आध्यात्मिक शक्ति और शांति के प्रतीक के रूप में खड़ा है। इस मंदिर का निर्माण हमारे पूर्वजों की सच्ची भक्ति से हुआ था, जिन्होंने इसी पवित्र भूमि पर देवी आदि शक्ति की दिव्य उपस्थिति का अनुभव किया था।",
-        desc2: "आज, यह प्रतिदिन हजारों भक्तों की सेवा करता है, जो न केवल पूजा का स्थान है, बल्कि आत्मा के लिए एक आश्रय, सामुदायिक सेवा का केंद्र और प्राचीन वैदिक परंपराओं का रक्षक है।",
-        quote: "जहाँ भक्ति सच्ची होती है, वहाँ परमात्मा का वास शाश्वत होता है।"
+        pageTitle: "मंदिर का गौरवशाली इतिहास",
+        subtitle: "माँ बड़ी माता का दिव्य उद्गम एवं गाथा",
+        genHeading: "हमारी दिव्य विरासत",
+        genDesc1: "सदियों से, बड़ी माता मंदिर आस्था, आशा और आध्यात्मिक जागृति के एक महान प्रकाश-स्तंभ के रूप में खड़ा है। यह वह पवित्र तपोभूमि है जहाँ लाखों भक्त दिव्य माँ का असीम आशीर्वाद और मातृ कृपा प्राप्त करने आते हैं।",
+        genDesc2: "मंदिर का इतिहास चमत्कारों, गहरी भक्ति और हमारे पूर्वजों की अटूट आस्था से बुना हुआ है, जिन्होंने इस पवित्र स्थान को सहेज कर रखा। इस मंदिर का कण-कण सकारात्मक ऊर्जा और सच्चे भक्तों की मूक प्रार्थनाओं से गुंजायमान है।",
+        mathaHeading: "तीन स्वरूप, एक शक्ति",
+        matha1Title: "माँ बड़ी माता",
+        matha1Desc: "भगवती का सर्वोच्च स्वरूप, जो अपार शक्ति और परम सुरक्षा का प्रतीक है। वे इस प्रांगण की अधिष्ठात्री देवी हैं, जो अपने बच्चों पर अनंत कृपा बरसाती हैं और उनके मार्ग के सभी विघ्नों का तत्क्षण नाश करती हैं।",
+        matha2Title: "माँ मंझली माता",
+        matha2Desc: "धन, सुख, समृद्धि और वात्सल्य की अत्यंत सुंदर प्रतिमूर्ति। भक्त जीवन में पूर्णता, पारिवारिक सद्भाव और अबाधित शांति के लिए माता के इस ममतामयी स्वरूप की विशेष आराधना करते हैं।",
+        matha3Title: "माँ छोटी माता",
+        matha3Desc: "ज्ञान, पवित्रता और आध्यात्मिक जागृति का तेजोमय प्रतीक। माता का यह स्वरूप अज्ञान के अंधकार को दूर कर जीवन में प्रकाश, सर्वोच्च ज्ञान और अंतिम मुक्ति का मार्ग प्रशस्त करता है।",
+        slogan: "“आस्था केवल यह मानना नहीं है कि माँ कर सकती है, बल्कि यह जानना है कि माँ अवश्य करेगी।”",
+        ctaBtn: "समाचार एवं आयोजन देखें"
       },
       gallery: {
         pageTitle: "दिव्य गैलरी",
@@ -354,21 +432,26 @@ const resources = {
         heritageDesc: "बड़ीमाता मंदिर का हर कोना पारंपरिक शिल्प कौशल से सजा हुआ है, जो आने वाली पीढ़ियों के लिए हमारे पूर्वजों की शानदार आध्यात्मिक कला को संरक्षित करता है।"
       },
       news: {
-        pageTitle: "समाचार और घटनाएँ",
-        upcomingTitle: "आगामी कार्यक्रम",
+        pageTitle: "समाचार एवं आयोजन",
+        tabEvents: "आगामी आयोजन",
+        tabNews: "नवीनतम समाचार",
+        
+        // Events
+        event1Title: "नवरात्रि महोत्सव की तैयारियाँ",
+        event1Desc: "आगामी नवरात्रि महोत्सव की भव्य तैयारियों में हमारे साथ जुड़ें। सजावट और व्यवस्थाओं में भाग लेने के लिए स्वयंसेवकों का स्वागत है।",
+        event2Title: "विशेष भंडारे का आयोजन",
+        event2Desc: "एक विशेष विशाल भंडारे का आयोजन किया जा रहा है। सामग्री का योगदान देने या सेवा करने के इच्छुक भक्त ट्रस्ट कार्यालय से संपर्क कर सकते हैं।",
+        readMore: "विवरण पढ़ें",
+        
+        // News
         latestNewsTitle: "नवीनतम समाचार",
-        event1Title: "नवरात्रि महोत्सव प्रारंभ",
-        event1Desc: "9 दिनों की निरंतर भक्ति, विशेष आरती और पारंपरिक गरबा के लिए हमारे साथ जुड़ें।",
-        event2Title: "दीपोत्सव समारोह",
-        event2Desc: "हजारों दीयों से जगमगाते मंदिर का अनुभव करें। शाम 7 बजे विशेष पूजा।",
-        readMore: "और पढ़ें",
-        readFullStory: "पूरी खबर पढ़ें",
-        tagCommunity: "समुदाय",
+        tagCommunity: "सामाजिक कार्य",
         tagTemple: "मंदिर अपडेट",
-        news1Title: "अन्नदान अभियान 3 लाख के मील के पत्थर तक पहुँचा",
-        news1Desc: "माता के आशीर्वाद और भक्तों के उदार समर्थन से, हमारे दैनिक भंडारे ने जरूरतमंदों को 3 लाख से अधिक भोजन सफलतापूर्वक परोसा है।",
-        news2Title: "नए मंदिर मंडप का निर्माण पूरा होने के करीब",
-        news2Desc: "दर्शन की प्रतीक्षा कर रहे भक्तों के लिए नया बैठने का क्षेत्र अंतिम चरण में है। इसमें पारंपरिक नक्काशी और आधुनिक शीतलन प्रणाली है।"
+        news1Title: "विशाल अन्नदान अभियान सफलतापूर्वक संपन्न",
+        news1Desc: "हाल ही के अभियान के दौरान 5,000 से अधिक भक्तों को महा-प्रसाद परोसा गया। हम सभी दानदाताओं और स्वयंसेवकों को उनकी निःस्वार्थ सेवा के लिए धन्यवाद देते हैं।",
+        news2Title: "मंदिर शिखर जीर्णोद्धार का पहला चरण प्रारंभ",
+        news2Desc: "मुख्य मंदिर के शिखर का बहुप्रतीक्षित जीर्णोद्धार आधिकारिक तौर पर शुरू हो गया है। वास्तुशिल्प टीम का लक्ष्य दिवाली से पहले पहले चरण को पूरा करना है।",
+        readFullStory: "पूरी खबर पढ़ें"
       },
       contact: {
         pageTitle: "संपर्क करें",
@@ -388,32 +471,67 @@ const resources = {
         submit: "संदेश भेजें"
       },
       luckyNew: {
-        mainHeading: "भाग्यशाली भक्त उपहार योजना",
-        subtitle: "मंदिर के विकास में सहयोग करें और शानदार उपहार जीतने का अवसर पाएं।",
-        bookBtn: "कूपन बुक करें",
-        ticketTag: "सहयोग रसीद",
-        ticketDesc: "आपके सहयोग से ही मंदिर का नवनिर्माण संभव है।",
-        ticketPriceLabel: "सहयोग राशि",
-        prizePlot: "प्लॉट",
-        prizeGold: "सोना",
-        prizeBike: "बाइक",
-        prizeCar: "कार",
-        prizeFridge: "फ्रिज",
-        prizeTV: "टीवी",
-        prizePhone: "स्मार्टफोन"
+        pageTitle: "माँ बड़ी माता भाग्यशाली भक्त उपहार योजना",
+        prizePlot: "₹10 लाख तक का प्लॉट",
+        prizeCar: "1 कार",
+        prizeRE: "1 Royal Enfield",
+        prizeChetak: "2 Bajaj Chetak EV",
+        prizeOther: "अनेक आकर्षक उपहार",
+        grandPrizesTag: "भव्य उपहार",
+        prizeHeading: "प्रमुख उपहार",
+        introTag: "परिचय",
+        introQuote: "“कल जब माँ का भव्य मंदिर पूर्ण होगा, तब हर श्रद्धालु गर्व से कह सकेगा — इसमें मेरा भी योगदान है।”",
+        introDetail: "मंदिर निर्माण का लगभग 65% कार्य पूर्ण हो चुका है। शेष निर्माण कार्य को शीघ्र पूर्ण करने हेतु यह योजना प्रारंभ की गई है।",
+        objTitle: "योजना का उद्देश्य",
+        objText: "माँ बड़ी माता के भव्य मंदिर निर्माण हेतु जनसहयोग को प्रोत्साहित करना तथा प्रत्येक भक्त को सेवा, समर्पण एवं सहभागिता का अवसर प्रदान करना।",
+        joinTitle: "भक्त कैसे जुड़ सकते हैं?",
+        joinText: "₹500 के महादान कूपन द्वारा योजना में सहभागी बनें।",
+        getCouponTitle: "कूपन कैसे प्राप्त करें?",
+        onlineMethod: "ऑनलाइन",
+        onlineStep1: "जानकारी भरें",
+        onlineStep2: "भुगतान करें",
+        onlineStep3: "डिजिटल कूपन प्राप्त करें",
+        offlineMethod: "ऑफलाइन",
+        offlineStep1: "मंदिर परिसर",
+        offlineStep2: "ट्रस्ट कार्यालय",
+        offlineStep3: "अधिकृत सेवादार",
+        ctaBtn: "कूपन प्राप्त करें",
+        modalTitle: "रसीद विवरण भरें",
+        modalSubtitle: "कूपन प्राप्त करने के लिए अपना विवरण दें।",
+        modalNamePlaceholder: "पूरा नाम (Full Name)",
+        modalPhonePlaceholder: "मोबाइल नंबर (Mobile No.)",
+        modalAmountLabel: "सहयोग राशि:",
+        modalAmount: "₹500",
+        modalPayBtn: "सुरक्षित भुगतान करें",
+        modalAlert: "पेमेंट गेटवे पर जा रहे हैं..."
       },
       founders: {
-        title: "हमारे संस्थापक",
-        subtitle: "वे मार्गदर्शक और संस्थापक स्तंभ जिन्होंने श्री बड़ीमाता मंदिर की दिव्य नींव स्थापित की।",
-        f1Name: "श्री राजेंद्र शर्मा",
-        f1Role: "मुख्य संस्थापक",
-        f1Desc: "उन्होंने मंदिर की स्थापना और शांति और सामुदायिक सेवा का संदेश फैलाने के लिए अपना जीवन समर्पित कर दिया।",
-        f2Name: "श्रीमती कमला देवी",
-        f2Role: "अध्यक्षा",
-        f2Desc: "करुणा की प्रतिमूर्ति, जो मंदिर के दैनिक अन्नदान और दान पहलों का नेतृत्व करती हैं।",
-        f3Name: "श्री विक्रम सिंह",
-        f3Role: "मुख्य ट्रस्टी",
-        f3Desc: "मंदिर ट्रस्ट के स्थापत्य संरक्षण और आध्यात्मिक प्रशासन की देखरेख करते हैं।"
+        title: "ट्रस्ट मंडल",
+        subtitle: "दिव्य दृष्टिकोण की दिशा में कार्यरत हमारे समर्पित सदस्य।",
+        
+        // Top 3 Leaders
+        f1Name: "श्री [नाम यहाँ]",
+        roleAdhyaks: "अध्यक्ष",
+        f1Desc: "दृष्टिकोण और समर्पण के साथ मंदिर ट्रस्ट का मार्गदर्शन करना।",
+        
+        f2Name: "श्री [नाम यहाँ]",
+        roleSachiv: "सचिव",
+        f2Desc: "परिचालन उत्कृष्टता और दैनिक गतिविधियों का कुशल प्रबंधन।",
+        
+        f3Name: "श्री [नाम यहाँ]",
+        roleKoshadhyksh: "कोषाध्यक्ष",
+        f3Desc: "सभी वित्तीय मामलों में पूर्ण पारदर्शिता और निष्ठा सुनिश्चित करना।",
+
+        // Committee Members
+        m1Name: "श्री [सदस्य 1]",
+        m2Name: "श्री [सदस्य 2]",
+        m3Name: "श्री [सदस्य 3]",
+        m4Name: "श्री [सदस्य 4]",
+        m5Name: "श्री [सदस्य 5]",
+        m6Name: "श्री [सदस्य 6]",
+        m7Name: "श्री [सदस्य 7]",
+        m8Name: "श्री [सदस्य 8]",
+        memberRole: "सदस्य"
       },
       carousel: {
         slide1Title: "दिव्य महा आरती",
@@ -553,7 +671,20 @@ const resources = {
         causeGau: "गौशाला सहयोग",
         descGau: "गौ माता के आश्रय एवं सेवा हेतु",
         donateBtn : "अभी सहयोग करें"
-      }
+      },
+      nirman: {
+        pageTitle: "भव्य मंदिर निर्माण",
+        subtitle: "आने वाली पीढ़ियों के लिए एक अमर विरासत का निर्माण",
+        sec1Title: "दिव्य संकल्प",
+        sec1Text: "माँ बड़ी माता के भव्य मंदिर का निर्माण केवल ईंट और पत्थरों का ढांचा नहीं है, बल्कि यह एक दिव्य स्वप्न का साकार होना है। यह एक ऐसा आध्यात्मिक केंद्र बनाने का प्रयास है जहां हर भक्त असीम शांति और मातृ कृपा का अनुभव कर सके। रखी जा रही हर शिला हजारों भक्तों की अटूट आस्था का प्रमाण है।",
+        sec2Title: "वास्तुशिल्प और भव्यता",
+        sec2Text: "मंदिर का निर्माण प्राचीन वास्तु शास्त्र के आधार पर किया जा रहा है, जिसमें सनातन विरासत और आधुनिक मजबूती का अनूठा संगम है। गगनचुंबी शिखर, सभा मंडप के नक्काशीदार स्तंभ और पवित्र गर्भगृह को इस प्रकार डिजाइन किया गया है कि वे सदियों तक अडिग खड़े रहें और सकारात्मक ऊर्जा का संचार करें।",
+        sec3Title: "सांस्कृतिक एवं आध्यात्मिक महत्व",
+        sec3Text: "मंदिर हमारे सनातन धर्म का केंद्र बिंदु है। यही वह स्थान है जहां हमारी आने वाली पीढ़ियां अपनी जड़ों से जुड़ेंगी और संस्कारों को सीखेंगी। इस मंदिर निर्माण में सहयोग करने का अर्थ है अपने परिवार का नाम इतिहास के पन्नों पर स्वर्णाक्षरों में दर्ज कराना और धर्म की ज्योति को प्रज्वलित रखना।",
+        sec4Title: "वर्तमान स्थिति और आपकी भूमिका",
+        sec4Text: "माता की कृपा से निर्माण कार्य लगभग 65% पूर्ण हो चुका है। अब भव्य शिखर और अंतिम रूपरेखा को पूरा करने के लिए समाज की सामूहिक शक्ति की आवश्यकता है। इस ऐतिहासिक महायज्ञ में आहुति दें और माता का आशीर्वाद प्राप्त करें।",
+        ctaBtn: "निर्माण में सहयोग करें"
+      },
     }
   }
 };

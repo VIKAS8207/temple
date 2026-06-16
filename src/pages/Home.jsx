@@ -16,10 +16,11 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // You can update the image paths here to match your actual files
+// Now we just pass the translation key
   const heroSlides = [
-    { img: "/image/Hero2.png", hi: "लक्ष्मी माता", en: "Laxmi Mata" },
-    { img: "/image/Hero1.png", hi: "सरस्वती माता", en: "Saraswati Mata" }, // Ensure you have this image
-    { img: "/image/Hero.png", hi: "दुर्गा माता", en: "Durga Mata" },       // Ensure you have this image
+    { img: "/image/Hero2.png", textKey: "hero.slide1" },
+    { img: "/image/Hero1.png", textKey: "hero.slide2" },
+    { img: "/image/Hero.png", textKey: "hero.slide3" }, 
   ];
 
   // Random static positions and animation delays for the twinkling stars
@@ -170,8 +171,9 @@ export default function Home() {
                     </div>
                     
                     <div className="mt-6 text-center">
-                      <h3 className="font-rozha text-3xl md:text-4xl text-orange-950 font-bold drop-shadow-md mb-1">{slide.hi}</h3>
-                      <p className="font-rozha text-xl md:text-2xl text-orange-800 tracking-wide font-bold">{slide.en}</p>
+                      <h3 className="font-rozha text-3xl md:text-4xl text-orange-950 font-bold drop-shadow-md mb-1">
+                        {t(slide.textKey)}
+                      </h3>
                     </div>
                   </div>
                 ))}
@@ -218,7 +220,6 @@ export default function Home() {
       <TempleCarousel />
       <TempleStats />
       <WinnerList />   
-      
       <TempleTiming />
 
       {/* --- INJECTED CSS FOR STAR TWINKLING ANIMATION --- */}

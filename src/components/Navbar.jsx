@@ -1,9 +1,11 @@
 // src/components/Navbar.jsx
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Function to switch languages
   const changeLanguage = (lng) => {
@@ -96,23 +98,22 @@ export default function Navbar() {
 
               {/* ABOUT US - DROPDOWN MENU */}
               <div className="relative group">
-                {/* Removed py-6, just kept normal padding */}
-                <button className="relative text-amber-50 group-hover:text-amber-300 transition-colors drop-shadow-md flex items-center gap-1 py-1">
+                <button className="relative text-amber-50 group-hover:text-amber-300 transition-colors drop-shadow-md flex items-center gap-1 py-6">
                   {t('nav.about')}
                   <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" /></svg>
-                  <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
+                  <div className="absolute left-0 bottom-6 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
                 </button>
 
-                {/* THE INVISIBLE HOVER BRIDGE: pt-5 creates a transparent area the mouse can travel across safely */}
-                <div className="absolute left-1/2 -translate-x-1/2 top-full w-64 pt-5 z-50 invisible opacity-0 translate-y-3 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out">
-                  <div className="bg-red-950/95 backdrop-blur-md border border-red-900/50 rounded-xl shadow-2xl py-2 overflow-hidden flex flex-col">
-                    <Link to="/about/history" className="px-5 py-3 text-sm text-amber-100/90 hover:text-amber-400 hover:bg-red-900/40 transition-colors border-b border-red-900/30">
+                {/* THE INVISIBLE HOVER BRIDGE: Brought much closer to the text with a SOLID background */}
+                <div className="absolute left-1/2 -translate-x-1/2 top-[80%] w-64 pt-2 z-50 invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out">
+                  <div className="bg-[#3e1a16] border border-red-900/50 rounded-xl shadow-2xl py-2 overflow-hidden flex flex-col">
+                    <Link to="/about" className="px-5 py-3 text-sm text-amber-100/90 hover:text-amber-400 hover:bg-red-900/40 transition-colors border-b border-red-900/30">
                       {t('nav.aboutHistory')}
                     </Link>
                     <Link to="/about/nirman" className="px-5 py-3 text-sm text-amber-100/90 hover:text-amber-400 hover:bg-red-900/40 transition-colors border-b border-red-900/30">
                       {t('nav.aboutNirman')}
                     </Link>
-                    <Link to="/about/trustees" className="px-5 py-3 text-sm text-amber-100/90 hover:text-amber-400 hover:bg-red-900/40 transition-colors">
+                    <Link to="/founders" className="px-5 py-3 text-sm text-amber-100/90 hover:text-amber-400 hover:bg-red-900/40 transition-colors">
                       {t('nav.aboutTrustees')}
                     </Link>
                   </div>
@@ -151,9 +152,12 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Trigger Button */}
             <div className="lg:hidden flex items-center">
-              <button className="text-amber-400 hover:text-amber-200 focus:outline-none drop-shadow-md">
+              <button 
+                onClick={() => setIsMobileMenuOpen(true)}
+                className="text-amber-400 hover:text-amber-200 focus:outline-none drop-shadow-md p-2"
+              >
                 <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
@@ -172,6 +176,57 @@ export default function Navbar() {
           backgroundSize: '24px 12px'
         }}
       ></div>
+
+      {/* =========================================
+          3. MOBILE SLIDE-IN MENU
+      ========================================= */}
+      <div className={`fixed inset-0 z-[100] lg:hidden transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        
+        {/* Dark overlay backdrop */}
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)}></div>
+        
+        {/* Sliding Drawer */}
+        <div className={`absolute top-0 right-0 w-64 sm:w-80 h-full bg-[#3e1a16] shadow-2xl transition-transform duration-300 transform flex flex-col ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+          
+          {/* Close Button Header */}
+          <div className="flex justify-end p-4 border-b border-red-900/50">
+            <button onClick={() => setIsMobileMenuOpen(false)} className="text-amber-400 hover:text-amber-200 p-2 bg-red-950 rounded-full">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="flex flex-col p-6 space-y-6 overflow-y-auto text-amber-50">
+            <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium hover:text-amber-400 transition-colors">{t('nav.home')}</Link>
+            
+            <Link to="/lucky-draw" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-yellow-300 hover:text-yellow-200 transition-colors">{t('nav.lucky')}</Link>
+            
+            {/* About Section Group */}
+            <div className="flex flex-col space-y-3 pb-2 border-b border-red-900/50">
+              <span className="text-sm font-bold text-amber-600 uppercase tracking-widest">{t('nav.about')}</span>
+              <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="pl-2 text-lg font-medium hover:text-amber-400 transition-colors">{t('nav.aboutHistory')}</Link>
+              <Link to="/about/nirman" onClick={() => setIsMobileMenuOpen(false)} className="pl-2 text-lg font-medium hover:text-amber-400 transition-colors">{t('nav.aboutNirman')}</Link>
+              <Link to="/founders" onClick={() => setIsMobileMenuOpen(false)} className="pl-2 text-lg font-medium hover:text-amber-400 transition-colors">{t('nav.aboutTrustees')}</Link>
+            </div>
+
+            <Link to="/gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium hover:text-amber-400 transition-colors">{t('nav.gallery')}</Link>
+            <Link to="/news" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium hover:text-amber-400 transition-colors">{t('nav.news')}</Link>
+            <Link to="/donate" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium hover:text-amber-400 transition-colors">{t('nav.donate')}</Link>
+            <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium hover:text-amber-400 transition-colors">{t('nav.contact')}</Link>
+            
+            <Link 
+              to="/serve" 
+              onClick={() => setIsMobileMenuOpen(false)} 
+              className="mt-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-red-950 px-6 py-3 rounded-full font-bold text-center shadow-lg hover:from-amber-300 hover:to-yellow-400 transition-colors"
+            >
+              {t('nav.seva')}
+            </Link>
+          </div>
+
+        </div>
+      </div>
 
     </header>
   );
