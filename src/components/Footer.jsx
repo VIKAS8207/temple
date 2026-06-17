@@ -1,5 +1,9 @@
 // src/components/Footer.jsx
+import { useTranslation } from 'react-i18next';
+
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="relative bg-red-950 text-amber-50/80 border-t-4 border-amber-500 overflow-hidden mt-auto">
       
@@ -23,15 +27,15 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-rozha text-2xl text-amber-400 tracking-wide leading-none mt-1">
-                  बड़ीमाता मंदिर
+                  {t('footer.templeName')}
                 </span>
                 <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-amber-200/80">
-                  Badimatha Temple
+                  {t('footer.templeSubName')}
                 </span>
               </div>
             </div>
             <p className="text-sm leading-relaxed mb-6">
-              A divine sanctuary of peace and spirituality. Join us to experience the eternal grace of Goddess Adi Shakti and find harmony in your soul.
+              {t('footer.templeDesc')}
             </p>
             {/* Social Icons */}
             <div className="flex gap-4">
@@ -64,58 +68,58 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <h3 className="text-amber-400 font-bold text-lg mb-6 uppercase tracking-wider">Quick Links</h3>
+            <h3 className="text-amber-400 font-bold text-lg mb-6 uppercase tracking-wider">{t('footer.quickLinks')}</h3>
             <ul className="space-y-4">
-              <li><a href="#" className="hover:text-amber-400 transition-colors inline-block transform hover:translate-x-1 duration-200">Home</a></li>
-              <li><a href="#" className="hover:text-amber-400 transition-colors inline-block transform hover:translate-x-1 duration-200">About the Temple</a></li>
-              <li><a href="#" className="hover:text-amber-400 transition-colors inline-block transform hover:translate-x-1 duration-200">Pooja & Sevas</a></li>
-              <li><a href="#" className="hover:text-amber-400 transition-colors inline-block transform hover:translate-x-1 duration-200">Upcoming Festivals</a></li>
-              <li><a href="#" className="hover:text-amber-400 transition-colors inline-block transform hover:translate-x-1 duration-200">Photo Gallery</a></li>
-              <li><a href="#" className="hover:text-amber-400 transition-colors text-yellow-300 font-medium inline-block transform hover:translate-x-1 duration-200">Lucky Draw</a></li>
+              <li><a href="#" className="hover:text-amber-400 transition-colors inline-block transform hover:translate-x-1 duration-200">{t('footer.linkHome')}</a></li>
+              <li><a href="#" className="hover:text-amber-400 transition-colors inline-block transform hover:translate-x-1 duration-200">{t('footer.linkAbout')}</a></li>
+              <li><a href="#" className="hover:text-amber-400 transition-colors inline-block transform hover:translate-x-1 duration-200">{t('footer.linkPooja')}</a></li>
+              <li><a href="#" className="hover:text-amber-400 transition-colors inline-block transform hover:translate-x-1 duration-200">{t('footer.linkFestivals')}</a></li>
+              <li><a href="#" className="hover:text-amber-400 transition-colors inline-block transform hover:translate-x-1 duration-200">{t('footer.linkGallery')}</a></li>
+              <li><a href="#" className="hover:text-amber-400 transition-colors text-yellow-300 font-medium inline-block transform hover:translate-x-1 duration-200">{t('footer.linkLuckyDraw')}</a></li>
             </ul>
           </div>
 
           {/* Column 3: Temple Timings */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <h3 className="text-amber-400 font-bold text-lg mb-6 uppercase tracking-wider">Temple Timings</h3>
+            <h3 className="text-amber-400 font-bold text-lg mb-6 uppercase tracking-wider">{t('footer.templeTimings')}</h3>
             <ul className="space-y-4 text-sm">
               <li className="flex flex-col">
-                <span className="text-amber-200 font-medium">Morning Darshan</span>
-                <span>05:30 AM - 12:30 PM</span>
+                <span className="text-amber-200 font-medium">{t('footer.morningDarshan')}</span>
+                <span>{t('footer.morningTime')}</span>
               </li>
               <li className="flex flex-col">
-                <span className="text-amber-200 font-medium">Evening Darshan</span>
-                <span>04:00 PM - 09:00 PM</span>
+                <span className="text-amber-200 font-medium">{t('footer.eveningDarshan')}</span>
+                <span>{t('footer.eveningTime')}</span>
               </li>
               <li className="flex flex-col mt-4">
-                <span className="text-amber-200 font-medium">Maha Aarti</span>
-                <span>07:00 AM & 07:30 PM</span>
+                <span className="text-amber-200 font-medium">{t('footer.mahaAarti')}</span>
+                <span>{t('footer.aartiTime')}</span>
               </li>
             </ul>
           </div>
 
           {/* Column 4: Contact Info */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <h3 className="text-amber-400 font-bold text-lg mb-6 uppercase tracking-wider">Contact Us</h3>
+            <h3 className="text-amber-400 font-bold text-lg mb-6 uppercase tracking-wider">{t('footer.contactUs')}</h3>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3 justify-center lg:justify-start">
                 <svg className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span>123 Spiritual Way, Heritage District,<br />City Name, State, 123456</span>
+                <span>{t('footer.addressLine1')}<br />{t('footer.addressLine2')}</span>
               </li>
               <li className="flex items-center gap-3 justify-center lg:justify-start">
                 <svg className="w-5 h-5 text-amber-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span>+91 98765 43210</span>
+                <span>{t('footer.phone')}</span>
               </li>
               <li className="flex items-center gap-3 justify-center lg:justify-start">
                 <svg className="w-5 h-5 text-amber-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span>info@badimathatemple.com</span>
+                <span>{t('footer.email')}</span>
               </li>
             </ul>
           </div>
@@ -127,8 +131,8 @@ export default function Footer() {
         ========================================= */}
         <div className="mt-16 pt-8 border-t border-red-900/50 text-center">
           <p className="text-xs sm:text-sm text-amber-100/60 max-w-4xl mx-auto leading-relaxed">
-            <span className="font-bold text-amber-500/80">नोट: </span>
-            भाग्यशाली भक्त उपहार योजना श्री बड़ी माता मंदिर ट्रस्ट द्वारा संचालित योजना है। योजना के सभी नियम एवं शर्तें लागू हैं। चयन प्रक्रिया एवं योजना से जुड़े सभी अंतिम निर्णय मंदिर ट्रस्ट द्वारा मान्य होंगे।
+            <span className="font-bold text-amber-500/80">{t('footer.note')}</span>
+            {t('footer.disclaimer')}
           </p>
         </div>
 
@@ -137,11 +141,11 @@ export default function Footer() {
       {/* Bottom Bar: Copyright */}
       <div className="relative z-10 bg-red-900 border-t border-red-800 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-red-200">
-          <p>&copy; {new Date().getFullYear()} Shri Badimatha Temple. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {t('footer.copyright')}</p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-amber-400 transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-amber-400 transition-colors">{t('footer.privacyPolicy')}</a>
             <span className="text-red-700">|</span>
-            <a href="#" className="hover:text-amber-400 transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-amber-400 transition-colors">{t('footer.termsOfService')}</a>
           </div>
         </div>
       </div>

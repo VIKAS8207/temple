@@ -382,6 +382,40 @@ const resources = {
         payBtn: "Proceed to Payment",
         redirectMsg: "Redirecting to secure payment gateway..."
       },
+      footer: {
+        templeName: "Badi Mata Mandir",
+        templeSubName: "Badimatha Temple",
+        templeDesc: "A divine sanctuary of peace and spirituality. Join us to experience the eternal grace of Goddess Adi Shakti and find harmony in your soul.",
+        
+        quickLinks: "Quick Links",
+        linkHome: "Home",
+        linkAbout: "About the Temple",
+        linkPooja: "Pooja & Sevas",
+        linkFestivals: "Upcoming Festivals",
+        linkGallery: "Photo Gallery",
+        linkLuckyDraw: "Lucky Draw",
+        
+        templeTimings: "Temple Timings",
+        morningDarshan: "Morning Darshan",
+        morningTime: "05:30 AM - 12:30 PM",
+        eveningDarshan: "Evening Darshan",
+        eveningTime: "04:00 PM - 09:00 PM",
+        mahaAarti: "Maha Aarti",
+        aartiTime: "07:00 AM & 07:30 PM",
+        
+        contactUs: "Contact Us",
+        addressLine1: "123 Spiritual Way, Heritage District,",
+        addressLine2: "City Name, State, 123456",
+        phone: "+91 98765 43210",
+        email: "info@badimathatemple.com",
+        
+        note: "Note: ",
+        disclaimer: "The Lucky Devotee Gift Scheme is operated by Shri Badi Mata Temple Trust. All terms and conditions of the scheme apply. The selection process and all final decisions related to the scheme will be binding by the Temple Trust.",
+        
+        copyright: "Shri Badimatha Temple. All rights reserved.",
+        privacyPolicy: "Privacy Policy",
+        termsOfService: "Terms of Service"
+      },
     }
   },
   hi: {
@@ -761,6 +795,40 @@ const resources = {
         anonymous: "इस बुकिंग को गुप्त दान के रूप में दर्ज करें",
         payBtn: "सुरक्षित भुगतान करें",
         redirectMsg: "सुरक्षित पेमेंट गेटवे पर जा रहे हैं..."
+      },
+      footer: {
+        templeName: "बड़ी माता मंदिर",
+        templeSubName: "Badimatha Temple",
+        templeDesc: "शांति और आध्यात्मिकता का एक दिव्य अभयारण्य। देवी आदिशक्ति की शाश्वत कृपा का अनुभव करने और अपनी आत्मा में सद्भाव खोजने के लिए हमसे जुड़ें।",
+        
+        quickLinks: "महत्वपूर्ण लिंक",
+        linkHome: "मुखपृष्ठ",
+        linkAbout: "मंदिर के बारे में",
+        linkPooja: "पूजा एवं सेवाएं",
+        linkFestivals: "आगामी उत्सव",
+        linkGallery: "फोटो गैलरी",
+        linkLuckyDraw: "भाग्यशाली उपहार योजना",
+        
+        templeTimings: "दर्शन का समय",
+        morningDarshan: "प्रातः दर्शन",
+        morningTime: "सुबह 05:30 - दोपहर 12:30",
+        eveningDarshan: "सांध्य दर्शन",
+        eveningTime: "शाम 04:00 - रात 09:00",
+        mahaAarti: "महा आरती",
+        aartiTime: "सुबह 07:00 एवं शाम 07:30",
+        
+        contactUs: "संपर्क करें",
+        addressLine1: "123 आध्यात्मिक मार्ग, हेरिटेज जिला,",
+        addressLine2: "शहर का नाम, राज्य, 123456",
+        phone: "+91 98765 43210",
+        email: "info@badimathatemple.com",
+        
+        note: "नोट: ",
+        disclaimer: "भाग्यशाली भक्त उपहार योजना श्री बड़ी माता मंदिर ट्रस्ट द्वारा संचालित योजना है। योजना के सभी नियम एवं शर्तें लागू हैं। चयन प्रक्रिया एवं योजना से जुड़े सभी अंतिम निर्णय मंदिर ट्रस्ट द्वारा मान्य होंगे।",
+        
+        copyright: "श्री बड़ी माता मंदिर। सर्वाधिकार सुरक्षित।",
+        privacyPolicy: "गोपनीयता नीति",
+        termsOfService: "सेवा की शर्तें"
       },
     }
   }
