@@ -1,3 +1,4 @@
+// src/components/Footer.jsx
 export default function Footer() {
   return (
     <footer className="relative bg-red-950 text-amber-50/80 border-t-4 border-amber-500 overflow-hidden mt-auto">
@@ -11,7 +12,7 @@ export default function Footer() {
         }}
       ></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           
           {/* Column 1: Temple Info & Logo */}
@@ -120,6 +121,17 @@ export default function Footer() {
           </div>
 
         </div>
+
+        {/* =========================================
+            Disclaimer / Note Section
+        ========================================= */}
+        <div className="mt-16 pt-8 border-t border-red-900/50 text-center">
+          <p className="text-xs sm:text-sm text-amber-100/60 max-w-4xl mx-auto leading-relaxed">
+            <span className="font-bold text-amber-500/80">नोट: </span>
+            भाग्यशाली भक्त उपहार योजना श्री बड़ी माता मंदिर ट्रस्ट द्वारा संचालित योजना है। योजना के सभी नियम एवं शर्तें लागू हैं। चयन प्रक्रिया एवं योजना से जुड़े सभी अंतिम निर्णय मंदिर ट्रस्ट द्वारा मान्य होंगे।
+          </p>
+        </div>
+
       </div>
 
       {/* Bottom Bar: Copyright */}
