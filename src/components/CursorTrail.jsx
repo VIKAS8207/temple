@@ -33,7 +33,7 @@ export default function CursorTrail() {
   }, []);
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-[100] overflow-hidden">
+    <div className="pointer-events-none fixed inset-0 z-[100] overflow-hidden ">
       {particles.map((p) => (
         <div
           key={p.id}

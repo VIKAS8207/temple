@@ -10,15 +10,15 @@ export default function TempleCarousel() {
   const slides = [
     {
       id: 0,
-      image: "https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=1200&auto=format&fit=crop",
+      image: "/image/Artboard.jpeg",
     },
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1604168612704-dfb1200fc0eb?q=80&w=1200&auto=format&fit=crop",
+      image: "/image/Artboard 1.png",
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1593014164582-74718cb14eb5?q=80&w=1200&auto=format&fit=crop",
+      image: "/image/Artboard 2.png",
     },
   ];
 
@@ -39,72 +39,62 @@ export default function TempleCarousel() {
   };
 
   return (
-    <section className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden bg-stone-900 border-y-8 border-amber-600/40">
+    <section className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-16 mb-12 sm:mb-16">
       
-      {/* Slides */}
-      {slides.map((slide, index) => (
-        <div 
-          key={slide.id}
-          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-            index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
-          }`}
-        >
-          {/* Background Image */}
-          <img 
-            src={slide.image} 
-            alt={slide.title} 
-            className="w-full h-full object-cover object-center"
-          />
-          
-          {/* Gradient Overlay for Text Readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#3e1a16]/90 via-[#3e1a16]/40 to-transparent"></div>
-          
-          {/* Text Content */}
-          <div className="absolute inset-0 flex flex-col items-center justify-end pb-20 md:pb-32 px-4 text-center">
-            <div className="flex items-center gap-4 mb-4 transform translate-y-4 opacity-0 animate-[fadeUp_0.8s_ease-out_forwards_0.3s]">
-            </div>
-          </div>
-        </div>
-      ))}
-
-      {/* Navigation Arrows */}
-      <button 
-        onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 p-3 bg-black/20 hover:bg-[#8b3a2b]/80 text-white rounded-full backdrop-blur-sm transition-all duration-300 border border-white/20 hover:scale-110"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
-      </button>
-      
-      <button 
-        onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 p-3 bg-black/20 hover:bg-[#8b3a2b]/80 text-white rounded-full backdrop-blur-sm transition-all duration-300 border border-white/20 hover:scale-110"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-      </button>
-
-      {/* Dots Indicators */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-3">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`transition-all duration-500 rounded-full ${
-              index === currentIndex 
-                ? 'w-8 h-2.5 bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.8)]' 
-                : 'w-2.5 h-2.5 bg-white/50 hover:bg-white'
+      {/* The Floating Carousel Box */}
+      <div className="relative w-full aspect-video sm:aspect-video max-h-[80vh] bg-stone-900 border-[4px] sm:border-[6px] border-amber-200/60 rounded-2xl sm:rounded-3xl shadow-[0_20px_50px_rgba(139,58,43,0.15)] group overflow-hidden">
+        
+        {/* Slides */}
+        {slides.map((slide, index) => (
+          <div 
+            key={slide.id}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+              index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
             }`}
-          />
+          >
+            {/* Background Image */}
+            <img 
+              src={slide.image} 
+              alt={`Slide ${index + 1}`} 
+              className="w-full h-full object-cover object-center"
+            />
+            
+            {/* Gradient Overlay for Text Readability (Using your maroon tint) */}
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#3e1a16]/90 via-[#3e1a16]/40 to-transparent pointer-events-none"></div>
+          </div>
         ))}
+
+        {/* Navigation Arrows (Hidden by default, smooth fade in on hover) */}
+        <button 
+          onClick={prevSlide}
+          className="hidden sm:block absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-30 p-3 bg-black/40 hover:bg-amber-500 text-white rounded-full backdrop-blur-sm transition-all duration-300 opacity-0 group-hover:opacity-100 shadow-lg border border-white/20 hover:scale-110"
+        >
+          <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+        
+        <button 
+          onClick={nextSlide}
+          className="hidden sm:block absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-30 p-3 bg-black/40 hover:bg-amber-500 text-white rounded-full backdrop-blur-sm transition-all duration-300 opacity-0 group-hover:opacity-100 shadow-lg border border-white/20 hover:scale-110"
+        >
+          <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
+        </button>
+
+        {/* Dots Indicators */}
+        <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2 sm:gap-3">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`transition-all duration-500 rounded-full shadow-md ${
+                index === currentIndex 
+                  ? 'w-6 sm:w-10 h-2 sm:h-2.5 bg-amber-400' 
+                  : 'w-2 sm:w-2.5 h-2 sm:h-2.5 bg-white/70 hover:bg-white'
+              }`}
+            />
+          ))}
+        </div>
+
       </div>
-
-      {/* Add keyframes for the text fade-up animation in tailwind config or globally */}
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-      `}} />
-
     </section>
   );
 }

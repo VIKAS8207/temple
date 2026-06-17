@@ -60,7 +60,7 @@ export default function Navbar() {
         {/* Background container separated safely */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
           <img 
-            src="/image/Nav1.webp" 
+            src="/image/Nav1.jpg" 
             alt="Temple Texture"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -191,7 +191,7 @@ export default function Navbar() {
 
       {/* --- HANGING BOTTOM MANDALA BORDER --- */}
       <div 
-        className="absolute top-full left-0 w-full h-3 z-10 bg-repeat-x -mt-[1px]"
+        className="absolute top-full left-0 w-full h-3 z-0 bg-repeat-x -mt-[1px]"
         style={{ 
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='24' height='12' viewBox='0 0 24 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 12C6.477 12 2 7.523 2 2h2c0 4.418 3.582 8 8 8s8-3.582 8-8h2c0 5.523-4.477 10-10 10z' fill='%236B1111' fill-opacity='1'/%3E%3Cpath d='M12 6a2 2 0 100-4 2 2 0 000 4z' fill='%236B1111'/%3E%3C/svg%3E")`,
           backgroundSize: '24px 12px'
