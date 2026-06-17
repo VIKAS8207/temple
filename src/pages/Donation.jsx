@@ -7,6 +7,7 @@ export default function Donation() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
+    email: '',
     isAnonymous: false,
     selectedCauses: [], // Changed to an array to hold multiple selections
     amount: ''
@@ -150,17 +151,24 @@ export default function Donation() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <input 
-                    type="text" placeholder={t('donate.name', 'पूरा नाम')} required
-                    className={inputClasses}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  />
-                  <input 
-                    type="tel" placeholder={t('donate.phone', 'मोबाइल नंबर')} required
-                    className={inputClasses}
-                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                  />
-                </div>
+  <input 
+    type="text" placeholder={t('donate.name', 'पूरा नाम')} required
+    className={inputClasses}
+    onChange={(e) => setFormData({...formData, name: e.target.value})}
+  />
+  <input 
+    type="tel" placeholder={t('donate.phone', 'मोबाइल नंबर')} required
+    className={inputClasses}
+    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+  />
+  
+  {/* NEW EMAIL FIELD */}
+  <input 
+    type="email" placeholder={t('donate.email', 'ईमेल आईडी')} required
+    className={`${inputClasses} md:col-span-2`}
+    onChange={(e) => setFormData({...formData, email: e.target.value})}
+  />
+</div>
 
                 {/* Anonymous Checkbox */}
                 <label className="flex items-center gap-3 cursor-pointer group w-max">

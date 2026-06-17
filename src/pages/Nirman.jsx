@@ -121,8 +121,8 @@ export default function Nirman() {
 
           </div>
           <div className="flex-1 w-full max-w-md lg:max-w-full">
-            <div className="relative p-2 bg-white rounded-t-[10rem] rounded-b-2xl shadow-xl border border-stone-200">
-              <div className="overflow-hidden rounded-t-[9.5rem] rounded-b-xl border-4 border-amber-500/30">
+            <div className="relative p-2 bg-white rounded-t-2xl rounded-b-2xl shadow-xl border border-stone-200">
+              <div className="overflow-hidden rounded-t-2xl rounded-b-xl border-4 border-amber-500/30">
                 <img 
                   src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=80" 
                   alt="Current Status" 

@@ -1,6 +1,7 @@
 // src/pages/Serve.jsx
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export default function Serve() {
   const { t } = useTranslation();
@@ -113,23 +114,43 @@ export default function Serve() {
       </section>
 
       <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        
-        {/* Categories (Tabs) Section */}
+
+      {/* Categories (Tabs) Section */}
         <div className="flex flex-wrap pb-4 mb-10 gap-3 justify-center md:justify-start">
-          {categories.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`whitespace-nowrap px-6 py-3 rounded-full text-sm font-bold transition-all duration-300 border ${
-                activeTab === tab.id
-                  ? 'bg-gradient-to-r from-orange-600 to-amber-600 text-white border-transparent shadow-lg scale-105'
-                  : 'bg-white text-stone-600 border-stone-200 hover:border-amber-400 hover:text-amber-600 shadow-sm'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
+          {categories.map((tab) => {
+            
+            // SPECIAL CASE: Kalash Sthapana is a Link to a new page, with highlight styling
+            if (tab.id === 'kalash') {
+              return (
+                <Link
+                  key={tab.id}
+                  to="/kalash-sthapna"
+                  className="whitespace-nowrap px-6 py-3 rounded-full text-sm font-bold transition-all duration-300 shadow-md scale-105 animate-pulse bg-gradient-to-r from-red-600 to-amber-600 text-white border-2 border-amber-300 hover:scale-110 hover:shadow-amber-500/50 flex items-center gap-2"
+                >
+                  <span className="text-lg">🏺</span> {tab.label}
+                </Link>
+              );
+            }
+
+            // NORMAL CASE: Standard toggle buttons for all other categories
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`whitespace-nowrap px-6 py-3 rounded-full text-sm font-bold transition-all duration-300 border ${
+                  activeTab === tab.id
+                    ? 'bg-gradient-to-r from-orange-600 to-amber-600 text-white border-transparent shadow-lg scale-105'
+                    : 'bg-white text-stone-600 border-stone-200 hover:border-amber-400 hover:text-amber-600 shadow-sm'
+                }`}
+              >
+                {tab.label}
+              </button>
+            );
+            
+          })}
         </div>
+        
+        
 
         {/* Dynamic Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">

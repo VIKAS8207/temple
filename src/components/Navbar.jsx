@@ -7,6 +7,8 @@ export default function Navbar() {
   const { t, i18n } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+
   // Function to switch languages
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -96,24 +98,43 @@ export default function Navbar() {
                 <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-300 transition-all duration-300 group-hover:w-full"></div>
               </Link>
 
-              {/* ABOUT US - DROPDOWN MENU */}
-              <div className="relative group">
-                <button className="relative text-amber-50 group-hover:text-amber-300 transition-colors drop-shadow-md flex items-center gap-1 py-6">
+{/* ABOUT US - ONCLICK DROPDOWN MENU */}
+              <div className="relative">
+                <button 
+                  onClick={() => setIsAboutOpen(!isAboutOpen)}
+                  className="relative text-amber-50 hover:text-amber-300 transition-colors drop-shadow-md flex items-center gap-1 py-6"
+                >
                   {t('nav.about')}
-                  <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" /></svg>
-                  <div className="absolute left-0 bottom-6 w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"></div>
+                  {/* Arrow rotates when open */}
+                  <svg className={`w-4 h-4 transition-transform duration-300 ${isAboutOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
+                  </svg>
+                  {/* Underline expands when open */}
+                  <div className={`absolute left-0 bottom-6 h-[2px] bg-amber-400 transition-all duration-300 ${isAboutOpen ? 'w-full' : 'w-0'}`}></div>
                 </button>
 
-                {/* THE INVISIBLE HOVER BRIDGE: Brought much closer to the text with a SOLID background */}
-                <div className="absolute left-1/2 -translate-x-1/2 top-[80%] w-64 pt-2 z-50 invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out">
+                {/* THE DROPDOWN CONTAINER (Controlled by isAboutOpen state) */}
+                <div className={`absolute left-1/2 -translate-x-1/2 top-[80%] w-64 pt-2 z-50 transition-all duration-300 ease-out ${isAboutOpen ? 'visible opacity-100 translate-y-0' : 'invisible opacity-0 translate-y-2'}`}>
                   <div className="bg-[#3e1a16] border border-red-900/50 rounded-xl shadow-2xl py-2 overflow-hidden flex flex-col">
-                    <Link to="/about" className="px-5 py-3 text-sm text-amber-100/90 hover:text-amber-400 hover:bg-red-900/40 transition-colors border-b border-red-900/30">
+                    <Link 
+                      to="/about" 
+                      onClick={() => setIsAboutOpen(false)}
+                      className="px-5 py-3 text-sm text-amber-100/90 hover:text-amber-400 hover:bg-red-900/40 transition-colors border-b border-red-900/30"
+                    >
                       {t('nav.aboutHistory')}
                     </Link>
-                    <Link to="/about/nirman" className="px-5 py-3 text-sm text-amber-100/90 hover:text-amber-400 hover:bg-red-900/40 transition-colors border-b border-red-900/30">
+                    <Link 
+                      to="/about/nirman" 
+                      onClick={() => setIsAboutOpen(false)}
+                      className="px-5 py-3 text-sm text-amber-100/90 hover:text-amber-400 hover:bg-red-900/40 transition-colors border-b border-red-900/30"
+                    >
                       {t('nav.aboutNirman')}
                     </Link>
-                    <Link to="/founders" className="px-5 py-3 text-sm text-amber-100/90 hover:text-amber-400 hover:bg-red-900/40 transition-colors">
+                    <Link 
+                      to="/founders" 
+                      onClick={() => setIsAboutOpen(false)}
+                      className="px-5 py-3 text-sm text-amber-100/90 hover:text-amber-400 hover:bg-red-900/40 transition-colors"
+                    >
                       {t('nav.aboutTrustees')}
                     </Link>
                   </div>

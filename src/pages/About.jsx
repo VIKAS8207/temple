@@ -89,8 +89,8 @@ export default function About() {
               </p>
             </div>
             <div className="flex-1 w-full max-w-md lg:max-w-full">
-              <div className="relative p-2 bg-white rounded-t-[10rem] rounded-b-2xl shadow-xl border border-stone-200 rotate-2 hover:rotate-0 transition-transform duration-500">
-                <div className="overflow-hidden rounded-t-[9.5rem] rounded-b-xl border-4 border-amber-500/30">
+              <div className="relative p-2 bg-white rounded-t-2xl rounded-b-2xl shadow-xl border border-stone-200 rotate-2 hover:rotate-0 transition-transform duration-500">
+                <div className="overflow-hidden rounded-t-2xl rounded-b-xl border-4 border-amber-500/30">
                   <img src="https://images.unsplash.com/photo-1590055531615-f16d36ffe8ea?auto=format&fit=crop&w=800&q=80" alt="Maa Badi Mata" className="w-full h-[350px] md:h-[450px] object-cover hover:scale-105 transition-transform duration-700"/>
                 </div>
               </div>
@@ -109,8 +109,8 @@ export default function About() {
               </p>
             </div>
             <div className="flex-1 w-full max-w-md lg:max-w-full">
-              <div className="relative p-2 bg-white rounded-t-[10rem] rounded-b-2xl shadow-xl border border-stone-200 -rotate-2 hover:rotate-0 transition-transform duration-500">
-                <div className="overflow-hidden rounded-t-[9.5rem] rounded-b-xl border-4 border-amber-500/30">
+              <div className="relative p-2 bg-white rounded-t-2xl rounded-b-2xl shadow-xl border border-stone-200 -rotate-2 hover:rotate-0 transition-transform duration-500">
+                <div className="overflow-hidden rounded-t-2xl rounded-b-xl border-4 border-amber-500/30">
                   <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" alt="Maa Manjhli Mata" className="w-full h-[350px] md:h-[450px] object-cover hover:scale-105 transition-transform duration-700"/>
                 </div>
               </div>
@@ -129,8 +129,8 @@ export default function About() {
               </p>
             </div>
             <div className="flex-1 w-full max-w-md lg:max-w-full">
-              <div className="relative p-2 bg-white rounded-t-[10rem] rounded-b-2xl shadow-xl border border-stone-200 rotate-2 hover:rotate-0 transition-transform duration-500">
-                <div className="overflow-hidden rounded-t-[9.5rem] rounded-b-xl border-4 border-amber-500/30">
+              <div className="relative p-2 bg-white rounded-t-2xl rounded-b-2xl shadow-xl border border-stone-200 rotate-2 hover:rotate-0 transition-transform duration-500">
+                <div className="overflow-hidden rounded-t-2xl rounded-b-xl border-4 border-amber-500/30">
                   <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=80" alt="Maa Chhoti Mata" className="w-full h-[350px] md:h-[450px] object-cover hover:scale-105 transition-transform duration-700"/>
                 </div>
               </div>

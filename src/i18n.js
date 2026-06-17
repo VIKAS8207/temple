@@ -80,14 +80,16 @@ const resources = {
       },
       gallery: {
         pageTitle: "Divine Gallery",
-        subtitle: "Glimpses of Faith & Devotion",
-        img1: "Maha Aarti Mahotsav",
-        card1Title: "Sacred Collections",
-        card1Sub: "Explore Heritage",
-        card2Title: "Moments of Peace",
-        card2Desc: "Experience the architectural beauty and spiritual tranquility of the temple grounds.",
-        heritage: "Heritage Art",
-        heritageDesc: "Every corner of Badimatha Temple is adorned with traditional craftsmanship, preserving the glorious spiritual art of our ancestors for generations to come."
+        subtitle: "Glimpses of Grace and Devotion",
+        photoHeading: "Sacred Darshan",
+        photoSub: "Captured Moments of Divinity",
+        videoHeading: "Aarti & Utsav",
+        videoSub: "Experience the Divine Energy",
+        vid1Title: "Grand Evening Aarti",
+        vid2Title: "Navratri Mahotsav Highlights",
+        vid3Title: "Temple Foundation Day",
+        heritage: "Eternal Heritage",
+        heritageDesc: "Every frame holds a thousand prayers. Explore the timeless beauty, vibrant festivals, and the supreme tranquility of Maa Badi Mata's sanctuary."
       },
       news: {
         pageTitle: "News & Events",
@@ -220,6 +222,7 @@ const resources = {
         formTitle: "Donation & Seva Offering",
         name: "Full Name",
         phone: "Mobile Number",
+        email: "Email Address",
         anonymous: "Donate Anonymously",
         selectSeva: "Select Seva Type",
         specify: "Please specify the seva",
@@ -343,7 +346,42 @@ const resources = {
         sec4Title: "Current Status & Your Role",
         sec4Text: "By the grace of Mata, approximately 65% of the construction work is already complete. However, to bring the grand Shikhar and the finishing touches to life, we need the collective strength of our community. Join us in this historic Mahayagya.",
         ctaBtn: "Contribute to Nirman"
-      }
+      },
+      kalash: {
+        pageTitle: "Kalash Sthapana",
+        subtitle: "Light the lamp of devotion during Navratri",
+        
+        // Navratri Categories
+        shardiyaTitle: "Shardiya Navratri Kalash",
+        chaitraTitle: "Chaitra Navratri Kalash",
+        
+        // Kalash Types
+        telKalash: "Tel Kalash (Oil)",
+        gheeKalash: "Akhand Ghee Kalash",
+        descTel: "Illuminate the temple with a sacred oil lamp for 9 days.",
+        descGhee: "Establish a pure Akhand Ghee lamp for divine blessings.",
+        bookBtn: "Book Kalash",
+        
+        // Gupt Dan Section
+        guptTitle: "Mandir Mahabhiyan - Gupt Dan",
+        guptDesc: "Support the grand temple construction anonymously. Your selfless devotion remains a sacred secret between you and the Divine Mother.",
+        addressLabel: "Temple Address:",
+        addressValue: "Maa Badi Mata Mandir, Raipur, Chhattisgarh",
+        emailLabel: "Email ID:",
+        emailValue: "contact@badimatatrust.com",
+        
+        // Modal & Form
+        modalTitle: "Kalash Booking Details",
+        modalSubtitle: "Please provide your details for the Kalash Sankalp.",
+        selectedSeva: "Selected Festival:",
+        name: "Full Name",
+        phone: "Mobile Number",
+        email: "Email Address",
+        address: "Complete Address",
+        anonymous: "Make this booking anonymous (Gupt Dan)",
+        payBtn: "Proceed to Payment",
+        redirectMsg: "Redirecting to secure payment gateway..."
+      },
     }
   },
   hi: {
@@ -421,15 +459,17 @@ const resources = {
         ctaBtn: "समाचार एवं आयोजन देखें"
       },
       gallery: {
-        pageTitle: "दिव्य गैलरी",
-        subtitle: "आस्था और भक्ति की झलकियाँ",
-        img1: "महा आरती महोत्सव",
-        card1Title: "पवित्र संग्रह",
-        card1Sub: "विरासत का अन्वेषण करें",
-        card2Title: "शांति के क्षण",
-        card2Desc: "मंदिर परिसर की स्थापत्य सुंदरता और आध्यात्मिक शांति का अनुभव करें।",
-        heritage: "विरासत कला",
-        heritageDesc: "बड़ीमाता मंदिर का हर कोना पारंपरिक शिल्प कौशल से सजा हुआ है, जो आने वाली पीढ़ियों के लिए हमारे पूर्वजों की शानदार आध्यात्मिक कला को संरक्षित करता है।"
+        pageTitle: "दिव्य दर्शन गैलरी",
+        subtitle: "कृपा और भक्ति की मनमोहक झलकियाँ",
+        photoHeading: "पवित्र दर्शन",
+        photoSub: "दिव्यता के कुछ अद्भुत पल",
+        videoHeading: "आरती एवं उत्सव",
+        videoSub: "दिव्य ऊर्जा और चैतन्यता का अनुभव करें",
+        vid1Title: "भव्य सांध्य आरती",
+        vid2Title: "नवरात्रि महोत्सव की झलकियाँ",
+        vid3Title: "मंदिर स्थापना दिवस",
+        heritage: "शाश्वत विरासत",
+        heritageDesc: "हर एक छवि में हजारों प्रार्थनाएं बसी हैं। माँ बड़ी माता के दरबार के शाश्वत सौंदर्य, जीवंत उत्सवों और परम शांति का अनुभव करें।"
       },
       news: {
         pageTitle: "समाचार एवं आयोजन",
@@ -562,6 +602,7 @@ const resources = {
         formTitle: "दान एवं सेवा अर्पण",
         name: "पूरा नाम",
         phone: "मोबाइल नंबर",
+        email: "ईमेल आईडी",
         anonymous: "गुमनाम दान (Anonymous Donation)",
         selectSeva: "सेवा का प्रकार चुनें",
         specify: "कृपया सेवा बताएं",
@@ -684,6 +725,41 @@ const resources = {
         sec4Title: "वर्तमान स्थिति और आपकी भूमिका",
         sec4Text: "माता की कृपा से निर्माण कार्य लगभग 65% पूर्ण हो चुका है। अब भव्य शिखर और अंतिम रूपरेखा को पूरा करने के लिए समाज की सामूहिक शक्ति की आवश्यकता है। इस ऐतिहासिक महायज्ञ में आहुति दें और माता का आशीर्वाद प्राप्त करें।",
         ctaBtn: "निर्माण में सहयोग करें"
+      },
+      kalash: {
+        pageTitle: "कलश स्थापना",
+        subtitle: "नवरात्रि में माँ के दरबार में आस्था का दीप प्रज्वलित करें",
+        
+        // Navratri Categories
+        shardiyaTitle: "शारदीय नवरात्रि कलश",
+        chaitraTitle: "चैत्र नवरात्रि कलश",
+        
+        // Kalash Types
+        telKalash: "तेल कलश",
+        gheeKalash: "अखंड घृत (घी) कलश",
+        descTel: "९ दिनों तक पवित्र तेल के कलश द्वारा माता की आराधना।",
+        descGhee: "दिव्य कृपा हेतु शुद्ध देसी घी का अखंड कलश स्थापित करें।",
+        bookBtn: "कलश बुक करें",
+        
+        // Gupt Dan Section
+        guptTitle: "मंदिर महाभियान - गुप्त दान",
+        guptDesc: "भव्य मंदिर निर्माण में गुप्त रूप से अपना सहयोग दें। आपकी यह निःस्वार्थ सेवा केवल आपके और माता के बीच का एक पवित्र रहस्य है।",
+        addressLabel: "मंदिर का पता:",
+        addressValue: "माँ बड़ी माता मंदिर, रायपुर, छत्तीसगढ़",
+        emailLabel: "ईमेल आईडी:",
+        emailValue: "contact@badimatatrust.com",
+        
+        // Modal & Form
+        modalTitle: "कलश बुकिंग विवरण",
+        modalSubtitle: "कलश संकल्प हेतु कृपया अपना विवरण प्रदान करें।",
+        selectedSeva: "चयनित पर्व:",
+        name: "पूरा नाम",
+        phone: "मोबाइल नंबर",
+        email: "ईमेल आईडी",
+        address: "पूरा पता",
+        anonymous: "इस बुकिंग को गुप्त दान के रूप में दर्ज करें",
+        payBtn: "सुरक्षित भुगतान करें",
+        redirectMsg: "सुरक्षित पेमेंट गेटवे पर जा रहे हैं..."
       },
     }
   }

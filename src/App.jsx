@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import LuckyDraw from "./pages/LuckyDraw";
 import Serve from "./pages/Serve";
 import Donation from "./pages/Donation";
+import KalashSthapna from "./pages/KalashSthapna";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="/lucky-draw" element={<LuckyDraw />} />
             <Route path="/serve" element={<Serve />} />
             <Route path="/donate" element={<Donation />} />
+            <Route path="/kalash-sthapna" element={<KalashSthapna />} />
           </Routes>
         </main>
 

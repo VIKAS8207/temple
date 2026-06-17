@@ -78,7 +78,7 @@ export default function Founders() {
                   <img 
                     src={founder.img} 
                     alt={founder.name} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
                 </div>
@@ -124,7 +124,7 @@ export default function Founders() {
                   <img 
                     src={member.img} 
                     alt={member.name} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700"
                   />
                 </div>
               </div>
