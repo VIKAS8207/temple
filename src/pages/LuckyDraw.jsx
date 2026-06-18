@@ -29,7 +29,7 @@ export default function LuckyDraw() {
     { count: "4", name: "Refrigerator", img: "/prize/fridge.jpg" },
     { count: "5", name: "Air Conditioner", img: "/prize/AC.jpg" },
     { count: "5", name: "Washing Machine", img: "/prize/WM.jpg" },
-    { count: "5", name: "Vivo Mobile", img: "/prize/phone.jpg" },
+    { count: "5", name: "Vivo Mobile", img: "/prize/Phone.jpg" },
     { count: "10", name: "LED TV", img: "/prize/TV.jpg" },
     { count: "10", name: "Cooler", img: "/prize/cooler.jpg" },
     { count: "10", name: "Bicycle", img: "/prize/cycle.jpg" },
