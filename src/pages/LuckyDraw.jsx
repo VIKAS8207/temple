@@ -17,29 +17,29 @@ export default function LuckyDraw() {
 
   // 2. Major Prizes 
   const majorPrizes = [
-    { id: 1, img: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=400&q=80', title: t('luckyNew.prizePlot', '₹10 लाख तक का प्लॉट') },
-    { id: 2, img: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=400&q=80', title: t('luckyNew.prizeCar', '1 कार') },
-    { id: 3, img: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=400&q=80', title: t('luckyNew.prizeRE', '1 Royal Enfield') },
-    { id: 4, img: 'https://images.unsplash.com/photo-1593950315186-76a92975b60c?auto=format&fit=crop&w=400&q=80', title: t('luckyNew.prizeChetak', '2 Bajaj Chetak EV') }
+    { id: 1, img: '/prize/land.jpg', title: t('luckyNew.prizePlot', '₹10 लाख तक का प्लॉट') },
+    { id: 2, img: '/prize/car.jpg', title: t('luckyNew.prizeCar', '1 कार') },
+    { id: 3, img: '/prize/bike.jpg', title: t('luckyNew.prizeRE', '1 Royal Enfield') },
+    { id: 4, img: '/prize/scooty.jpg', title: t('luckyNew.prizeChetak', '2 Bajaj Chetak EV') }
   ];
 
 // 3. Other Attractive Prizes (Updated with Images instead of Emojis)
   const otherPrizes = [
-    { count: "3", name: "Laptop", img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=300&q=80" },
-    { count: "4", name: "Refrigerator", img: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=300&q=80" },
-    { count: "5", name: "Air Conditioner", img: "https://images.unsplash.com/photo-1629210214878-5777bdcc7137?auto=format&fit=crop&w=300&q=80" },
-    { count: "5", name: "Washing Machine", img: "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=300&q=80" },
-    { count: "5", name: "Vivo Mobile", img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=300&q=80" },
-    { count: "10", name: "LED TV", img: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=300&q=80" },
-    { count: "10", name: "Cooler", img: "https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=300&q=80" },
-    { count: "10", name: "Bicycle", img: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=300&q=80" },
-    { count: "15", name: "Trolley Bag", img: "https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=300&q=80" },
-    { count: "20", name: "Home Theatre", img: "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=300&q=80" },
-    { count: "25", name: "Induction", img: "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=300&q=80" },
-    { count: "100", name: "Mixer Grinder", img: "https://images.unsplash.com/photo-1585659722983-38ca899fc73d?auto=format&fit=crop&w=300&q=80" },
-    { count: "100", name: "Steel Dinner Set", img: "https://images.unsplash.com/photo-1615887023516-9b62ca531db5?auto=format&fit=crop&w=300&q=80" },
-    { count: "200", name: "Electric Iron", img: "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=300&q=80" },
-    { count: "500", name: "Water Can", img: "https://images.unsplash.com/photo-1564415315949-7a0c4c73aab4?auto=format&fit=crop&w=300&q=80" }
+    { count: "3", name: "Laptop", img: "/prize/laptop.jpg" },
+    { count: "4", name: "Refrigerator", img: "/prize/fridge.jpg" },
+    { count: "5", name: "Air Conditioner", img: "/prize/AC.jpg" },
+    { count: "5", name: "Washing Machine", img: "/prize/WM.jpg" },
+    { count: "5", name: "Vivo Mobile", img: "/prize/phone.jpg" },
+    { count: "10", name: "LED TV", img: "/prize/TV.jpg" },
+    { count: "10", name: "Cooler", img: "/prize/cooler.jpg" },
+    { count: "10", name: "Bicycle", img: "/prize/cycle.jpg" },
+    { count: "15", name: "Trolley Bag", img: "/prize/airbag.jpg" },
+    { count: "20", name: "Home Theatre", img: "/prize/sound.jpg" },
+    { count: "25", name: "Induction", img: "/prize/Induction.jpg" },
+    { count: "100", name: "Mixer Grinder", img: "/prize/Mixi.jpg" },
+    { count: "100", name: "Steel Dinner Set", img: "/prize/vessel.jpg" },
+    { count: "200", name: "Electric Iron", img: "/prize/iorn.jpg" },
+    { count: "500", name: "Water Can", img: "/prize/watercan.jpg" }
   ];
 
   // Auto-slide effect
