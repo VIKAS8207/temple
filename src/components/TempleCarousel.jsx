@@ -20,6 +20,10 @@ export default function TempleCarousel() {
       id: 2,
       image: "/image/Artboard 2.png",
     },
+    {
+      id: 3,
+      image: "/image/Artboard 3.png",
+    },
   ];
 
   // Auto-play functionality

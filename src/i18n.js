@@ -163,7 +163,9 @@ const resources = {
         modalAmountLabel: "Contribution Amount:",
         modalAmount: "₹500",
         modalPayBtn: "Secure Payment",
-        modalAlert: "Redirecting to Payment Gateway..."
+        modalAlert: "Redirecting to Payment Gateway...",
+        modalEmailPlaceholder: "Email Address (Optional)",
+modalAddressPlaceholder: "Complete Address",
       },
       founders: {
         title: "Trust Board",
@@ -578,7 +580,9 @@ const resources = {
         modalAmountLabel: "सहयोग राशि:",
         modalAmount: "₹500",
         modalPayBtn: "सुरक्षित भुगतान करें",
-        modalAlert: "पेमेंट गेटवे पर जा रहे हैं..."
+        modalAlert: "पेमेंट गेटवे पर जा रहे हैं...",
+        modalEmailPlaceholder: "ईमेल आईडी (Email ID)",
+modalAddressPlaceholder: "पूरा पता (Complete Address)",
       },
       founders: {
         title: "ट्रस्ट मंडल",
