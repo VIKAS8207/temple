@@ -10,7 +10,7 @@ const resources = {
         about: "About Us",
         timing: "Temple Timing",
         gallery: "Gallery",
-        news: "News & Events",
+        news: "Events & Blog",
         lucky: "Lucky Draw",
         donate: "Donate",
         contact: "Contact",
@@ -94,7 +94,7 @@ const resources = {
       news: {
         pageTitle: "News & Events",
         tabEvents: "Upcoming Events",
-        tabNews: "Latest News",
+        tabNews: "Latest Blog",
         
         // Events
         event1Title: "Navratri Mahotsav Preparation",
@@ -427,7 +427,7 @@ modalAddressPlaceholder: "Complete Address",
         about: "हमारे बारे में",
         timing: "दर्शन का समय",
         gallery: "गैलरी",
-        news: "समाचार और घटनाएँ",
+        news: "इवेंट और ब्लॉगिंग",
         lucky: "भाग्यशाली भक्त उपहार योजना",
         donate: "मंदिर निर्माण महाअभियान",
         contact: "संपर्क करें",
@@ -510,8 +510,8 @@ modalAddressPlaceholder: "Complete Address",
       },
       news: {
         pageTitle: "समाचार एवं आयोजन",
-        tabEvents: "आगामी आयोजन",
-        tabNews: "नवीनतम समाचार",
+        tabEvents: "आयोजन",
+        tabNews: "ब्लॉग",
         
         // Events
         event1Title: "नवरात्रि महोत्सव की तैयारियाँ",
@@ -521,7 +521,7 @@ modalAddressPlaceholder: "Complete Address",
         readMore: "विवरण पढ़ें",
         
         // News
-        latestNewsTitle: "नवीनतम समाचार",
+        latestNewsTitle: "ब्लॉग",
         tagCommunity: "सामाजिक कार्य",
         tagTemple: "मंदिर अपडेट",
         news1Title: "विशाल अन्नदान अभियान सफलतापूर्वक संपन्न",
