@@ -165,7 +165,24 @@ const resources = {
         modalPayBtn: "Secure Payment",
         modalAlert: "Redirecting to Payment Gateway...",
         modalEmailPlaceholder: "Email Address (Optional)",
-modalAddressPlaceholder: "Complete Address",
+        modalAddressPlaceholder: "Complete Address",
+        // Receipt Page Labels & Details
+        receiptTitle: "Donation Receipt",
+        receiptId: "Coupon ID",
+        receiptDate: "Date",
+        receiptName: "Name",
+        receiptPhone: "Mobile Number",
+        receiptEmail: "Email ID",
+        receiptAddress: "Address",
+        receiptAmount: "Amount Paid",
+        
+        // Buttons
+        downloadBtn: "Download PDF Receipt",
+        backToHome: "Back to Home",
+        
+        // Custom Toast Notifications
+        pdfSuccess: "Receipt downloaded successfully!",
+        pdfError: "Failed to generate PDF. Please try again."
       },
       founders: {
         title: "Trust Board",
@@ -333,7 +350,18 @@ modalAddressPlaceholder: "Complete Address",
         causeGau: "Cow Shelter",
         descGau: "For the shelter & care of Gau Mata",
 
-        donateBtn : "अभी सहयोग करें"
+        donateBtn : "अभी सहयोग करें",
+
+        // In the 'donate' block:
+        addressPlaceholder: "Complete Address",
+        receiptTitle: "Donation Receipt",
+        receiptThanks: "Thank you for your generous contribution to the temple construction!",
+        receiptId: "Donation ID",
+        receiptDate: "Date",
+        donorDetails: "Donor Details",
+        anonymousDonor: "Anonymous Donor",
+        anonymousMsg: "The donor has chosen to remain anonymous. Personal details are withheld.",
+        categoriesSupported: "Categories Supported",
 
       },
       nirman: {
@@ -418,6 +446,7 @@ modalAddressPlaceholder: "Complete Address",
         privacyPolicy: "Privacy Policy",
         termsOfService: "Terms of Service"
       },
+      
     }
   },
   hi: {
@@ -582,7 +611,24 @@ modalAddressPlaceholder: "Complete Address",
         modalPayBtn: "सुरक्षित भुगतान करें",
         modalAlert: "पेमेंट गेटवे पर जा रहे हैं...",
         modalEmailPlaceholder: "ईमेल आईडी (Email ID)",
-modalAddressPlaceholder: "पूरा पता (Complete Address)",
+        modalAddressPlaceholder: "पूरा पता (Complete Address)",
+        // Receipt Page Labels & Details
+        receiptTitle: "सहयोग रसीद",
+        receiptId: "कूपन आईडी",
+        receiptDate: "दिनांक",
+        receiptName: "नाम",
+        receiptPhone: "मोबाइल नंबर",
+        receiptEmail: "ईमेल आईडी",
+        receiptAddress: "पता",
+        receiptAmount: "जमा राशि",
+        
+        // Buttons
+        downloadBtn: "PDF रसीद डाउनलोड करें",
+        backToHome: "मुख्य पृष्ठ पर लौटें",
+        
+        // Custom Toast Notifications
+        pdfSuccess: "रसीद सफलतापूर्वक डाउनलोड हो गई!",
+        pdfError: "PDF जनरेट करने में विफल। कृपया पुनः प्रयास करें।"
       },
       founders: {
         title: "ट्रस्ट मंडल",
@@ -750,7 +796,17 @@ modalAddressPlaceholder: "पूरा पता (Complete Address)",
         descAnna: "महाप्रसाद एवं दैनिक भंडारा भवन",
         causeGau: "गौशाला सहयोग",
         descGau: "गौ माता के आश्रय एवं सेवा हेतु",
-        donateBtn : "अभी सहयोग करें"
+        donateBtn : "अभी सहयोग करें",
+        // In the 'donate' block:
+        addressPlaceholder: "पूरा पता (Complete Address)",
+        receiptTitle: "दान रसीद",
+        receiptThanks: "मंदिर निर्माण में आपके अमूल्य सहयोग के लिए धन्यवाद!",
+        receiptId: "दान आईडी",
+        receiptDate: "दिनांक",
+        donorDetails: "दानकर्ता विवरण",
+        anonymousDonor: "गुमनाम दानदाता",
+        anonymousMsg: "दानदाता ने अपनी पहचान गुप्त रखने का विकल्प चुना है। व्यक्तिगत विवरण सुरक्षित रखा गया है।",
+        categoriesSupported: "सहयोग श्रेणियां",
       },
       nirman: {
         pageTitle: "भव्य मंदिर निर्माण",
@@ -798,7 +854,17 @@ modalAddressPlaceholder: "पूरा पता (Complete Address)",
         address: "पूरा पता",
         anonymous: "इस बुकिंग को गुप्त दान के रूप में दर्ज करें",
         payBtn: "सुरक्षित भुगतान करें",
-        redirectMsg: "सुरक्षित पेमेंट गेटवे पर जा रहे हैं..."
+        redirectMsg: "सुरक्षित पेमेंट गेटवे पर जा रहे हैं...",
+        // In the 'kalash' block:
+        receiptTitle: "Kalash Sthapna Receipt",
+        receiptThanks: "Thank you for your devotional offering!",
+        receiptId: "Booking ID",
+        receiptDate: "Date",
+        donorDetails: "Devotee Details",
+        anonymousDonor: "Anonymous Devotee",
+        anonymousMsg: "The devotee has chosen to remain anonymous. Personal details are withheld.",
+        sevaDetails: "Seva Details",
+        receiptAmount: "Amount Paid",
       },
       footer: {
         templeName: "बड़ी माता मंदिर",
@@ -832,7 +898,17 @@ modalAddressPlaceholder: "पूरा पता (Complete Address)",
         
         copyright: "श्री बड़ी माता मंदिर। सर्वाधिकार सुरक्षित।",
         privacyPolicy: "गोपनीयता नीति",
-        termsOfService: "सेवा की शर्तें"
+        termsOfService: "सेवा की शर्तें",
+        // In the 'kalash' block:
+        receiptTitle: "कलश स्थापना रसीद",
+        receiptThanks: "आपके भक्तिपूर्ण समर्पण के लिए धन्यवाद!",
+        receiptId: "बुकिंग आईडी",
+        receiptDate: "दिनांक",
+        donorDetails: "भक्त विवरण",
+        anonymousDonor: "गुमनाम भक्त",
+        anonymousMsg: "भक्त ने अपनी पहचान गुप्त रखने का विकल्प चुना है। व्यक्तिगत विवरण सुरक्षित रखा गया है।",
+        sevaDetails: "सेवा विवरण",
+        receiptAmount: "जमा राशि",
       },
     }
   }

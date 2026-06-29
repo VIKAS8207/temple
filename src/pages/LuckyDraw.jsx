@@ -1,11 +1,18 @@
 // src/pages/LuckyDraw.jsx
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function LuckyDraw() {
   const { t } = useTranslation();
+  const navigate = useNavigate(); // NEW HOOK
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: '', phone: '', email: '', address: ''
+  });
 
   // 1. Full-Width Carousel Images
   const carouselImages = [
@@ -404,15 +411,39 @@ export default function LuckyDraw() {
               <p className="text-stone-500 text-xs sm:text-sm">{t('luckyNew.modalSubtitle', 'कूपन प्राप्त करने के लिए अपना विवरण दें।')}</p>
             </div>
 
-            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert(t('luckyNew.modalAlert', 'पेमेंट गेटवे पर जा रहे हैं...')); }}>
+            <form 
+              className="space-y-4" 
+              onSubmit={(e) => { 
+                e.preventDefault(); 
+                // Generate a random ID like BMT-A7F9-2026
+                const uniqueId = `BMT-${Math.random().toString(36).substring(2, 6).toUpperCase()}-${new Date().getFullYear()}`;
+                
+                // Navigate to receipt page and pass the data!
+                navigate('/lucky-draw-receipt', { 
+                  state: { ...formData, couponId: uniqueId, amount: 500, date: new Date().toLocaleDateString() } 
+                });
+              }}
+            >
               
-              <input type="text" placeholder={t('luckyNew.modalNamePlaceholder', 'पूरा नाम (Full Name)')} required className="w-full p-3 sm:p-4 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none font-medium text-stone-800 text-sm sm:text-base" />
+              <input type="text" placeholder={t('luckyNew.modalNamePlaceholder', 'पूरा नाम (Full Name)')} required 
+                className="w-full p-3 sm:p-4 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none font-medium text-stone-800 text-sm sm:text-base" 
+                onChange={(e) => setFormData({...formData, name: e.target.value})}
+              />
               
-              <input type="tel" placeholder={t('luckyNew.modalPhonePlaceholder', 'मोबाइल नंबर (Mobile No.)')} required className="w-full p-3 sm:p-4 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none font-medium text-stone-800 text-sm sm:text-base" />
+              <input type="tel" placeholder={t('luckyNew.modalPhonePlaceholder', 'मोबाइल नंबर (Mobile No.)')} required 
+                className="w-full p-3 sm:p-4 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none font-medium text-stone-800 text-sm sm:text-base" 
+                onChange={(e) => setFormData({...formData, phone: e.target.value})}
+              />
               
-              <input type="email" placeholder={t('luckyNew.modalEmailPlaceholder', 'ईमेल आईडी (Email ID)')} required className="w-full p-3 sm:p-4 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none font-medium text-stone-800 text-sm sm:text-base" />
+              <input type="email" placeholder={t('luckyNew.modalEmailPlaceholder', 'ईमेल आईडी (Email ID)')} required 
+                className="w-full p-3 sm:p-4 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none font-medium text-stone-800 text-sm sm:text-base" 
+                onChange={(e) => setFormData({...formData, email: e.target.value})}
+              />
               
-              <textarea placeholder={t('luckyNew.modalAddressPlaceholder', 'पूरा पता (Complete Address)')} required rows="2" className="w-full p-3 sm:p-4 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none font-medium text-stone-800 text-sm sm:text-base resize-none"></textarea>
+              <textarea placeholder={t('luckyNew.modalAddressPlaceholder', 'पूरा पता (Complete Address)')} required rows="2" 
+                className="w-full p-3 sm:p-4 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none font-medium text-stone-800 text-sm sm:text-base resize-none"
+                onChange={(e) => setFormData({...formData, address: e.target.value})}
+              ></textarea>
               
               <div className="flex items-center justify-between p-3 sm:p-4 bg-amber-50 border border-amber-200 rounded-xl mt-4">
                 <span className="font-bold text-stone-700 text-sm sm:text-base">{t('luckyNew.modalAmountLabel', 'सहयोग राशि:')}</span>

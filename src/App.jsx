@@ -12,6 +12,9 @@ import LuckyDraw from "./pages/LuckyDraw";
 import Serve from "./pages/Serve";
 import Donation from "./pages/Donation";
 import KalashSthapna from "./pages/KalashSthapna";
+import LuckyDrawReceipt from './pages/LuckyDrawReceipt';
+import DonationReceipt from './pages/DonationReceipt';
+import KalashReceipt from './pages/KalashReceipt';
 
 function App() {
   return (
@@ -35,6 +38,9 @@ function App() {
             <Route path="/serve" element={<Serve />} />
             <Route path="/donate" element={<Donation />} />
             <Route path="/kalash-sthapna" element={<KalashSthapna />} />
+            <Route path="/lucky-draw-receipt" element={<LuckyDrawReceipt />} />
+            <Route path="/donation-receipt" element={<DonationReceipt />} />
+            <Route path="/kalash-receipt" element={<KalashReceipt />} />
           </Routes>
         </main>
 

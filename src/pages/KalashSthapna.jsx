@@ -1,9 +1,11 @@
 // src/pages/KalashSthapna.jsx
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 export default function KalashSthapna() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   
   // Toggle State for Navratri Festival
   const [activeFestival, setActiveFestival] = useState('shardiya'); // 'shardiya' or 'chaitra'
@@ -21,10 +23,8 @@ export default function KalashSthapna() {
     isAnonymous: false
   });
 
-  // Reusable input styling for the modal
   const inputClasses = "w-full p-3.5 sm:p-4 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none font-medium text-stone-800 text-sm sm:text-base transition-all";
 
-  // Data for the Kalash Packages
   const kalashOptions = [
     { id: 'tel', type: 'telKalash', price: 1100, icon: '🪔', desc: 'descTel' },
     { id: 'ghee', type: 'gheeKalash', price: 2100, icon: '✨', desc: 'descGhee' }
@@ -37,14 +37,24 @@ export default function KalashSthapna() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(t('kalash.redirectMsg'));
-    console.log("Booking Data:", { ...formData, package: selectedPackage });
+    
+    // Generate Unique Booking ID
+    const bookingId = `KAL-${Math.random().toString(36).substring(2, 6).toUpperCase()}-${new Date().getFullYear()}`;
+
+    // Navigate to receipt and pass data
+    navigate('/kalash-receipt', { 
+      state: { 
+        ...formData, 
+        package: selectedPackage,
+        bookingId, 
+        date: new Date().toLocaleDateString()
+      } 
+    });
   };
 
   return (
     <div className="min-h-screen bg-[#fcf9f5] relative overflow-hidden flex flex-col items-center pb-24">
       
-      {/* Background ambient mandala pattern */}
       <div 
         className="absolute inset-0 opacity-[0.03] pointer-events-none z-0"
         style={{ 
@@ -57,7 +67,7 @@ export default function KalashSthapna() {
           1. HEADER SECTION
       ========================================= */}
       <section className="relative z-10 w-full bg-gradient-to-b from-[#3e1a16] via-[#2a110e] to-[#3e1a16] text-[#eedcbf] py-16 px-4 border-b-8 border-amber-500 flex flex-col items-center text-center shadow-2xl">
-        <div className="absolute inset-0  mix-blend-overlay"></div>
+        <div className="absolute inset-0 mix-blend-overlay"></div>
         <h1 className="relative z-10 text-4xl md:text-5xl lg:text-6xl font-rozha text-[#eedcbf] font-bold mb-4 leading-tight drop-shadow-md">
           {t('kalash.pageTitle')}
         </h1>
@@ -77,7 +87,6 @@ export default function KalashSthapna() {
             2. TOGGLE TABS & BOOKING OPTIONS
         ========================================= */}
         <div>
-          {/* Toggle Buttons */}
           <div className="flex justify-center mb-10">
             <div className="bg-white/60 backdrop-blur-md p-1.5 rounded-full inline-flex shadow-sm border border-stone-200">
               <button 
@@ -103,10 +112,8 @@ export default function KalashSthapna() {
             </div>
           </div>
 
-          {/* Dynamic Grid Based on Active Tab */}
           <div className="grid md:grid-cols-2 gap-8 animate-[fadeIn_0.4s_ease-out]">
             {kalashOptions.map((opt) => {
-              // Get the correct localized title based on the active tab
               const activeTitle = activeFestival === 'shardiya' ? t('kalash.shardiyaTitle') : t('kalash.chaitraTitle');
               
               return (
@@ -127,7 +134,6 @@ export default function KalashSthapna() {
           </div>
         </div>
 
-        {/* Divider */}
         <div className="flex items-center justify-center opacity-30 my-4">
           <span className="w-1/3 h-px bg-amber-800"></span>
           <span className="mx-4 text-amber-800 text-xl font-rozha">❖</span>
@@ -139,7 +145,6 @@ export default function KalashSthapna() {
         ========================================= */}
         <div className="mt-10">
           <div className="bg-gradient-to-br from-[#8B3A2B] to-[#592218] rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center gap-10">
-            {/* Background elements */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-bl-full pointer-events-none"></div>
             
             <div className="flex-1 relative z-10">
@@ -202,7 +207,6 @@ export default function KalashSthapna() {
               <p className="text-stone-500 text-xs sm:text-sm">{t('kalash.modalSubtitle')}</p>
             </div>
 
-            {/* Selected Package Banner */}
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6 shadow-inner">
               <div className="flex justify-between items-center mb-2">
                 <span className="text-stone-500 text-xs font-bold uppercase">{t('kalash.selectedSeva')}</span>
@@ -216,31 +220,30 @@ export default function KalashSthapna() {
 
             <form className="space-y-4" onSubmit={handleSubmit}>
               <input 
-                type="text" placeholder={t('kalash.name')} required 
+                type="text" placeholder={t('kalash.name')} required={!formData.isAnonymous} 
                 className={inputClasses}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
               />
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input 
-                  type="tel" placeholder={t('kalash.phone')} required 
+                  type="tel" placeholder={t('kalash.phone')} required={!formData.isAnonymous} 
                   className={inputClasses}
                   onChange={(e) => setFormData({...formData, phone: e.target.value})}
                 />
                 <input 
-                  type="email" placeholder={t('kalash.email')} required 
+                  type="email" placeholder={t('kalash.email')} required={!formData.isAnonymous} 
                   className={inputClasses}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
                 />
               </div>
 
               <textarea 
-                placeholder={t('kalash.address')} required rows="2"
+                placeholder={t('kalash.address')} required={!formData.isAnonymous} rows="2"
                 className={`${inputClasses} resize-none`}
                 onChange={(e) => setFormData({...formData, address: e.target.value})}
               ></textarea>
               
-              {/* Anonymous Checkbox */}
               <label className="flex items-center gap-3 cursor-pointer group mt-2">
                 <div className="relative flex items-center justify-center">
                   <input 
@@ -267,7 +270,6 @@ export default function KalashSthapna() {
         </div>
       )}
 
-      {/* Global styles for animations */}
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes fadeIn {
           from { opacity: 0; transform: scale(0.95) translateY(10px); }
