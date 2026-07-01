@@ -23,6 +23,14 @@ export default function Home() {
     { img: "/image/Hero.png", textKey: "hero.slide3" }, 
   ];
 
+  // 1. Define your page-specific images at the top of your component
+  const donationCarouselImages = [
+  "/image/Artboard.jpeg",
+  "/image/Artboard 2.png",
+  "/image/Artboard 4.png",
+  "/image/Artboard 3.png",
+];
+
   // Random static positions and animation delays for the twinkling stars
   const starPositions = [
     { top: '10%', left: '5%', delay: '0s', duration: '1.5s' },
@@ -217,7 +225,7 @@ export default function Home() {
       </section>
 
       <ActionButtons />
-      <TempleCarousel />
+      <TempleCarousel images={donationCarouselImages} />
       <TempleStats />
       <WinnerList />   
       <TempleTiming />
