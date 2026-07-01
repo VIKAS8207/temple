@@ -2,45 +2,32 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-export default function TempleCarousel() {
+export default function TempleCarousel({ images = [] }) {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Carousel Data
-  const slides = [
-    {
-      id: 0,
-      image: "/image/Artboard.jpeg",
-    },
-    {
-      id: 1,
-      image: "/image/Artboard 1.png",
-    },
-    {
-      id: 2,
-      image: "/image/Artboard 2.png",
-    },
-    {
-      id: 3,
-      image: "/image/Artboard 3.png",
-    },
-  ];
-
   // Auto-play functionality
   useEffect(() => {
+    // Prevent interval if no images are provided
+    if (images.length === 0) return; 
+    
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
+      setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
     }, 5000); // Changes slide every 5 seconds
+    
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }, [images.length]);
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
+
+  // If no images are passed, don't render the carousel box at all
+  if (!images || images.length === 0) return null;
 
   return (
     <section className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-16 mb-12 sm:mb-16">
@@ -49,16 +36,16 @@ export default function TempleCarousel() {
       <div className="relative w-full aspect-video sm:aspect-video max-h-[80vh] bg-stone-900 border-[4px] sm:border-[6px] border-amber-200/60 rounded-2xl sm:rounded-3xl shadow-[0_20px_50px_rgba(139,58,43,0.15)] group overflow-hidden">
         
         {/* Slides */}
-        {slides.map((slide, index) => (
+        {images.map((imageSrc, index) => (
           <div 
-            key={slide.id}
+            key={index}
             className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
               index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
             }`}
           >
             {/* Background Image */}
             <img 
-              src={slide.image} 
+              src={imageSrc} 
               alt={`Slide ${index + 1}`} 
               className="w-full h-full object-cover object-center"
             />
@@ -85,7 +72,7 @@ export default function TempleCarousel() {
 
         {/* Dots Indicators */}
         <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2 sm:gap-3">
-          {slides.map((_, index) => (
+          {images.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}

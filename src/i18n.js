@@ -328,42 +328,73 @@ const resources = {
 
         pageTitle: "Temple Construction Donation",
         subtitle: "Building a Divine Legacy",
-        tagline: "“One Pillar – One Family”",
-        slogan: "Temple construction is not just building a structure, but creating an immortal legacy of Sanatan culture for future generations.",
-        step1: "Select Construction Part",
-        step2: "Your Details",
-        step3: "Donation Amount",
-        selectAlert: "Please select a construction category to proceed.",
-        payNow: "Offer Contribution",
+        // Trust Section
+        trustHeading: "How does your service reach the Goddess?",
+        trust1: "100% Secure Payment",
+        trust2: "Instant Digital Receipt",
+        trust3: "Temple Trust Certified Service",
+        trust4: "Your Service at the Mother's Feet",
         
-        // Causes
-        causePillar: "Pillar Donation",
-        descPillar: "Contribute to the main temple pillars",
-        causeGarbha: "Sanctum Sanctorum",
-        descGarbha: "Contribution for Mata's main shrine",
-        causeShikhar: "Spire Construction",
-        descShikhar: "Support for the highest temple spire",
-        causeSabha: "Assembly Hall",
-        descSabha: "Grand hall for devotee seating",
-        causeAnna: "Food Pavilion",
-        descAnna: "Mahaprasad & Bhandara building",
-        causeGau: "Cow Shelter",
-        descGau: "For the shelter & care of Gau Mata",
+        // Occasion Section
+        occasionHeading: "Every Achievement, Every Beginning - Dedicated to the Mother",
+        occasionSub: "Every success and happiness in our lives is fulfilled by the grace of the Mother. Offer your devotion and gratitude at her feet through service.",
+        occasionTagline: '"Your every contribution will be dedicated to the grand temple, dharma, service, and public welfare of Mother Badi Mata."',
+        
+        // Closing Message
+        closingMsg1: "We pray to Mother Badi Mata to always maintain happiness, peace, prosperity, good health, and her blessings in your life.",
+        closingMsg2: "Jai Maa Badi Mata",
+        closingMsg3: "Your Contribution • Mother's Blessings • Immortal Heritage of Sanatan Culture",
+        
+        // Modal & Form
+        modalTitle: "Devotee Details",
+        modalSubtitle: "Please fill in your details to dedicate your service at the feet of the Mother.",
+        modalNote: '"Your information will be kept safe only for service confirmation, receipt, and official communication from the Temple Trust."',
+        modalSelectedSeva: "Selected Service",
+        modalNamePlaceholder: "👤 Full Name* (Required)",
+        modalPhonePlaceholder: "📱 Mobile Number* (Required)",
+        modalEmailPlaceholder: "📧 Email ID (Optional)",
+        modalAddressPlaceholder: "📍 Complete Address (Optional)",
+        modalAnonymous: "Anonymous Donation",
+        modalAmountLabel: "Donation Amount (₹)",
+        modalAmountPlaceholder: "Enter amount as per devotion",
+        modalMinAmount: "* Minimum donation amount ₹",
+        modalSubmitBtn: "Offer Donation",
 
-        donateBtn : "अभी सहयोग करें",
+        // Section 3: Shloka & Slogan
+        shlokaText: "श्रद्धया देयम्। अश्रद्धया अदेयम्।\nश्रिया देयम्। ह्रिया देयम्। भिया देयम्। संविदा देयम्॥",
+        shlokaRef: "— Taittiriya Upanishad (Shikshavalli)",
+        shlokaMeaning: "\"Donation should be given with faith, humility, capacity, and wisdom.\"",
+        shlokaDesc: "\"In the scriptures, temple construction and renovation are described as highly virtuous acts. The devotee who contributes to the construction, protection, or renovation of the temple becomes a participant in this sacred work of dharma, service, and public welfare.\"",
 
-        // In the 'donate' block:
-        addressPlaceholder: "Complete Address",
-        receiptTitle: "Donation Receipt",
-        receiptThanks: "Thank you for your generous contribution to the temple construction!",
-        receiptId: "Donation ID",
-        receiptDate: "Date",
-        donorDetails: "Donor Details",
-        anonymousDonor: "Anonymous Donor",
-        anonymousMsg: "The donor has chosen to remain anonymous. Personal details are withheld.",
-        categoriesSupported: "Categories Supported",
+        categoryHeading: "“One Pillar – One Family”",
+categorySub: "Temple construction is not just building a structure, but creating an immortal heritage of Sanatan culture for generations to come.",
+categorySelectTitle: "Select Contribution Category",
+contributeBtn: "Contribute →",
+masterCtaBtn: "Offer Your Devotion",
+
+ categories: {
+            pillar: { title: "Base Pillar Donation", subtitle: "One Base Pillar", priceDesc: "₹11,00,000", desc: "Contribution towards the main pillars of the temple, the immortal foundation of faith." },
+            shila: { title: "One Stone Donation", subtitle: "", priceDesc: "₹5,100", desc: "Good fortune of becoming a sacred stone of the Mother's grand temple." },
+            swarn: { title: "Gold Donation for Kalash", subtitle: "", priceDesc: "Contribution as per devotion", desc: "Contribute devoutly towards the construction of the divine dome and gold Kalash." },
+            rajat: { title: "Silver Donation for Throne", subtitle: "", priceDesc: "Contribution as per devotion", desc: "Dedicate your devotion for the divine silver throne of Mother Badi Mata." },
+            kasht: { title: "Wooden Donation", subtitle: "", priceDesc: "Starting from ₹5,100", desc: "Participate in the construction of the divine wooden doors of the sacred sanctum." },
+            marble: { title: "Marble Donation for Sabha Mandap", subtitle: "", priceDesc: "Contribution as per devotion", desc: "Participate in the construction of the marble floor for the assembly hall." },
+            anna: { title: "Annakshetra Donation", subtitle: "", priceDesc: "Contribution as per devotion", desc: "Contribute to the sacred service of Maha Prasad, Bhandara, and food donation." },
+            gau: { title: "Gaushala Donation", subtitle: "", priceDesc: "Contribution as per devotion", desc: "Participate in the food, protection, and service of Gau Mata." },
+            svechha: { title: "Voluntary Donation", subtitle: "As much devotion, as much dedication.", priceDesc: "Contribution as per devotion", desc: "Participate in the grand temple construction with your devotion and capacity." }
+        },
+        occasions: {
+            bday: "Birthday Seva",
+            anniv: "Marriage Anniversary Seva",
+            family: "Family Auspicious Seva",
+            ancestor: "Ancestral Remembrance Seva",
+            success: "Success/New Beginning Seva"
+        },
 
       },
+
+     
+
       nirman: {
         pageTitle: "Temple Construction",
         subtitle: "Building an Immortal Legacy for Future Generations",
@@ -458,7 +489,7 @@ const resources = {
         gallery: "गैलरी",
         news: "इवेंट और ब्लॉगिंग",
         lucky: "भाग्यशाली भक्त उपहार योजना",
-        donate: "मंदिर निर्माण महाअभियान",
+        donate: "मंदिर नव निर्माण महाअभियान",
         contact: "संपर्क करें",
         seva: "सेवा",
         register: "पंजीयन क्रमांक",
@@ -773,41 +804,76 @@ const resources = {
         subGau4: "गौ आश्रय सहयोग",
 
         // Temple Construction Specifics
-        pageTitle: "मंदिर निर्माण सहयोग",
+        pageTitle: "मंदिर नव निर्माण महाअभियान",
         subtitle: "एक दिव्य विरासत का निर्माण",
-        tagline: "“एक आधार स्तंभ – एक परिवार”",
-        slogan: "मंदिर निर्माण केवल भवन निर्माण नहीं बल्कि आने वाली पीढ़ियों के लिए सनातन संस्कृति की अमर विरासत का निर्माण है।",
-        step1: "सहयोग श्रेणी चुनें",
-        step2: "आपका विवरण",
-        step3: "सहयोग राशि",
-        selectAlert: "कृपया आगे बढ़ने के लिए एक सहयोग श्रेणी चुनें।",
-        payNow: "सहयोग अर्पण करें",
+        // Trust Section
+        trustHeading: "आपकी सेवा माँ तक कैसे पहुँचती है?",
+        trust1: "100% सुरक्षित भुगतान",
+        trust2: "तत्काल डिजिटल रसीद",
+        trust3: "मंदिर ट्रस्ट प्रमाणित सेवा",
+        trust4: "आपकी सेवा माँ के चरणों में",
         
-        // Causes
-        causePillar: "आधार स्तंभ दान",
-        descPillar: "मंदिर के मुख्य स्तंभों में अपना नाम अंकित करें",
-        causeGarbha: "गर्भगृह सहयोग",
-        descGarbha: "माता के मुख्य गर्भगृह निर्माण में आहुति",
-        causeShikhar: "शिखर निर्माण सहयोग",
-        descShikhar: "मंदिर के सर्वोच्च शिखर के लिए सहयोग",
-        causeSabha: "सभा मंडप सहयोग",
-        descSabha: "भक्तों के बैठने हेतु विशाल मंडप",
-        causeAnna: "अन्नक्षेत्र सहयोग",
-        descAnna: "महाप्रसाद एवं दैनिक भंडारा भवन",
-        causeGau: "गौशाला सहयोग",
-        descGau: "गौ माता के आश्रय एवं सेवा हेतु",
-        donateBtn : "अभी सहयोग करें",
-        // In the 'donate' block:
-        addressPlaceholder: "पूरा पता (Complete Address)",
-        receiptTitle: "दान रसीद",
-        receiptThanks: "मंदिर निर्माण में आपके अमूल्य सहयोग के लिए धन्यवाद!",
-        receiptId: "दान आईडी",
-        receiptDate: "दिनांक",
-        donorDetails: "दानकर्ता विवरण",
-        anonymousDonor: "गुमनाम दानदाता",
-        anonymousMsg: "दानदाता ने अपनी पहचान गुप्त रखने का विकल्प चुना है। व्यक्तिगत विवरण सुरक्षित रखा गया है।",
-        categoriesSupported: "सहयोग श्रेणियां",
+        // Occasion Section
+        occasionHeading: "हर उपलब्धि, हर आरंभ - माँ को समर्पित",
+        occasionSub: "हमारे जीवन की हर सफलता और हर खुशी माँ की कृपा से पूर्ण होती है। अपनी श्रद्धा और कृतज्ञता को सेवा के माध्यम से माँ के चरणों में अर्पित करें।",
+        occasionTagline: '"आपका प्रत्येक सहयोग माँ बड़ी माता के भव्य धाम, धर्म, सेवा एवं लोककल्याण के पावन कार्यों में समर्पित होगा।"',
+        
+        // Closing Message
+        closingMsg1: "माँ बड़ी माता से प्रार्थना है कि वे आपके जीवन में सुख, शांति, समृद्धि, उत्तम स्वास्थ्य एवं सदैव अपनी कृपा बनाए रखें।",
+        closingMsg2: "जय माँ बड़ी माता",
+        closingMsg3: "आपका सहयोग • माँ का आशीर्वाद • सनातन संस्कृति की अमर विरासत",
+        
+        // Modal & Form
+        modalTitle: "सेवक का विवरण",
+        modalSubtitle: "माँ के श्रीचरणों में सेवा समर्पित करने हेतु कृपया अपना विवरण भरें।",
+        modalNote: '"आपकी जानकारी केवल सेवा पुष्टि, रसीद एवं मंदिर ट्रस्ट के आधिकारिक संवाद हेतु सुरक्षित रखी जाएगी।"',
+        modalSelectedSeva: "चयनित सेवा",
+        modalNamePlaceholder: "👤 पूरा नाम* (अनिवार्य)",
+        modalPhonePlaceholder: "📱 मोबाइल नंबर* (अनिवार्य)",
+        modalEmailPlaceholder: "📧 ईमेल आईडी (वैकल्पिक)",
+        modalAddressPlaceholder: "📍 पूरा पता (वैकल्पिक)",
+        modalAnonymous: "गुमनाम दान (Anonymous Donation)",
+        modalAmountLabel: "सहयोग राशि (₹)",
+        modalAmountPlaceholder: "श्रद्धानुसार राशि दर्ज करें",
+        modalMinAmount: "* न्यूनतम सहयोग राशि ₹",
+        modalSubmitBtn: "सहयोग अर्पण करें",
+
+        // Section 3: Shloka & Slogan
+        shlokaText: "श्रद्धया देयम्। अश्रद्धया अदेयम्।\nश्रिया देयम्। ह्रिया देयम्। भिया देयम्। संविदा देयम्॥",
+        shlokaRef: "— तैत्तिरीय उपनिषद् (शिक्षावल्ली)",
+        shlokaMeaning: "\"दान श्रद्धा, विनम्रता, सामर्थ्य एवं विवेक के साथ करना चाहिए।\"",
+        shlokaDesc: "\"शास्त्रों में मंदिर नव निर्माण महाअभियान एवं जीर्णोद्धार को महापुण्यकारी कार्य बताया गया है। जो श्रद्धालु देवालय के निर्माण, संरक्षण या जीर्णोद्धार में सहयोग करता है, वह धर्म, सेवा और लोककल्याण के इस पावन कार्य का सहभागी बनता है।\"",
+
+        categoryHeading: "“एक आधार स्तंभ – एक परिवार”",
+categorySub: "मंदिर निर्माण केवल भवन निर्माण नहीं बल्कि आने वाली पीढ़ियों के लिए सनातन संस्कृति की अमर विरासत का निर्माण है।",
+categorySelectTitle: "सहयोग श्रेणी चुनें",
+contributeBtn: "सहयोग करें →",
+masterCtaBtn: "अपनी श्रद्धा समर्पित करें",
+
+categories: {
+            pillar: { title: "आधार स्तंभ दान", subtitle: "एक आधार स्तंभ", priceDesc: "₹11,00,000", desc: "मुख्य आधार स्तंभ दान, श्रद्धा की अमर नींव।" },
+            shila: { title: "एक शिला दान", subtitle: "", priceDesc: "₹5,100", desc: "माँ के भव्य मंदिर की एक पवित्र शिला बनने का सौभाग्य।" },
+            swarn: { title: "कलश हेतु स्वर्ण दान", subtitle: "", priceDesc: "श्रद्धानुसार सहयोग", desc: "मंदिर के दिव्य गुंबद एवं स्वर्ण कलश निर्माण हेतु श्रद्धापूर्वक सहयोग करें।" },
+            rajat: { title: "सिंहासन हेतु रजत दान", subtitle: "", priceDesc: "श्रद्धानुसार सहयोग", desc: "माँ बड़ी माता के दिव्य रजत सिंहासन हेतु अपनी श्रद्धा समर्पित करें।" },
+            kasht: { title: "काष्ठ (लकड़ी) दान", subtitle: "", priceDesc: "₹5,100 से प्रारंभ", desc: "माँ के पवित्र गर्भगृह के दिव्य काष्ठ द्वार (लकड़ी का दरवाज़ा) निर्माण में सहभागी बनें।" },
+            marble: { title: "सभा मंडप मार्बल दान", subtitle: "", priceDesc: "श्रद्धानुसार सहयोग", desc: "सभा मंडप की मार्बल फर्श निर्माण में सहभागी बनें।" },
+            anna: { title: "अन्नक्षेत्र सहयोग", subtitle: "", priceDesc: "श्रद्धानुसार सहयोग", desc: "मंदिर में महाप्रसाद, भंडारा एवं अन्नदान की पावन सेवा में अपना योगदान दें।" },
+            gau: { title: "गौशाला सहयोग", subtitle: "", priceDesc: "श्रद्धानुसार सहयोग", desc: "गौ माता के भोजन, संरक्षण एवं सेवा कार्यों में सहभागी बनें।" },
+            svechha: { title: "स्वेच्छा दान", subtitle: "जितनी श्रद्धा, उतना समर्पण।", priceDesc: "श्रद्धानुसार सहयोग", desc: "अपनी श्रद्धा एवं सामर्थ्य के अनुसार सहयोग कर माँ बड़ी माता के भव्य मंदिर निर्माण एवं धर्म सेवा के इस पावन अभियान का हिस्सा बनें।" }
+        },
+        occasions: {
+            bday: "जन्मदिन सेवा",
+            anniv: "विवाह वर्षगांठ सेवा",
+            family: "परिवार मंगल सेवा",
+            ancestor: "पूर्वजों की स्मृति सेवा",
+            success: "सफलता/नई शुरुआत सेवा"
+        },
+        
       },
+
+      
+
+
       nirman: {
         pageTitle: "भव्य मंदिर निर्माण",
         subtitle: "आने वाली पीढ़ियों के लिए एक अमर विरासत का निर्माण",
