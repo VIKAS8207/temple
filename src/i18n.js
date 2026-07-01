@@ -35,6 +35,14 @@ const resources = {
         slide2: "Saraswati Mata",
         slide3: "Durga Mata"
       },
+      home: {
+            donationSection: {
+                badge: "Temple Construction Grand Campaign",
+                heading: "“One Pillar – One Family”",
+                description: "Temple construction is not just building a structure, but creating an immortal heritage of Sanatan culture for generations to come.",
+                button: "Offer Your Devotion"
+            }
+        },
       action: {
         btn1: "Get Online Coupon",
         btn2: "Temple Construction",
@@ -512,6 +520,14 @@ masterCtaBtn: "Offer Your Devotion",
         slide2: "सरस्वती माता",
         slide3: "दुर्गा माता"
       },
+      home: {
+            donationSection: {
+                badge: "मंदिर निर्माण महाअभियान",
+                heading: "“एक आधार स्तंभ – एक परिवार”",
+                description: "मंदिर निर्माण केवल भवन निर्माण नहीं बल्कि आने वाली पीढ़ियों के लिए सनातन संस्कृति की अमर विरासत का निर्माण है।",
+                button: "सहयोग अर्पण करें"
+            }
+        },
       action: {
         btn1: "ऑनलाइन कूपन प्राप्त करें",
         btn2: "मंदिर निर्माण सहयोग",
@@ -868,7 +884,7 @@ categories: {
             ancestor: "पूर्वजों की स्मृति सेवा",
             success: "सफलता/नई शुरुआत सेवा"
         },
-        
+
       },
 
       

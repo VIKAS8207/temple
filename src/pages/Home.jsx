@@ -6,6 +6,7 @@ import TempleTiming from "../components/TempleTiming";
 import TempleCarousel from "../components/TempleCarousel";
 import WinnerList from "../components/WinnerList";
 import CursorTrail from "../components/CursorTrail"; 
+import DonationSection from "../components/DonationSection"; 
 
 export default function Home() {
   // Initialize the translation hook
@@ -227,6 +228,7 @@ export default function Home() {
       <ActionButtons />
       <TempleCarousel images={donationCarouselImages} />
       <TempleStats />
+      <DonationSection />
       <WinnerList />   
       <TempleTiming />
 
