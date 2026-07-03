@@ -120,24 +120,25 @@ export default function Donation() {
         ========================================= */}
         <div className="mb-16 mt-8 w-full max-w-5xl mx-auto">
           
-          {/* Glassmorphic Container */}
-          <div className="relative overflow-hidden rounded-3xl bg-white/40 backdrop-blur-md border border-amber-200/40 p-2 shadow-[0_20px_50px_rgba(139,58,43,0.05)] transition-all duration-300 hover:shadow-[0_20px_50px_rgba(139,58,43,0.1)]">
+          {/* Glassmorphic Container with Enhanced High-Contrast Shadow and Border Tints */}
+          <div className="relative overflow-hidden rounded-3xl bg-white/60 backdrop-blur-md border border-amber-500/30 p-2 shadow-[0_25px_60px_rgba(139,58,43,0.08)] shadow-amber-900/10 transition-all duration-300">
             
-            {/* Traditional Double-Line Frame Layer */}
-            <div className="border-2 border-double border-amber-600/30 rounded-2xl p-6 sm:p-10 md:p-12 text-center bg-white/10 relative z-10">
+            {/* Inner Frame Layer with Solid Warm Sandstone Background for Text Pop */}
+            <div className="border-2 border-double border-amber-600/40 rounded-2xl p-6 sm:p-10 md:p-12 text-center bg-[#fffbf5]/90 relative z-10 shadow-inner">
               
               {/* Corner Traditional Accents */}
-              <div className="absolute top-3 left-3 w-4 h-4 border-t-2 border-l-2 border-amber-500/60"></div>
-              <div className="absolute top-3 right-3 w-4 h-4 border-t-2 border-r-2 border-amber-500/60"></div>
-              <div className="absolute bottom-3 left-3 w-4 h-4 border-b-2 border-l-2 border-amber-500/60"></div>
-              <div className="absolute bottom-3 right-3 w-4 h-4 border-b-2 border-r-2 border-amber-500/60"></div>
+              <div className="absolute top-3 left-3 w-4 h-4 border-t-2 border-l-2 border-amber-600"></div>
+              <div className="absolute top-3 right-3 w-4 h-4 border-t-2 border-r-2 border-amber-600"></div>
+              <div className="absolute bottom-3 left-3 w-4 h-4 border-b-2 border-l-2 border-amber-600"></div>
+              <div className="absolute bottom-3 right-3 w-4 h-4 border-b-2 border-r-2 border-amber-600"></div>
               
               {/* Shloka Text */}
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-rozha text-[#8B3A2B] mb-4 leading-relaxed font-bold drop-shadow-sm">
                 {t('donate.shlokaText')}
               </h3>
               
-              <p className="text-stone-500 text-xs sm:text-sm font-bold uppercase tracking-widest mb-8 bg-amber-50/60 backdrop-blur-sm inline-block px-4 py-1.5 rounded-full border border-amber-200/30">
+              {/* POPPING UPGRADED CAPSULE: Rich Saffron-Orange Gradient for Visual Anchor */}
+              <p className="text-white text-xs sm:text-sm font-black uppercase tracking-widest mb-8 bg-gradient-to-r from-amber-500 via-orange-500 to-orange-600 inline-block px-6 py-2 rounded-full shadow-md border border-orange-400/30">
                 {t('donate.shlokaRef')}
               </p>
               
@@ -148,21 +149,21 @@ export default function Donation() {
                 </p>
                 
                 {/* Custom Elegant Geometric Divider */}
-                <div className="flex items-center justify-center gap-3 opacity-40">
+                <div className="flex items-center justify-center gap-3 opacity-60">
                   <span className="w-12 h-px bg-amber-600"></span>
-                  <span className="text-amber-700 text-xs">❖</span>
+                  <span className="text-amber-700 text-sm">❖</span>
                   <span className="w-12 h-px bg-amber-600"></span>
                 </div>
                 
-                <p className="text-stone-700 font-medium text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+                <p className="text-stone-800 font-medium text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
                   {t('donate.shlokaDesc')}
                 </p>
               </div>
             </div>
             
-            {/* Ambient Back-glow circles to enhance transparency definition */}
-            <div className="absolute -top-24 -left-24 w-48 h-48 bg-amber-400/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-[#8B3A2B]/10 rounded-full blur-3xl pointer-events-none"></div>
+            {/* Amplified Back-glow circles behind the card for depth */}
+            <div className="absolute -top-20 -left-24 w-64 h-64 bg-amber-400/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute -bottom-20 -right-24 w-64 h-64 bg-[#8B3A2B]/15 rounded-full blur-3xl pointer-events-none"></div>
           </div>
         </div>
 
@@ -226,7 +227,7 @@ export default function Donation() {
           <div className="mt-12 text-center">
             <button 
               onClick={handleGeneralDonation}
-              className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-orange-600 via-red-600 to-amber-600 bg-[length:200%_auto] hover:bg-[position:right_center] text-white px-10 sm:px-16 py-4 sm:py-5 rounded-full shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-visible ring-4 ring-orange-600/20 cursor-pointer"
+              className="group relative inline-flex items-center justify-center gap-6 bg-gradient-to-r from-orange-600 via-red-600 to-amber-600 bg-[length:200%_auto] hover:bg-[position:right_center] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-full shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-visible ring-4 ring-orange-600/20 cursor-pointer"
             >
               {/* Animated Lotus Bloom SVG */}
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 sm:w-8 sm:h-8 overflow-visible shrink-0 transition-transform duration-500 group-hover:scale-110">
@@ -415,7 +416,7 @@ export default function Donation() {
             onClick={() => setIsModalOpen(false)}
           ></div>
           
-          <div className="relative bg-white w-full max-w-md rounded-3xl shadow-2xl p-6 sm:p-8 animate-[fadeIn_0.3s_ease-out] border-4 border-amber-100 max-h-[90vh] overflow-y-auto">
+          <div className="relative bg-white w-full max-w-xl rounded-3xl shadow-2xl p-6 sm:p-8 animate-[fadeIn_0.3s_ease-out] border-4 border-amber-100 max-h-[90vh] overflow-y-auto hide-scrollbar">
             <button 
               onClick={() => setIsModalOpen(false)}
               className="absolute top-4 right-4 text-stone-400 hover:text-red-600 hover:rotate-90 transition-all bg-stone-100 hover:bg-red-50 p-2 rounded-full"
