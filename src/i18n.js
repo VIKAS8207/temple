@@ -190,7 +190,29 @@ const resources = {
         
         // Custom Toast Notifications
         pdfSuccess: "Receipt downloaded successfully!",
-        pdfError: "Failed to generate PDF. Please try again."
+        pdfError: "Failed to generate PDF. Please try again.",
+        // PDF Toasts
+        pdfSuccess: "Receipt downloaded successfully!",
+        pdfError: "Failed to generate PDF. Please try again.",
+        
+        // Receipt Details
+        receiptName: "Name",
+        receiptPhone: "Mobile Number",
+        receiptEmail: "Email ID",
+        receiptAmount: "Amount Deposited",
+        
+        // Action Buttons
+        downloadBtn: "Download PDF Receipt",
+        backToHome: "Return to Home Page",
+
+        pdfSuccess: "Receipt downloaded successfully!",
+        pdfError: "Failed to generate PDF. Please try again.",
+        receiptName: "Name",
+        receiptPhone: "Mobile Number",
+        receiptEmail: "Email ID",
+        receiptAmount: "Amount Deposited",
+        downloadBtn: "Download PDF Receipt",
+        backToHome: "Return to Home Page"
       },
       founders: {
         title: "Trust Board",
@@ -379,6 +401,137 @@ categorySub: "Temple construction is not just building a structure, but creating
 categorySelectTitle: "Select Contribution Category",
 contributeBtn: "Contribute →",
 masterCtaBtn: "Offer Your Devotion",
+
+        // Receipt Titles & Thanks
+        bookingReceiptTitle: "Booking Receipt",
+        receiptTitle: "Donation Receipt",
+        bookingThanks: "Thank you for participating in the service of the Mother!",
+        receiptThanks: "Thank you for your invaluable contribution to the temple construction!",
+        
+        // Metadata
+        bookingId: "Booking ID",
+        receiptId: "Donation ID",
+        receiptDate: "Date",
+        categoriesSupported: "Contribution Category",
+        
+        // Anonymous section
+        anonymousSevak: "Anonymous Sevak",
+        anonymousDonor: "Anonymous Donor",
+        anonymousSevakMsg: "The Sevak has chosen to keep their identity hidden.",
+        anonymousMsg: "The Donor has chosen to keep their identity hidden.",
+        
+        // General
+        addressPlaceholder: "Address",
+
+        // ==========================================
+        // 1. GLOBAL & RECEIPTS
+        // ==========================================
+        bookingReceiptTitle: "Booking Receipt",
+        receiptTitle: "Donation Receipt",
+        bookingThanks: "Thank you for participating in the service of the Mother!",
+        receiptThanks: "Thank you for your invaluable contribution to the temple construction!",
+        bookingId: "Booking ID",
+        receiptId: "Donation ID",
+        receiptDate: "Date",
+        categoriesSupported: "Contribution Category",
+        anonymousSevak: "Anonymous Sevak",
+        anonymousDonor: "Anonymous Donor",
+        anonymousSevakMsg: "The Sevak has chosen to keep their identity hidden.",
+        anonymousMsg: "The Donor has chosen to keep their identity hidden.",
+        addressPlaceholder: "Address",
+
+        // ==========================================
+        // 2. SERVE PAGE (TABS & HEADER)
+        // ==========================================
+        pageTitle: "Daily & Special Sevas",
+        subtitle: "Participate in the services of Mother Badi Mata",
+        genericDesc: "Contribute to this sacred service and receive the Mother's blessings.",
+        bookBtn: "Book Seva",
+        donateBtn: "Donate Now",
+        
+        catDainik: "Daily Seva",
+        catTuesdaySpecial: "Tuesday Special Sevas",
+        catTuesdayBhandara: "Tuesday Bhandara Seva",
+        catKalash: "Kalash Sthapana",
+        catAbhishek: "Abhishek Pujan",
+        catJaap: "Jaap Seva",
+        catArchan: "Archan Seva",
+        catVastra: "Vastra Seva",
+        catShringar: "Shringar Seva",
+        catNavratri: "Navratri Festival",
+        catGau: "Gau-Seva",
+
+        // ==========================================
+        // 3. SUB-SEVAS LIST
+        // ==========================================
+        subDainik1: "Akhand Deep Seva",
+        subDainik2: "Pushp Seva",
+        subDainik3: "Bhog Seva",
+        subDainik4: "Aarti Seva",
+        subDainik5: "Vastra Seva",
+        subDainik6: "Daily Shringar Seva",
+        subDainik7: "Annadan Seva",
+        subDainik8: "Special Sankalp Seva",
+        
+        subTueSp1: "Tuesday Special Abhishek",
+        subTueSp2: "Mangal Path",
+        subTueSp3: "Special Aarti",
+        subTueSp4: "Prasad Seva",
+        subTueSp5: "Sankalp Pooja",
+        
+        subTueBh1: "Complete Bhandara",
+        subTueBh2: "Partial Bhandara",
+        subTueBh3: "Prasad Distribution",
+        subTueBh4: "Annadan",
+        
+        subKalash1: "Kalash Sthapana",
+        subAbhishek1: "Abhishek Pujan",
+        
+        subJaap1: "Durga Saptashati Path",
+        subJaap2: "Navchandi Path",
+        subJaap3: "Special Jaap",
+        
+        subArchan1: "Pushp Archan",
+        subArchan2: "Kumkum Archan",
+        subArchan3: "Fruit Offering",
+        subArchan4: "Sindoor Offering",
+        subArchan5: "Dry Fruits Offering",
+        
+        subVastra1: "Vastra Seva",
+        subShringar1: "Shringar Seva",
+        
+        subNavratri1: "Akhand Jyoti",
+        subNavratri2: "Durga Saptashati Path",
+        subNavratri3: "Kanya Pujan",
+        subNavratri4: "Special Abhishek",
+        subNavratri5: "Shringar Seva",
+        subNavratri6: "Annadan",
+        subNavratri7: "Kalash Sthapana",
+        
+        subGau1: "Fodder Seva",
+        subGau2: "Gau Bhojan",
+        subGau3: "Medical Assistance",
+        subGau4: "Gau Shelter Support",
+
+        // ==========================================
+        // 4. MODALS & FORMS
+        // ==========================================
+        modalTitleBook: "Seva Booking Details",
+        modalTitleDonate: "Devotee Details",
+        modalSubtitle: "Please fill in your details to dedicate your service at the feet of the Mother.",
+        modalNote: "\"Your information will be kept safe only for service confirmation and official communication.\"",
+        modalSelectedSeva: "Selected Service",
+        modalNamePlaceholder: "Full Name* (Required)",
+        modalPhonePlaceholder: "Mobile Number* (Required)",
+        modalEmailPlaceholder: "Email ID (Optional)",
+        modalAddressPlaceholder: "Complete Address (Optional)",
+        modalAnonymous: "Anonymous Donation",
+        modalAmountLabel: "Contribution Amount (₹)",
+        modalAmountPlaceholder: "Enter amount as per devotion",
+        modalSubmitBookBtn: "Book Seva",
+        modalSubmitDonateBtn: "Offer Contribution",
+        tuesdayError: "Please select a Tuesday only.",
+        tuesdayOnlyNote: "Available on Tuesdays only",
 
  categories: {
             pillar: { title: "Base Pillar Donation", subtitle: "One Base Pillar", priceDesc: "₹11,00,000", desc: "Contribution towards the main pillars of the temple, the immortal foundation of faith." },
@@ -675,7 +828,29 @@ masterCtaBtn: "Offer Your Devotion",
         
         // Custom Toast Notifications
         pdfSuccess: "रसीद सफलतापूर्वक डाउनलोड हो गई!",
-        pdfError: "PDF जनरेट करने में विफल। कृपया पुनः प्रयास करें।"
+        pdfError: "PDF जनरेट करने में विफल। कृपया पुनः प्रयास करें।",
+        // PDF Toasts
+        pdfSuccess: "रसीद सफलतापूर्वक डाउनलोड हो गई!",
+        pdfError: "PDF जनरेट करने में विफल। कृपया पुनः प्रयास करें।",
+        
+        // Receipt Details
+        receiptName: "नाम",
+        receiptPhone: "मोबाइल नंबर",
+        receiptEmail: "ईमेल",
+        receiptAmount: "जमा राशि",
+        
+        // Action Buttons
+        downloadBtn: "PDF रसीद डाउनलोड करें",
+        backToHome: "मुख्य पृष्ठ पर लौटें",
+
+        pdfSuccess: "रसीद सफलतापूर्वक डाउनलोड हो गई!",
+        pdfError: "PDF जनरेट करने में विफल। कृपया पुनः प्रयास करें।",
+        receiptName: "नाम",
+        receiptPhone: "मोबाइल नंबर",
+        receiptEmail: "ईमेल",
+        receiptAmount: "जमा राशि",
+        downloadBtn: "PDF रसीद डाउनलोड करें",
+        backToHome: "मुख्य पृष्ठ पर लौटें",
       },
       founders: {
         title: "ट्रस्ट मंडल",
@@ -865,6 +1040,137 @@ categorySub: "मंदिर निर्माण केवल भवन न�
 categorySelectTitle: "सहयोग श्रेणी चुनें",
 contributeBtn: "सहयोग करें →",
 masterCtaBtn: "अपनी श्रद्धा समर्पित करें",
+
+        // Receipt Titles & Thanks
+        bookingReceiptTitle: "बुकिंग रसीद",
+        receiptTitle: "दान रसीद",
+        bookingThanks: "माँ की सेवा में सहभागी बनने के लिए धन्यवाद!",
+        receiptThanks: "मंदिर निर्माण में आपके अमूल्य सहयोग के लिए धन्यवाद!",
+        
+        // Metadata
+        bookingId: "बुकिंग आईडी",
+        receiptId: "दान आईडी",
+        receiptDate: "दिनांक",
+        categoriesSupported: "सहयोग श्रेणियां",
+        
+        // Anonymous section
+        anonymousSevak: "गुमनाम सेवक",
+        anonymousDonor: "गुमनाम दानदाता",
+        anonymousSevakMsg: "सेवक ने अपनी पहचान गुप्त रखने का विकल्प चुना है।",
+        anonymousMsg: "दानदाता ने अपनी पहचान गुप्त रखने का विकल्प चुना है।",
+        
+        // General
+        addressPlaceholder: "पता",
+
+        // ==========================================
+        // 1. GLOBAL & RECEIPTS
+        // ==========================================
+        bookingReceiptTitle: "बुकिंग रसीद",
+        receiptTitle: "दान रसीद",
+        bookingThanks: "माँ की सेवा में सहभागी बनने के लिए धन्यवाद!",
+        receiptThanks: "मंदिर निर्माण में आपके अमूल्य सहयोग के लिए धन्यवाद!",
+        bookingId: "बुकिंग आईडी",
+        receiptId: "दान आईडी",
+        receiptDate: "दिनांक",
+        categoriesSupported: "सहयोग श्रेणियां",
+        anonymousSevak: "गुमनाम सेवक",
+        anonymousDonor: "गुमनाम दानदाता",
+        anonymousSevakMsg: "सेवक ने अपनी पहचान गुप्त रखने का विकल्प चुना है।",
+        anonymousMsg: "दानदाता ने अपनी पहचान गुप्त रखने का विकल्प चुना है।",
+        addressPlaceholder: "पता",
+
+        // ==========================================
+        // 2. SERVE PAGE (TABS & HEADER)
+        // ==========================================
+        pageTitle: "दैनिक एवं विशेष सेवाएँ",
+        subtitle: "माँ बड़ी माता की सेवाओं में सहभागी बनें",
+        genericDesc: "इस पवित्र सेवा में अपना योगदान दें और माता का आशीर्वाद प्राप्त करें।",
+        bookBtn: "बुक करें",
+        donateBtn: "दान करें",
+        
+        catDainik: "दैनिक सेवा",
+        catTuesdaySpecial: "मंगलवार विशेष सेवाएँ",
+        catTuesdayBhandara: "मंगलवार भंडारा सेवा",
+        catKalash: "कलश स्थापना",
+        catAbhishek: "अभिषेक पूजन",
+        catJaap: "जाप सेवा",
+        catArchan: "अर्चन सेवा",
+        catVastra: "वस्त्र सेवा",
+        catShringar: "श्रृंगार सेवा",
+        catNavratri: "नवरात्रि महोत्सव",
+        catGau: "गौ-सेवा",
+
+        // ==========================================
+        // 3. SUB-SEVAS LIST
+        // ==========================================
+        subDainik1: "अखंड दीप सेवा",
+        subDainik2: "पुष्प सेवा",
+        subDainik3: "भोग सेवा",
+        subDainik4: "आरती सेवा",
+        subDainik5: "वस्त्र सेवा",
+        subDainik6: "दैनिक श्रृंगार सेवा",
+        subDainik7: "अन्नदान सेवा",
+        subDainik8: "विशेष संकल्प सेवा",
+        
+        subTueSp1: "मंगलवार विशेष अभिषेक",
+        subTueSp2: "मंगल पाठ",
+        subTueSp3: "विशेष आरती",
+        subTueSp4: "प्रसाद सेवा",
+        subTueSp5: "संकल्प पूजा",
+        
+        subTueBh1: "संपूर्ण भंडारा",
+        subTueBh2: "आंशिक भंडारा",
+        subTueBh3: "प्रसाद वितरण",
+        subTueBh4: "अन्नदान",
+        
+        subKalash1: "कलश स्थापना",
+        subAbhishek1: "अभिषेक पूजन",
+        
+        subJaap1: "दुर्गा सप्तशती पाठ",
+        subJaap2: "नवचंडी पाठ",
+        subJaap3: "विशेष जाप",
+        
+        subArchan1: "पुष्प अर्चन",
+        subArchan2: "कुमकुम अर्चन",
+        subArchan3: "फल अर्पण",
+        subArchan4: "सिंदूर अर्पण",
+        subArchan5: "सूखे मेवे अर्पण",
+        
+        subVastra1: "वस्त्र सेवा",
+        subShringar1: "श्रृंगार सेवा",
+        
+        subNavratri1: "अखंड ज्योति",
+        subNavratri2: "दुर्गा सप्तशती पाठ",
+        subNavratri3: "कन्या पूजन",
+        subNavratri4: "विशेष अभिषेक",
+        subNavratri5: "श्रृंगार सेवा",
+        subNavratri6: "अन्नदान",
+        subNavratri7: "कलश स्थापना",
+        
+        subGau1: "चारा सेवा",
+        subGau2: "गौ भोजन",
+        subGau3: "चिकित्सा सहायता",
+        subGau4: "गौ आश्रय सहयोग",
+
+        // ==========================================
+        // 4. MODALS & FORMS
+        // ==========================================
+        modalTitleBook: "सेवा बुकिंग विवरण",
+        modalTitleDonate: "सेवक का विवरण",
+        modalSubtitle: "माँ के श्रीचरणों में सेवा समर्पित करने हेतु कृपया अपना विवरण भरें।",
+        modalNote: "\"आपकी जानकारी केवल सेवा पुष्टि एवं आधिकारिक संवाद हेतु सुरक्षित रखी जाएगी।\"",
+        modalSelectedSeva: "चयनित सेवा",
+        modalNamePlaceholder: "पूरा नाम* (अनिवार्य)",
+        modalPhonePlaceholder: "मोबाइल नंबर* (अनिवार्य)",
+        modalEmailPlaceholder: "ईमेल आईडी (वैकल्पिक)",
+        modalAddressPlaceholder: "पूरा पता (वैकल्पिक)",
+        modalAnonymous: "गुमनाम दान (Anonymous Donation)",
+        modalAmountLabel: "सहयोग राशि (₹)",
+        modalAmountPlaceholder: "श्रद्धानुसार राशि दर्ज करें",
+        modalSubmitBookBtn: "सेवा बुक करें",
+        modalSubmitDonateBtn: "सहयोग अर्पण करें",
+        tuesdayError: "कृपया केवल मंगलवार का दिन चुनें। (Please select a Tuesday only.)",
+        tuesdayOnlyNote: "केवल मंगलवार उपलब्ध है",
 
 categories: {
             pillar: { title: "आधार स्तंभ दान", subtitle: "एक आधार स्तंभ", priceDesc: "₹11,00,000", desc: "मुख्य आधार स्तंभ दान, श्रद्धा की अमर नींव।" },

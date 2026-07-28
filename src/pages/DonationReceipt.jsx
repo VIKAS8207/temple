@@ -21,6 +21,12 @@ export default function DonationReceipt() {
     return <Navigate to="/donation" replace />;
   }
 
+  // Determine if this is a "Book Seva" action or a "Donation" action
+  const isBooking = receiptData.actionType === 'book';
+  
+  // Handle both ID types depending on which page routed here
+  const idToDisplay = receiptData.transactionId || receiptData.donationId;
+
   const showToast = (message, type) => {
     setNotification({ show: true, message, type });
     setTimeout(() => {
@@ -50,7 +56,10 @@ export default function DonationReceipt() {
       const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
       
       pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight);
-      pdf.save(`${receiptData.donationId}_Donation_Receipt.pdf`);
+      
+      // Dynamic File Name
+      const fileNameType = isBooking ? 'Booking_Receipt' : 'Donation_Receipt';
+      pdf.save(`${idToDisplay}_${fileNameType}.pdf`);
 
       showToast(t('luckyNew.pdfSuccess', 'रसीद सफलतापूर्वक डाउनलोड हो गई!'), 'success');
 
@@ -100,7 +109,10 @@ export default function DonationReceipt() {
           </div>
 
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-12 opacity-10 pointer-events-none z-0 select-none">
-            <span className="text-[90px] md:text-[120px] font-black text-green-600 uppercase tracking-widest border-8 border-green-600 p-4 rounded-xl">DONATION</span>
+            {/* Dynamic Watermark */}
+            <span className="text-[90px] md:text-[120px] font-black text-green-600 uppercase tracking-widest border-8 border-green-600 p-4 rounded-xl">
+              {isBooking ? 'BOOKING' : 'DONATION'}
+            </span>
           </div>
 
           <div className="relative z-10">
@@ -110,21 +122,30 @@ export default function DonationReceipt() {
                 ॐ
               </div>
               <h1 className="text-3xl sm:text-4xl font-rozha text-[#8B3A2B] mb-2 uppercase tracking-wide">
-                {t('donate.receiptTitle', 'दान रसीद')}
+                {/* Dynamic Title */}
+                {isBooking ? t('donate.bookingReceiptTitle', 'बुकिंग रसीद') : t('donate.receiptTitle', 'दान रसीद')}
               </h1>
               <p className="text-stone-600 font-medium tracking-widest uppercase text-xs mb-2">
                 Shri Badi Mata Mandir Trust
               </p>
               <p className="text-sm font-medium text-stone-500 italic bg-amber-50 inline-block px-4 py-1 rounded-full border border-amber-200">
-                {t('donate.receiptThanks', 'मंदिर निर्माण में आपके अमूल्य सहयोग के लिए धन्यवाद!')}
+                {/* Dynamic Thank You Note */}
+                {isBooking 
+                  ? t('donate.bookingThanks', 'माँ की सेवा में सहभागी बनने के लिए धन्यवाद!')
+                  : t('donate.receiptThanks', 'मंदिर निर्माण में आपके अमूल्य सहयोग के लिए धन्यवाद!')}
               </p>
             </div>
 
             {/* Receipt Metadata (ID & Date) */}
             <div className="flex justify-between items-center bg-stone-50 border border-stone-200 py-3 px-6 rounded mb-8">
               <div>
-                <p className="text-stone-400 text-[10px] font-bold uppercase tracking-widest mb-0.5">{t('donate.receiptId', 'दान आईडी')}</p>
-                <p className="font-mono text-lg font-bold text-stone-800 tracking-wider">{receiptData.donationId}</p>
+                <p className="text-stone-400 text-[10px] font-bold uppercase tracking-widest mb-0.5">
+                  {/* Dynamic ID Label */}
+                  {isBooking ? t('donate.bookingId', 'बुकिंग आईडी') : t('donate.receiptId', 'दान आईडी')}
+                </p>
+                <p className="font-mono text-lg font-bold text-stone-800 tracking-wider">
+                  {idToDisplay}
+                </p>
               </div>
               <div className="text-right">
                 <p className="text-stone-400 text-[10px] font-bold uppercase tracking-widest mb-0.5">{t('donate.receiptDate', 'दिनांक')}</p>
@@ -144,10 +165,14 @@ export default function DonationReceipt() {
                 <div className="p-8 bg-stone-50 text-center flex flex-col items-center justify-center">
                   <svg className="w-12 h-12 text-stone-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                   <h3 className="text-stone-700 font-bold text-xl uppercase tracking-widest mb-2">
-                    {t('donate.anonymousDonor', 'गुमनाम दानदाता')}
+                    {/* Dynamic Anonymous Label */}
+                    {isBooking ? t('donate.anonymousSevak', 'गुमनाम सेवक') : t('donate.anonymousDonor', 'गुमनाम दानदाता')}
                   </h3>
                   <p className="text-stone-500 text-sm">
-                    {t('donate.anonymousMsg', 'दानदाता ने अपनी पहचान गुप्त रखने का विकल्प चुना है।')}
+                    {/* Dynamic Anonymous Message */}
+                    {isBooking 
+                      ? t('donate.anonymousSevakMsg', 'सेवक ने अपनी पहचान गुप्त रखने का विकल्प चुना है।') 
+                      : t('donate.anonymousMsg', 'दानदाता ने अपनी पहचान गुप्त रखने का विकल्प चुना है।')}
                   </p>
                 </div>
               ) : (
